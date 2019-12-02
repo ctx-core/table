@@ -1,0 +1,18 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"outDir": ".",
+		"declarationDir": ".",
+		"lib": [
+			"dom"
+		]
+	},
+	"references": [
+		{"path": "../array"},
+		{"path": "../combinators"},
+		{"path": "../dom"},
+		{"path": "../function"},
+		{"path": "../logger"},
+		{"path": "../store"}
+	]
+}
