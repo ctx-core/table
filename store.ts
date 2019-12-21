@@ -1,10 +1,10 @@
-import { writable, derived, get } from 'svelte/store'
+import { writable, derived, get, Readable } from 'svelte/store'
 import {
 	derived__spread,
 	_clear__store,
 	subscribe,
 } from '@ctx-core/store'
-import { _andand } from '@ctx-core/function'
+import { _andand, falsy } from '@ctx-core/function'
 import { I } from '@ctx-core/combinators'
 import { _hash__key, _fn__hash__key } from '@ctx-core/array'
 import {
@@ -23,7 +23,11 @@ export const __offsets__column = derived(__columns, _offsets__column)
 export const __domain__table = writable([0, 10.0])
 export const __domain__ticks = writable([0, 5.0, 10.0])
 export const __rows = derived__spread([__table, __offsets__column], _rows)
-export const __rows__data = derived__spread([
+export const __rows__data = derived__spread<[
+	Readable<falsy|any[]>,
+	Readable<falsy|any[]>,
+	Readable<falsy|any>,
+], falsy|any[]>([
 		__rows,
 		__columns__data,
 		__offsets__column
@@ -32,7 +36,7 @@ export const __rows__data = derived__spread([
 )
 export const __reverse__columns =
 	derived(__columns,
-		columns =>
+		columns=>
 			columns && columns.slice(0).reverse())
 export const __rank__table = derived__spread([
 	__columns,
@@ -51,7 +55,7 @@ function _rank__table(columns, rows, offsets__column) {
 	for (let i = 0; i < columns.length; i++) {
 		const rows__sorted =
 			rows__rank.slice(0).sort(
-				(a, b) =>
+				(a, b)=>
 					a[i] > b[i]
 					? -1
 					: a[i] < b[i]
@@ -80,8 +84,11 @@ function _rank__table(columns, rows, offsets__column) {
 export const __row_id = writable(null)
 export const __inputs__filter__rows__data = writable(null)
 export const __filter__rows__data =
-	derived([__inputs__filter__rows__data, __rows__data],
-		([inputs__filter__rows__data, rows__data]) => {
+	derived<[
+		Readable<falsy|any>,
+		Readable<falsy|any[]>
+	], falsy|any[]>([__inputs__filter__rows__data, __rows__data],
+		([inputs__filter__rows__data, rows__data])=>{
 			log(`${logPrefix}|_filter`)
 			if (!inputs__filter__rows__data || !rows__data) return
 			const filter__rows = []
