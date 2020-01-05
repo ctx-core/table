@@ -4,6 +4,7 @@ import {
 	_clear__store,
 	subscribe,
 } from '@ctx-core/store'
+import { _b } from '@ctx-core/object'
 import { _andand, falsy } from '@ctx-core/function'
 import { I } from '@ctx-core/combinators'
 import { _hash__key, _fn__hash__key } from '@ctx-core/array'
@@ -16,33 +17,64 @@ import {
 import { _has__dom } from '@ctx-core/dom'
 import { log } from '@ctx-core/logger'
 const logPrefix = '@ctx-core/table/store.js'
-export const __table = writable([])
-export const __columns = derived(__table, _andand(0))
-export const __columns__data = derived(__columns, I)
-export const __offsets__column = derived(__columns, _offsets__column)
-export const __domain__table = writable([0, 10.0])
-export const __domain__ticks = writable([0, 5.0, 10.0])
-export const __rows = derived__spread([__table, __offsets__column], _rows)
-export const __rows__data = derived__spread<[
-	Readable<falsy|any[]>,
-	Readable<falsy|any[]>,
-	Readable<falsy|any>,
-], falsy|any[]>([
-		__rows,
-		__columns__data,
-		__offsets__column
-	],
-	_rows__data
+export const b__table = _b('__table', ()=>
+	writable([]))
+export const __table = b__table()
+export const b__columns = _b('__columns', ctx=>
+	derived(
+		b__table(ctx),
+		_andand(0)))
+export const __columns = b__columns()
+export const b__columns__data = _b('__columns__data', ctx=>
+	derived(
+		b__columns(ctx),
+		I))
+export const __columns__data = b__columns__data()
+export const b__offsets__column = _b('__offsets__column', ctx=>
+	derived(
+		b__columns(ctx),
+		_offsets__column))
+export const __offsets__column = b__offsets__column()
+export const b__domain__table = _b('__domain__table', ()=>
+	writable([0, 10.0]))
+export const __domain__table = b__domain__table()
+export const b__domain__ticks = _b('__domain__ticks', ()=>
+	writable([0, 5.0, 10.0]))
+export const __domain__ticks = b__domain__ticks()
+export const b__rows = _b('__rows', ctx=>
+	derived__spread([
+		b__table(ctx),
+		b__offsets__column(ctx)
+	], _rows))
+export const __rows = b__rows()
+export const b__rows__data = _b('__rows__data', ctx=>
+	derived__spread<[
+		Readable<falsy|any[]>,
+		Readable<falsy|any[]>,
+		Readable<falsy|any>,
+	], falsy|any[]>([
+			b__rows(ctx),
+			b__columns__data(ctx),
+			b__offsets__column(ctx),
+		],
+		_rows__data
+	)
 )
-export const __reverse__columns =
-	derived(__columns,
+export const __rows__data = b__rows__data()
+export const b__reverse__columns = _b('__reverse__columns', ctx=>
+	derived(
+		b__columns(ctx),
 		columns=>
-			columns && columns.slice(0).reverse())
-export const __rank__table = derived__spread([
-	__columns,
-	__rows,
-	__offsets__column,
-], _rank__table)
+			columns
+			&& columns.slice(0).reverse()))
+export const __reverse__columns = b__reverse__columns()
+export const b__rank__table = _b('derived__spread', ctx=>
+	derived__spread([
+		b__columns(ctx),
+		b__rows(ctx),
+		b__offsets__column(ctx),
+	], _rank__table))
+export const __rank__table = b__rank__table()
 function _rank__table(columns, rows, offsets__column) {
 	log(`${logPrefix}|_rank__table`)
 	if (!columns || !rows) return
@@ -81,13 +113,27 @@ function _rank__table(columns, rows, offsets__column) {
 	}
 	return rank__table
 }
-export const __row_id = writable(null)
-export const __inputs__filter__rows__data = writable(null)
-export const __filter__rows__data =
+export const b__row_id = _b('__row_id', ()=>
+	writable(null))
+export const __row_id = b__row_id()
+export const b__inputs__filter__rows__data = _b('__inputs__filter__rows__data', ctx=>{
+	const __inputs__filter__rows__data = writable(null)
+	if (_has__dom()) {
+		subscribe(
+			b__table(ctx),
+			_clear__store(__inputs__filter__rows__data))
+	}
+	return __inputs__filter__rows__data
+})
+export const __inputs__filter__rows__data = b__inputs__filter__rows__data()
+export const b__filter__rows__data = _b('__filter__rows__data', ctx=>
 	derived<[
 		Readable<falsy|any>,
 		Readable<falsy|any[]>
-	], falsy|any[]>([__inputs__filter__rows__data, __rows__data],
+	], falsy|any[]>([
+			b__inputs__filter__rows__data(ctx),
+			b__rows__data(ctx)
+		],
 		([inputs__filter__rows__data, rows__data])=>{
 			log(`${logPrefix}|_filter`)
 			if (!inputs__filter__rows__data || !rows__data) return
@@ -112,58 +158,74 @@ export const __filter__rows__data =
 			}
 			return filter__rows
 		})
-export const __table__filter__rows__data =
-	derived(__filter__rows__data, _fn__hash__key('row_id'))
-if (_has__dom()) {
-	subscribe(__table, _clear__store(__inputs__filter__rows__data))
-}
-export const __highlight__rows__data = writable(null)
-export const __table__highlight__rows__data = writable(null)
-if (_has__dom()) {
-	subscribe(__row_id, assign__highlight__rows)
-	subscribe(__table, assign__highlight__rows)
-	subscribe(__filter__rows__data, assign__highlight__rows)
-}
-function assign__highlight__rows() {
-	log(`${logPrefix}|assign__highlight__rows`)
-	const row_id = get(__row_id)
-	const rows__data = get(__rows__data)
-	const filter__rows__data = get(__filter__rows__data)
-	const rows__data__ = filter__rows__data || rows__data
-	let highlight__rows__data
-	if (rows__data__) {
-		highlight__rows__data = []
-		for (let i = 0; i < rows__data__.length; i++) {
-			const row = rows__data__[i]
-			if (row.row_id === row_id) {
-				highlight__rows__data.push(row)
+)
+export const __filter__rows__data = b__filter__rows__data()
+export const b__table__filter__rows__data = _b('__table__filter__rows__data', ctx=>
+	derived(
+		b__filter__rows__data(ctx),
+		_fn__hash__key('row_id')))
+export const __table__filter__rows__data = b__table__filter__rows__data()
+export const b__highlight__rows__data = _b('__highlight__rows__data', ()=>
+	writable(null))
+export const b__table__highlight__rows__data = _b('__table__highlight__rows__data', ()=>
+	writable(null))
+export const b__assign__highlight__rows = _b('assign__highlight__rows', ctx=>{
+	if (_has__dom()) {
+		subscribe(b__row_id(ctx), assign__highlight__rows)
+		subscribe(b__table(ctx), assign__highlight__rows)
+		subscribe(b__filter__rows__data(ctx), assign__highlight__rows)
+	}
+	return assign__highlight__rows
+	function assign__highlight__rows() {
+		log(`${logPrefix}|assign__highlight__rows`)
+		const row_id = get(b__row_id(ctx))
+		const rows__data = get(b__rows__data(ctx))
+		const filter__rows__data = get(b__filter__rows__data(ctx))
+		const rows__data__ = filter__rows__data || rows__data
+		let highlight__rows__data
+		if (rows__data__) {
+			highlight__rows__data = []
+			for (let i = 0; i < rows__data__.length; i++) {
+				const row = rows__data__[i]
+				if (row.row_id === row_id) {
+					highlight__rows__data.push(row)
+				}
 			}
 		}
+		const table__highlight__rows__data =
+			highlight__rows__data
+			&& _hash__key(highlight__rows__data, 'row_id')
+		b__highlight__rows__data(ctx)
+			.set(highlight__rows__data)
+		b__table__highlight__rows__data(ctx)
+			.set(table__highlight__rows__data)
 	}
-	const table__highlight__rows__data =
-		highlight__rows__data
-		&& _hash__key(highlight__rows__data, 'row_id')
-	__highlight__rows__data.set(highlight__rows__data)
-	__table__highlight__rows__data.set(table__highlight__rows__data)
-}
-export const __row = writable(null)
-if (_has__dom()) {
-	subscribe(__row_id, set__row)
-	subscribe(__table, set__row)
-	set__row()
-}
-export function set__row() {
-	log(`${logPrefix}|agent__row|set__row`)
-	const rows = get(__rows)
-	const row_id = get(__row_id)
-	if (!rows || !row_id) return
-	let row
-	for (let i = 0; i < rows.length; i++) {
-		const row__ = rows[i]
-		if (row__.row_id === row_id) {
-			row = row__
-			break
+})
+export const assign__highlight__rows = b__assign__highlight__rows()
+export const b__row = _b('__row', ()=>
+	writable(null))
+export const __row = b__row()
+export const b__set__row = _b('set__row', ctx=>{
+	if (_has__dom()) {
+		subscribe(b__row_id(ctx), set__row)
+		subscribe(b__table(ctx), set__row)
+		set__row()
+	}
+	return set__row
+	function set__row() {
+		log(`${logPrefix}|agent__row|set__row`)
+		const rows = get(b__rows(ctx))
+		const row_id = get(b__row_id(ctx))
+		if (!rows || !row_id) return
+		let row
+		for (let i = 0; i < rows.length; i++) {
+			const row__ = rows[i]
+			if (row__.row_id === row_id) {
+				row = row__
+				break
+			}
 		}
+		__row.set(row)
 	}
-	__row.set(row)
-}
+})
+export const set__row = b__set__row()
