@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "6.2.26",
+	"version": "6.2.27",
 	"description": "ctx-core table",
 	"main": "lib.js",
 	"module": "lib.js",
@@ -31,7 +31,7 @@
 	"dependencies": {
 		"@ctx-core/array": "^15.5.10",
 		"@ctx-core/combinators": "^4.2.14",
-		"@ctx-core/dom": "^5.12.6",
+		"@ctx-core/dom": "^5.12.7",
 		"@ctx-core/function": "^10.5.42",
 		"@ctx-core/logger": "^3.1.13",
 		"@ctx-core/store": "^13.1.17",
