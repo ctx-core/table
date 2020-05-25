@@ -2,7 +2,6 @@
 	"name": "@ctx-core/table",
 	"version": "6.2.51",
 	"description": "ctx-core table",
-	"type": "module",
 	"main": "lib.js",
 	"module": "lib.js",
 	"types": "lib.ts",
