@@ -35,10 +35,10 @@
 		"@ctx-core/function": "^13.0.6",
 		"@ctx-core/logger": "^3.1.17",
 		"@ctx-core/store": "^13.1.32",
-		"svelte": "^3.23.0"
+		"svelte": "^3.23.1"
 	},
 	"devDependencies": {
-		"typescript": "^3.9.3"
+		"typescript": "^3.9.5"
 	},
 	"gitHead": "41de24068c4e49ead27b9ed81765813c3aa48120"
 }
