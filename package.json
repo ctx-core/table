@@ -2,9 +2,9 @@
 	"name": "@ctx-core/table",
 	"version": "6.2.66",
 	"description": "ctx-core table",
-	"main": "index.js",
-	"module": "index.js",
-	"types": "index.ts",
+	"main": "./index.js",
+	"module": "./index.js",
+	"types": "./index.ts",
 	"scripts": {
 		"build": "npm run clean && npm run compile",
 		"clean": "rm -f tsconfig.tsbuildinfo",
