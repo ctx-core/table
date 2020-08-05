@@ -48,17 +48,13 @@ export const b__rows = _b('__rows', ctx=>
 	], _rows))
 export const __rows = b__rows()
 export const b__rows__data = _b('__rows__data', ctx=>
-	derived__spread<[
-		Readable<falsy|any[]>,
-		Readable<falsy|any[]>,
-		Readable<falsy|any>,
-	], falsy|any[]>([
+	derived__spread([
 			b__rows(ctx),
 			b__columns__data(ctx),
 			b__offsets__column(ctx),
 		],
 		_rows__data
-	)
+	) as Readable<falsy|any[]>
 )
 export const __rows__data = b__rows__data()
 export const b__reverse__columns = _b('__reverse__columns', ctx=>
