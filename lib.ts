@@ -1,6 +1,4 @@
 import { reduce } from '@ctx-core/array'
-import { log } from '@ctx-core/logger'
-const logPrefix = '@ctx-core/table/lib.ts'
 export function _offsets__column(columns) {
 	return reduce(columns, (memo, column, i)=>{
 		memo[column] = i
@@ -8,7 +6,6 @@ export function _offsets__column(columns) {
 	}, {})
 }
 export function _rows(table, offsets__column) {
-	log(`${logPrefix}|_rows`)
 	if (!table || !offsets__column) return
 	const a1__row__data = table.slice(1)
 	let rows__ = []
@@ -21,7 +18,6 @@ export function _rows(table, offsets__column) {
 	return rows__
 }
 export function _rows__data(rows, columns__data, offsets__column) {
-	log(`${logPrefix}|_rows__data`)
 	if (!rows) return
 	let rows__data = []
 	for (let i = 0; i < rows.length; i++) {

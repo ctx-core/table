@@ -1,22 +1,15 @@
 import { writable, derived, get, Readable } from 'svelte/store'
 import {
-	derived__spread,
-	_clear__store,
-	subscribe,
+	derived__spread, _clear__store, subscribe,
 } from '@ctx-core/store'
 import { _b } from '@ctx-core/object'
 import { _andand, falsy } from '@ctx-core/function'
 import { I } from '@ctx-core/combinators'
 import { _hash__key, _fn__hash__key } from '@ctx-core/array'
 import {
-	_proxy__row,
-	_offsets__column,
-	_rows,
-	_rows__data
+	_proxy__row, _offsets__column, _rows, _rows__data
 } from './lib'
-import { _has__dom } from '@ctx-core/dom'
-import { log } from '@ctx-core/logger'
-const logPrefix = '@ctx-core/table/store.js'
+import { has__dom } from '@ctx-core/dom'
 export const b__table = _b('__table', ()=>
 	writable([]))
 export const __table = b__table()
@@ -72,7 +65,6 @@ export const b__rank__table = _b('derived__spread', ctx=>
 	], _rank__table))
 export const __rank__table = b__rank__table()
 function _rank__table(columns, rows, offsets__column) {
-	log(`${logPrefix}|_rank__table`)
 	if (!columns || !rows) return
 	let rank__table = []
 	rank__table.push(columns)
@@ -114,7 +106,7 @@ export const b__row_id = _b('__row_id', ()=>
 export const __row_id = b__row_id()
 export const b__inputs__filter__rows__data = _b('__inputs__filter__rows__data', ctx=>{
 	const __inputs__filter__rows__data = writable(null)
-	if (_has__dom()) {
+	if (has__dom) {
 		subscribe(
 			b__table(ctx),
 			_clear__store(__inputs__filter__rows__data))
@@ -131,7 +123,6 @@ export const b__filter__rows__data = _b('__filter__rows__data', ctx=>
 			b__rows__data(ctx)
 		],
 		([inputs__filter__rows__data, rows__data])=>{
-			log(`${logPrefix}|_filter`)
 			if (!inputs__filter__rows__data || !rows__data) return
 			const filter__rows = []
 			for (let i = 0; i < rows__data.length; i++) {
@@ -166,14 +157,13 @@ export const b__highlight__rows__data = _b('__highlight__rows__data', ()=>
 export const b__table__highlight__rows__data = _b('__table__highlight__rows__data', ()=>
 	writable(null))
 export const b__assign__highlight__rows = _b('assign__highlight__rows', ctx=>{
-	if (_has__dom()) {
+	if (has__dom) {
 		subscribe(b__row_id(ctx), assign__highlight__rows)
 		subscribe(b__table(ctx), assign__highlight__rows)
 		subscribe(b__filter__rows__data(ctx), assign__highlight__rows)
 	}
 	return assign__highlight__rows
 	function assign__highlight__rows() {
-		log(`${logPrefix}|assign__highlight__rows`)
 		const row_id = get(b__row_id(ctx))
 		const rows__data = get(b__rows__data(ctx))
 		const filter__rows__data = get(b__filter__rows__data(ctx))
@@ -202,14 +192,13 @@ export const b__row = _b('__row', ()=>
 	writable(null))
 export const __row = b__row()
 export const b__set__row = _b('set__row', ctx=>{
-	if (_has__dom()) {
+	if (has__dom) {
 		subscribe(b__row_id(ctx), set__row)
 		subscribe(b__table(ctx), set__row)
 		set__row()
 	}
 	return set__row
 	function set__row() {
-		log(`${logPrefix}|agent__row|set__row`)
 		const rows = get(b__rows(ctx))
 		const row_id = get(b__row_id(ctx))
 		if (!rows || !row_id) return
