@@ -29,10 +29,10 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@ctx-core/array": "^16.0.15",
+		"@ctx-core/array": "^17.0.0",
 		"@ctx-core/combinators": "^4.2.22",
 		"@ctx-core/dom": "^6.0.28",
-		"@ctx-core/function": "^13.2.4",
+		"@ctx-core/function": "^14.0.0",
 		"@ctx-core/store": "^16.2.2",
 		"svelte": "^3.24.1"
 	},
