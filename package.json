@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "6.2.115",
+	"version": "6.2.116",
 	"description": "ctx-core table",
 	"main": "./index.js",
 	"module": "./index.js",
@@ -31,9 +31,9 @@
 	"dependencies": {
 		"@ctx-core/array": "^17.0.2",
 		"@ctx-core/combinators": "^4.2.23",
-		"@ctx-core/dom": "^6.0.31",
+		"@ctx-core/dom": "^6.0.32",
 		"@ctx-core/function": "^14.0.1",
-		"@ctx-core/store": "^16.2.5",
+		"@ctx-core/store": "^16.2.6",
 		"svelte": "^3.25.0"
 	},
 	"devDependencies": {
