@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "6.2.116",
+	"version": "6.2.117",
 	"description": "ctx-core table",
 	"main": "./index.js",
 	"module": "./index.js",
@@ -29,11 +29,11 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@ctx-core/array": "^17.0.2",
-		"@ctx-core/combinators": "^4.2.23",
-		"@ctx-core/dom": "^6.0.32",
-		"@ctx-core/function": "^14.0.1",
-		"@ctx-core/store": "^16.2.6",
+		"@ctx-core/array": "^17.0.3",
+		"@ctx-core/combinators": "^4.2.24",
+		"@ctx-core/dom": "^6.0.33",
+		"@ctx-core/function": "^14.0.2",
+		"@ctx-core/store": "^16.2.7",
 		"svelte": "^3.25.0"
 	},
 	"devDependencies": {
