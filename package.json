@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "6.2.118",
+	"version": "6.2.119",
 	"description": "ctx-core table",
 	"main": "./index.js",
 	"module": "./index.js",
