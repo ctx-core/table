@@ -31,9 +31,9 @@
     "@ctx-core/combinators": "workspace:*",
     "@ctx-core/dom": "workspace:*",
     "@ctx-core/function": "workspace:*",
+    "@ctx-core/object": "workspace:*",
     "@ctx-core/store": "workspace:*",
-    "svelte": "~3.25.1",
-    "@ctx-core/object": "workspace:*"
+    "svelte": "~3.25.1"
   },
   "devDependencies": {
     "typescript": "^4.0.2"
