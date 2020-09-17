@@ -1,9 +1,9 @@
 import { reduce } from '@ctx-core/array'
-export function _offsets__column(columns) {
-	return reduce(columns, (memo, column, i)=>{
+export function _offsets__column(columns: string[]) {
+	return reduce<string, Record<string, number>>(columns, (memo, column, i)=>{
 		memo[column] = i
 		return memo
-	}, {})
+	}, {} as Record<string, number>)
 }
 export function _rows(table, offsets__column) {
 	if (!table || !offsets__column) return

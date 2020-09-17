@@ -1,44 +1,45 @@
 {
-	"name": "@ctx-core/table",
-	"version": "6.2.119",
-	"description": "ctx-core table",
-	"keywords": [
-		"ctx-core",
-		"table"
-	],
-	"homepage": "https://github.com/ctx-core/table#readme",
-	"bugs": {
-		"url": "https://github.com/ctx-core/table/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/ctx-core/table/issues"
-	},
-	"license": "Apache-2.0",
-	"author": "Brian Takita",
-	"main": "./index.js",
-	"module": "./index.js",
-	"types": "./index.ts",
-	"scripts": {
-		"build": "npm run clean && npm run compile",
-		"clean": "rm -f tsconfig.tsbuildinfo",
-		"compile": "tsc -b",
-		"exec": "$@",
-		"prepublishOnly": "npm run compile"
-	},
-	"dependencies": {
-		"@ctx-core/array": "workspace:*",
-		"@ctx-core/combinators": "workspace:*",
-		"@ctx-core/dom": "workspace:*",
-		"@ctx-core/function": "workspace:*",
-		"@ctx-core/store": "workspace:*",
-		"svelte": "^3.25.0"
-	},
-	"devDependencies": {
-		"typescript": "^4.0.2"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"gitHead": "01a82e0fa0cc12805bcbaaf0e4d7138119271e30"
+  "name": "@ctx-core/table",
+  "version": "6.2.120",
+  "description": "ctx-core table",
+  "keywords": [
+    "ctx-core",
+    "table"
+  ],
+  "homepage": "https://github.com/ctx-core/table#readme",
+  "bugs": {
+    "url": "https://github.com/ctx-core/table/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ctx-core/table/issues"
+  },
+  "license": "Apache-2.0",
+  "author": "Brian Takita",
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.ts",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -f tsconfig.tsbuildinfo",
+    "compile": "tsc -b",
+    "exec": "$@",
+    "prepublishOnly": "npm run compile"
+  },
+  "dependencies": {
+    "@ctx-core/array": "workspace:*",
+    "@ctx-core/combinators": "workspace:*",
+    "@ctx-core/dom": "workspace:*",
+    "@ctx-core/function": "workspace:*",
+    "@ctx-core/store": "workspace:*",
+    "svelte": "~3.25.1",
+    "@ctx-core/object": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "01a82e0fa0cc12805bcbaaf0e4d7138119271e30"
 }

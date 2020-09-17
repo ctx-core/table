@@ -1,27 +1,32 @@
 import { writable, derived, get, Readable } from 'svelte/store'
 import {
-	derived__spread, _clear__store, subscribe,
+	derived__spread, _clear__store, subscribe, Writable,
 } from '@ctx-core/store'
 import { _b } from '@ctx-core/object'
-import { _andand, falsy } from '@ctx-core/function'
-import { I } from '@ctx-core/combinators'
+import { _andand, maybe } from '@ctx-core/function'
 import { _hash__key, _fn__hash__key } from '@ctx-core/array'
 import {
 	_proxy__row, _offsets__column, _rows, _rows__data
 } from './lib'
 import { has__dom } from '@ctx-core/dom'
-export const b__table = _b('__table', ()=>
-	writable([]))
+export function b__table<I = unknown>(ctx?:unknown) {
+	return _b<table_type<I>>('__table', ()=>
+		writable([]))(ctx)
+}
 export const __table = b__table()
-export const b__columns = _b('__columns', ctx=>
+export type $table_type<I = unknown> = I[][]
+export type table_type<I = unknown> = Writable<$table_type<I>>
+export const b__columns = _b<columns_type>('__columns', ctx=>
 	derived(
 		b__table(ctx),
-		_andand(0)))
+		_andand<unknown[], unknown[]>(0)))
+export type $columns_type = unknown[]
+export type columns_type = Readable<$columns_type>
 export const __columns = b__columns()
 export const b__columns__data = _b('__columns__data', ctx=>
 	derived(
 		b__columns(ctx),
-		I))
+		(v:$columns_type)=>v))
 export const __columns__data = b__columns__data()
 export const b__offsets__column = _b('__offsets__column', ctx=>
 	derived(
@@ -29,7 +34,7 @@ export const b__offsets__column = _b('__offsets__column', ctx=>
 		_offsets__column))
 export const __offsets__column = b__offsets__column()
 export const b__domain__table = _b('__domain__table', ()=>
-	writable([0, 10.0]))
+	writable([[0, 10.0]]))
 export const __domain__table = b__domain__table()
 export const b__domain__ticks = _b('__domain__ticks', ()=>
 	writable([0, 5.0, 10.0]))
@@ -47,8 +52,10 @@ export const b__rows__data = _b('__rows__data', ctx=>
 			b__offsets__column(ctx),
 		],
 		_rows__data
-	) as Readable<falsy|any[]>
+	) as data_rows_type
 )
+export type $data_rows_type<I = unknown> = maybe<I[]>
+export type data_rows_type<I = unknown> = Readable<$data_rows_type<I>>
 export const __rows__data = b__rows__data()
 export const b__reverse__columns = _b('__reverse__columns', ctx=>
 	derived(
@@ -114,38 +121,37 @@ export const b__inputs__filter__rows__data = _b('__inputs__filter__rows__data', 
 	return __inputs__filter__rows__data
 })
 export const __inputs__filter__rows__data = b__inputs__filter__rows__data()
-export const b__filter__rows__data = _b('__filter__rows__data', ctx=>
-	derived<[
-		Readable<falsy|any>,
-		Readable<falsy|any[]>
-	], falsy|any[]>([
-			b__inputs__filter__rows__data(ctx),
-			b__rows__data(ctx)
-		],
-		([inputs__filter__rows__data, rows__data])=>{
-			if (!inputs__filter__rows__data || !rows__data) return
-			const filter__rows = []
-			for (let i = 0; i < rows__data.length; i++) {
-				const row = rows__data[i]
-				let every
-				for (let j = inputs__filter__rows__data.length; j--;) {
-					const input__rows__data = inputs__filter__rows__data[j]
-					const { column } = input__rows__data
-					const value =
-						row[column]
-						|| 0
-					if (input__rows__data.value > value) break
-					if (!j) {
-						every = true
+export function b__filter__rows__data<I = unknown>(ctx?:unknown) {
+	return _b('__filter__rows__data', (ctx:unknown)=>
+		derived([
+				b__inputs__filter__rows__data(ctx),
+				b__rows__data(ctx)
+			],
+			([inputs__filter__rows__data, data_row_a1])=>{
+				if (!inputs__filter__rows__data || !data_row_a1) return
+				const filter__rows = []
+				for (let i = 0; i < (data_row_a1 as unknown[]).length; i++) {
+					const row = data_row_a1[i]
+					let every
+					for (let j = inputs__filter__rows__data.length; j--;) {
+						const input__rows__data = inputs__filter__rows__data[j]
+						const { column } = input__rows__data
+						const value =
+							row[column]
+							|| 0
+						if (input__rows__data.value > value) break
+						if (!j) {
+							every = true
+						}
+					}
+					if (every) {
+						filter__rows.push(row)
 					}
 				}
-				if (every) {
-					filter__rows.push(row)
-				}
-			}
-			return filter__rows
-		})
-)
+				return filter__rows
+			}) as data_rows_type<I>
+	)(ctx)
+}
 export const __filter__rows__data = b__filter__rows__data()
 export const b__table__filter__rows__data = _b('__table__filter__rows__data', ctx=>
 	derived(
