@@ -1,5 +1,16 @@
 # @ctx-core/table
 
+## 7.0.2
+
+### Patch Changes
+
+- fix: install issues: using explicit workspace: versioning
+- Updated dependencies [undefined]
+  - @ctx-core/array@19.0.2
+  - @ctx-core/dom@7.0.2
+  - @ctx-core/object@12.0.1
+  - @ctx-core/store@17.0.2
+
 ## 7.0.1
 
 ### Patch Changes
