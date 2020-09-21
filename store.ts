@@ -137,11 +137,16 @@ export type $maybe_type__inputs__filter__rows__data<I> = maybe_null<$type__input
 export type type__inputs__filter__rows__data<I> = Writable<$maybe_type__inputs__filter__rows__data<I>>
 export function b__inputs__filter__rows__data<I>(ctx?:object) {
 	return _b('__inputs__filter__rows__data', ctx=>{
-		const __inputs__filter__rows__data = writable<$maybe_type__inputs__filter__rows__data<I>>(null)
+		const __inputs__filter__rows__data = writable<$maybe_type__inputs__filter__rows__data<I>>(
+			null
+		) as type__inputs__filter__rows__data<I>
 		if (has__dom) {
 			subscribe(
 				b__table<I>(ctx),
-				_clear_store(__inputs__filter__rows__data, null))
+				_clear_store<type__inputs__filter__rows__data<I>>(
+					__inputs__filter__rows__data, null
+				)
+			)
 		}
 		return __inputs__filter__rows__data
 	})(ctx)

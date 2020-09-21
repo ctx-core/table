@@ -39,8 +39,8 @@ export declare type $data_row_filter_input<I> = {
 export declare type $type__inputs__filter__rows__data<I> = $data_row_filter_input<I>[];
 export declare type $maybe_type__inputs__filter__rows__data<I> = maybe_null<$type__inputs__filter__rows__data<I>>;
 export declare type type__inputs__filter__rows__data<I> = Writable<$maybe_type__inputs__filter__rows__data<I>>;
-export declare function b__inputs__filter__rows__data<I>(ctx?: object): Writable<maybe<$type__inputs__filter__rows__data<I>, null>>;
-export declare const __inputs__filter__rows__data: Writable<maybe<$type__inputs__filter__rows__data<unknown>, null>>;
+export declare function b__inputs__filter__rows__data<I>(ctx?: object): type__inputs__filter__rows__data<I>;
+export declare const __inputs__filter__rows__data: type__inputs__filter__rows__data<unknown>;
 export declare function b__filter__rows__data<I>(ctx?: any): data_rows_type<I>;
 export declare const __filter__rows__data: data_rows_type<unknown>;
 export declare function b__table__filter__rows__data<I>(ctx?: any): Readable<Record<string, I[]>>;
