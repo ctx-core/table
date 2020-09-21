@@ -10,13 +10,13 @@ import { _column_offsets } from './_column_offsets'
 import { _rows } from './_rows'
 import { _data_rows } from './_data_rows'
 import { _row_proxy } from './_row_proxy'
-export function b__table<I>(ctx?:object) {
+export function b__table<I extends unknown>(ctx?:object) {
 	return _b<table_type<I>>('__table', ()=>
 		writable<$table_type<I>>([]))(ctx)
 }
 export const __table = b__table()
-export type $table_type<I> = [string[]?, ...I[][]]
-export type table_type<I> = Writable<$table_type<I>>
+export type $table_type<I extends unknown> = [string[]?, ...I[][]]
+export type table_type<I extends unknown> = Writable<$table_type<I>>
 export function b__columns(ctx?:object) {
 	return (
 		_b<columns_type>('__columns', ctx=>
@@ -132,10 +132,12 @@ export type $data_row_filter_input<I> = {
 	column:number
 	value:I
 }
-export type $type__inputs__filter__rows__data<I> = $data_row_filter_input<I>[]
-export type $maybe_type__inputs__filter__rows__data<I> = maybe_null<$type__inputs__filter__rows__data<I>>
-export type type__inputs__filter__rows__data<I> = Writable<$maybe_type__inputs__filter__rows__data<I>>
-export function b__inputs__filter__rows__data<I>(ctx?:object) {
+export type $type__inputs__filter__rows__data<I extends unknown> = $data_row_filter_input<I>[]
+export type $maybe_type__inputs__filter__rows__data<I extends unknown> =
+	maybe_null<$type__inputs__filter__rows__data<I>>
+export type type__inputs__filter__rows__data<I extends unknown> =
+	Writable<$maybe_type__inputs__filter__rows__data<I>>
+export function b__inputs__filter__rows__data<I extends unknown>(ctx?:object) {
 	return _b('__inputs__filter__rows__data', ctx=>{
 		const __inputs__filter__rows__data = writable<$maybe_type__inputs__filter__rows__data<I>>(
 			null
@@ -189,7 +191,7 @@ export function b__filter__rows__data<I>(ctx?) {
 	)(ctx)
 }
 export const __filter__rows__data = b__filter__rows__data()
-export function b__table__filter__rows__data<I>(ctx?) {
+export function b__table__filter__rows__data<I extends unknown>(ctx?) {
 	return _b('__table__filter__rows__data', ctx=>
 		derived(
 			b__filter__rows__data<I>(ctx),
@@ -198,22 +200,26 @@ export function b__table__filter__rows__data<I>(ctx?) {
 	)(ctx)
 }
 export const __table__filter__rows__data = b__table__filter__rows__data()
-export type $type__highlight__rows__data<I> = I[][]
-export type $maybe_type__highlight__rows__data<I> = maybe_null<$type__highlight__rows__data<I>>
-export type type__highlight__rows__data<I> = Writable<$maybe_type__highlight__rows__data<I>>
-export function b__highlight__rows__data<I>(ctx?) {
+export type $type__highlight__rows__data<I extends unknown> = I[][]
+export type $maybe_type__highlight__rows__data<I extends unknown> =
+	maybe_null<$type__highlight__rows__data<I>>
+export type type__highlight__rows__data<I extends unknown> =
+	Writable<$maybe_type__highlight__rows__data<I>>
+export function b__highlight__rows__data<I extends unknown>(ctx?) {
 	return _b<type__highlight__rows__data<I>>('__highlight__rows__data',
 		()=>writable(null))(ctx)
 }
-export type $type__table__highlight__rows__data<I> = Record<string, I[]>
-export type $maybe_type__table__highlight__rows__data<I> = maybe_null<$type__table__highlight__rows__data<I>>
-export type type__table__highlight__rows__data<I> = Writable<$maybe_type__table__highlight__rows__data<I>>
-export function b__table__highlight__rows__data<I>(ctx?) {
+export type $type__table__highlight__rows__data<I extends unknown> = Record<string, I[]>
+export type $maybe_type__table__highlight__rows__data<I extends unknown> =
+	maybe_null<$type__table__highlight__rows__data<I>>
+export type type__table__highlight__rows__data<I extends unknown> =
+	Writable<$maybe_type__table__highlight__rows__data<I>>
+export function b__table__highlight__rows__data<I extends unknown>(ctx?) {
 	return _b<type__table__highlight__rows__data<I>>('__table__highlight__rows__data', ()=>
 		writable(null)
 	)(ctx)
 }
-export function b__assign__highlight__rows<I>(ctx?) {
+export function b__assign__highlight__rows<I extends unknown>(ctx?) {
 	return _b('assign__highlight__rows', ctx=>{
 		if (has__dom) {
 			subscribe(b__row_id(ctx), assign__highlight__rows)
