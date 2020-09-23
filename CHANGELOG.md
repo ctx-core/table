@@ -1,5 +1,13 @@
 # @ctx-core/table
 
+## 7.0.17
+
+### Patch Changes
+
+- @ctx-core/array@19.0.10
+- @ctx-core/store@17.2.2
+- @ctx-core/dom@7.0.16
+
 ## 7.0.16
 
 ### Patch Changes
