@@ -1,6 +1,6 @@
 import { writable, derived, get, Readable } from 'svelte/store'
 import {
-	derived__spread, _clear_store, subscribe, Writable,
+	spread_derived, _clear_store, subscribe, Writable,
 } from '@ctx-core/store'
 import { _b } from '@ctx-core/object'
 import type { maybe, maybe_null } from '@ctx-core/function'
@@ -49,7 +49,7 @@ export const b__domain__ticks = _b('__domain__ticks', ()=>
 export const __domain__ticks = b__domain__ticks()
 export function b__rows<I>(ctx?:object) {
 	return _b('__rows', ctx=>
-		derived__spread([
+		spread_derived([
 			b__table<I>(ctx),
 			b__offsets__column(ctx)
 		], _rows))(ctx)
@@ -57,7 +57,7 @@ export function b__rows<I>(ctx?:object) {
 export const __rows = b__rows()
 export function b__rows__data<I>(ctx?:object) {
 	return _b('__rows__data', ctx=>
-		derived__spread([
+		spread_derived([
 				b__rows<I>(ctx),
 				b__columns__data(ctx),
 				b__offsets__column(ctx),
@@ -77,8 +77,8 @@ export const b__reverse__columns = _b('__reverse__columns', ctx=>
 			columns
 			&& columns.slice(0).reverse()))
 export const __reverse__columns = b__reverse__columns()
-export const b__rank__table = _b('derived__spread', ctx=>
-	derived__spread([
+export const b__rank__table = _b('spread_derived', ctx=>
+	spread_derived([
 		b__columns(ctx),
 		b__rows(ctx),
 		b__offsets__column(ctx),
@@ -145,7 +145,7 @@ export function b__inputs__filter__rows__data<I extends unknown>(ctx?:object) {
 		if (has__dom) {
 			subscribe(
 				b__table<I>(ctx),
-				_clear_store<type__inputs__filter__rows__data<I>>(
+				_clear_store<$maybe_type__inputs__filter__rows__data<I>>(
 					__inputs__filter__rows__data, null
 				)
 			)
