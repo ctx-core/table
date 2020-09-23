@@ -1,5 +1,15 @@
 # @ctx-core/table
 
+## 7.0.16
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/object@12.0.5
+  - @ctx-core/array@19.0.9
+  - @ctx-core/dom@7.0.15
+  - @ctx-core/store@17.2.1
+
 ## 7.0.15
 
 ### Patch Changes
