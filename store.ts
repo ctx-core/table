@@ -10,51 +10,45 @@ import { _column_offsets } from './_column_offsets'
 import { _rows } from './_rows'
 import { _data_rows } from './_data_rows'
 import { _row_proxy } from './_row_proxy'
-export function b__table<I extends unknown>(ctx?:object) {
+export function table_b<I extends unknown>(ctx?:object) {
 	return _b<table_type<I>>('__table', ()=>
 		writable<$table_type<I>>([]))(ctx)
 }
-export const __table = b__table()
+export const b__table = table_b
 export type $table_type<I extends unknown> = [string[]?, ...I[][]]
 export type table_type<I extends unknown> = Writable<$table_type<I>>
 export function b__columns(ctx?:object) {
 	return (
 		_b<columns_type>('__columns', ctx=>
 			derived(
-				b__table(ctx),
+				table_b(ctx),
 				($table:$table_type<unknown>)=>$table?.[0] as $columns_type,
 			)
 		)(ctx))
 }
 export type $columns_type = string[]
 export type columns_type = Readable<$columns_type>
-export const __columns = b__columns()
 export const b__columns__data = _b('__columns__data', ctx=>
 	derived(
 		b__columns(ctx),
 		(v:$columns_type)=>v))
-export const __columns__data = b__columns__data()
 export const b__offsets__column = _b('__offsets__column', ctx=>
 	derived(
 		b__columns(ctx),
 		_column_offsets))
-export const __offsets__column = b__offsets__column()
 export type $type__domain__table = number[][]
 export type type__domain__table = Writable<$type__domain__table>
 export const b__domain__table = _b('__domain__table', ()=>
 	writable([[0, 10.0]]))
-export const __domain__table = b__domain__table()
 export const b__domain__ticks = _b('__domain__ticks', ()=>
 	writable([0, 5.0, 10.0]))
-export const __domain__ticks = b__domain__ticks()
 export function b__rows<I>(ctx?:object) {
 	return _b('__rows', ctx=>
 		spread_derived([
-			b__table<I>(ctx),
+			table_b<I>(ctx),
 			b__offsets__column(ctx)
 		], _rows))(ctx)
 }
-export const __rows = b__rows()
 export function b__rows__data<I>(ctx?:object) {
 	return _b('__rows__data', ctx=>
 		spread_derived([
@@ -69,21 +63,18 @@ export function b__rows__data<I>(ctx?:object) {
 export type $data_rows_type<I> = I[][]
 export type $maybe__data_rows_type<I> = maybe<$data_rows_type<I>>
 export type data_rows_type<I> = Readable<$maybe__data_rows_type<I>>
-export const __rows__data = b__rows__data()
 export const b__reverse__columns = _b('__reverse__columns', ctx=>
 	derived(
 		b__columns(ctx),
 		columns=>
 			columns
 			&& columns.slice(0).reverse()))
-export const __reverse__columns = b__reverse__columns()
 export const b__rank__table = _b('spread_derived', ctx=>
 	spread_derived([
 		b__columns(ctx),
 		b__rows(ctx),
 		b__offsets__column(ctx),
 	], _rank__table))
-export const __rank__table = b__rank__table()
 function _rank__table<I>(maybe_columns:maybe<$columns_type>, maybe_rows:maybe<I[][]>, offsets__column) {
 	if (!maybe_columns || !maybe_rows) return
 	const columns = maybe_columns as string[]
@@ -127,7 +118,6 @@ function _rank__table<I>(maybe_columns:maybe<$columns_type>, maybe_rows:maybe<I[
 }
 export const b__row_id = _b('__row_id', ()=>
 	writable(null))
-export const __row_id = b__row_id()
 export type $data_row_filter_input<I> = {
 	column:number
 	value:I
@@ -144,7 +134,7 @@ export function b__inputs__filter__rows__data<I extends unknown>(ctx?:object) {
 		) as type__inputs__filter__rows__data<I>
 		if (has__dom) {
 			subscribe(
-				b__table<I>(ctx),
+				table_b<I>(ctx),
 				_clear_store<$maybe_type__inputs__filter__rows__data<I>>(
 					__inputs__filter__rows__data, null
 				)
@@ -153,7 +143,6 @@ export function b__inputs__filter__rows__data<I extends unknown>(ctx?:object) {
 		return __inputs__filter__rows__data
 	})(ctx)
 }
-export const __inputs__filter__rows__data = b__inputs__filter__rows__data()
 export function b__filter__rows__data<I>(ctx?) {
 	return _b('__filter__rows__data', (ctx)=>
 		derived([
@@ -190,8 +179,7 @@ export function b__filter__rows__data<I>(ctx?) {
 			}) as data_rows_type<I>
 	)(ctx)
 }
-export const __filter__rows__data = b__filter__rows__data()
-export function b__table__filter__rows__data<I extends unknown>(ctx?) {
+export function table_b__filter__rows__data<I extends unknown>(ctx?) {
 	return _b('__table__filter__rows__data', ctx=>
 		derived(
 			b__filter__rows__data<I>(ctx),
@@ -199,7 +187,6 @@ export function b__table__filter__rows__data<I extends unknown>(ctx?) {
 		)
 	)(ctx)
 }
-export const __table__filter__rows__data = b__table__filter__rows__data()
 export type $type__highlight__rows__data<I extends unknown> = I[][]
 export type $maybe_type__highlight__rows__data<I extends unknown> =
 	maybe_null<$type__highlight__rows__data<I>>
@@ -214,7 +201,7 @@ export type $maybe_type__table__highlight__rows__data<I extends unknown> =
 	maybe_null<$type__table__highlight__rows__data<I>>
 export type type__table__highlight__rows__data<I extends unknown> =
 	Writable<$maybe_type__table__highlight__rows__data<I>>
-export function b__table__highlight__rows__data<I extends unknown>(ctx?) {
+export function table_b__highlight__rows__data<I extends unknown>(ctx?) {
 	return _b<type__table__highlight__rows__data<I>>('__table__highlight__rows__data', ()=>
 		writable(null)
 	)(ctx)
@@ -223,7 +210,7 @@ export function b__assign__highlight__rows<I extends unknown>(ctx?) {
 	return _b('assign__highlight__rows', ctx=>{
 		if (has__dom) {
 			subscribe(b__row_id(ctx), assign__highlight__rows)
-			subscribe(b__table(ctx), assign__highlight__rows)
+			subscribe(table_b(ctx), assign__highlight__rows)
 			subscribe(b__filter__rows__data(ctx), assign__highlight__rows)
 		}
 		return assign__highlight__rows
@@ -247,7 +234,7 @@ export function b__assign__highlight__rows<I extends unknown>(ctx?) {
 				&& _key_hash<I[][]>(maybe_highlight__rows__data, 'row_id')
 			b__highlight__rows__data<I>(ctx)
 				.set(maybe_highlight__rows__data)
-			b__table__highlight__rows__data<I>(ctx)
+			table_b__highlight__rows__data<I>(ctx)
 				.set(table__highlight__rows__data)
 		}
 	})(ctx)
@@ -255,11 +242,10 @@ export function b__assign__highlight__rows<I extends unknown>(ctx?) {
 export const assign__highlight__rows = b__assign__highlight__rows()
 export const b__row = _b('__row', ()=>
 	writable(null))
-export const __row = b__row()
 export const b__set__row = _b('set__row', ctx=>{
 	if (has__dom) {
 		subscribe(b__row_id(ctx), set__row)
-		subscribe(b__table(ctx), set__row)
+		subscribe(table_b(ctx), set__row)
 		set__row()
 	}
 	return set__row
@@ -275,7 +261,7 @@ export const b__set__row = _b('set__row', ctx=>{
 				break
 			}
 		}
-		__row.set(row)
+		b__row(ctx).set(row)
 	}
 })
 export const set__row = b__set__row()
