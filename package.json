@@ -1,44 +1,44 @@
 {
-  "name": "@ctx-core/table",
-  "version": "7.0.33",
-  "description": "ctx-core table",
-  "keywords": [
-    "ctx-core",
-    "table"
-  ],
-  "homepage": "https://github.com/ctx-core/table#readme",
-  "bugs": {
-    "url": "https://github.com/ctx-core/table/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ctx-core/table/issues"
-  },
-  "license": "Apache-2.0",
-  "author": "Brian Takita",
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.ts",
-  "scripts": {
-    "build": "npm run clean && npm run compile",
-    "clean": "rm -f tsconfig.tsbuildinfo",
-    "compile": "./node_modules/.bin/tsc -b",
-    "exec": "$@",
-    "prepublishOnly": "npm run compile"
-  },
-  "dependencies": {
-    "@ctx-core/array": "workspace:^19.0.19",
-    "@ctx-core/combinators": "workspace:^5.0.2",
-    "@ctx-core/dom": "workspace:^7.0.33",
-    "@ctx-core/function": "workspace:^16.1.1",
-    "@ctx-core/object": "workspace:^12.0.13",
-    "@ctx-core/store": "workspace:^18.1.12",
-    "svelte": "3.28.0"
-  },
-  "devDependencies": {
-    "typescript": "^4.0.3"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@ctx-core/table",
+	"version": "7.0.33",
+	"description": "ctx-core table",
+	"keywords": [
+		"ctx-core",
+		"table"
+	],
+	"homepage": "https://github.com/ctx-core/table#readme",
+	"bugs": {
+		"url": "https://github.com/ctx-core/table/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ctx-core/table/issues"
+	},
+	"license": "Apache-2.0",
+	"author": "Brian Takita",
+	"main": "./index.js",
+	"module": "./index.js",
+	"types": "./index.ts",
+	"scripts": {
+		"build": "npm run clean && npm run compile",
+		"clean": "rm -f tsconfig.tsbuildinfo",
+		"compile": "./node_modules/.bin/tsc -b",
+		"exec": "$@",
+		"prepublishOnly": "npm run compile"
+	},
+	"dependencies": {
+		"@ctx-core/array": "workspace:^19.0.19",
+		"@ctx-core/combinators": "workspace:^5.0.2",
+		"@ctx-core/dom": "workspace:^7.0.33",
+		"@ctx-core/function": "workspace:^16.1.1",
+		"@ctx-core/object": "workspace:^12.0.13",
+		"@ctx-core/store": "workspace:^18.1.12",
+		"svelte": "3.28.0"
+	},
+	"devDependencies": {
+		"typescript": "^4.0.3"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
