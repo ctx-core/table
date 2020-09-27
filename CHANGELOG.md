@@ -1,5 +1,14 @@
 # @ctx-core/table
 
+## 7.0.34
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+- Updated dependencies [undefined]
+  - @ctx-core/store@19.0.0
+  - @ctx-core/dom@7.0.34
+
 ## 7.0.33
 
 ### Patch Changes
