@@ -1,5 +1,15 @@
 # @ctx-core/table
 
+## 7.0.42
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+- Updated dependencies [undefined]
+- Updated dependencies [undefined]
+  - @ctx-core/store@23.0.0
+  - @ctx-core/dom@7.0.43
+
 ## 7.0.41
 
 ### Patch Changes
