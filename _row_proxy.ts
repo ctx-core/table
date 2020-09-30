@@ -1,13 +1,13 @@
-export function _row_proxy<I, O = unknown>(
+export function _row_proxy<I extends unknown, O = unknown>(
 	data_row:I[],
-	offsets__column:Record<string, number>
+	column_offsets:Record<string, number>
 ) {
 	return (new Proxy(data_row, {
 		get
 	}) as O)
 	function get(target, name) {
-		if (offsets__column[name] != null) {
-			return data_row[offsets__column[name]]
+		if (column_offsets[name] != null) {
+			return data_row[column_offsets[name]]
 		} else {
 			return target[name]
 		}
