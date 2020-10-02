@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 8.0.2
+
+### Patch Changes
+
+- flash updates
+
 ## 8.0.1
 
 ### Patch Changes
