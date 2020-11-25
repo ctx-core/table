@@ -1,3 +1,3 @@
-export type row_type = {
+export interface row_type {
 	row_id:number
 }

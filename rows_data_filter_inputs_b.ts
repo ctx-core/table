@@ -21,7 +21,7 @@ export function rows_data_filter_inputs_b<I extends row_type>(ctx?:object) {
 	})(ctx)
 }
 export const b__inputs__filter__rows__data = rows_data_filter_inputs_b
-export type $data_row_filter_input<I> = {
+export interface $data_row_filter_input<I> {
 	column:number
 	value:I
 }
