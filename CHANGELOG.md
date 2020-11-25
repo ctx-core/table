@@ -1,5 +1,19 @@
 # @ctx-core/table
 
+## 8.1.0
+
+### Minor Changes
+
+- interface instead of type
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/array@19.1.0
+  - @ctx-core/object@13.1.0
+  - @ctx-core/store@23.1.0
+  - @ctx-core/dom@7.1.11
+
 ## 8.0.14
 
 ### Patch Changes
