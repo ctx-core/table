@@ -20,7 +20,6 @@ export function rows_data_filter_inputs_b<I extends row_type, C extends object =
 		return rows_data_filter_inputs
 	})(ctx)
 }
-export { rows_data_filter_inputs_b as b__inputs__filter__rows__data }
 export interface $data_row_filter_input<I> {
 	column:number
 	value:I
@@ -28,5 +27,6 @@ export interface $data_row_filter_input<I> {
 export type $rows_data_filter_inputs_type<I extends unknown> = $data_row_filter_input<I>[]
 export type $rows_data_filter_inputs_maybe_type<I extends unknown> =
 	maybe_null<$rows_data_filter_inputs_type<I>>
-export type rows_data_filter_inputs_type<I extends unknown> =
-	Writable<$rows_data_filter_inputs_maybe_type<I>>
+export interface rows_data_filter_inputs_type<I extends unknown>
+	extends Writable<$rows_data_filter_inputs_maybe_type<I>> {}
+export { rows_data_filter_inputs_b as b__inputs__filter__rows__data }

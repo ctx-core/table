@@ -43,4 +43,6 @@ export function data_rows_filter_b<I extends row_type>(ctx?) {
 			}) as data_rows_type<I>
 	)(ctx)
 }
-export const b__filter__rows__data = data_rows_filter_b
+export {
+	data_rows_filter_b as b__filter__rows__data
+}

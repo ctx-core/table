@@ -12,5 +12,7 @@ export function columns_b<I extends row_type, C extends object = object>(ctx:C) 
 		)(ctx))
 }
 export type $columns_type = string[]
-export type columns_type = Readable<$columns_type>
-export const b__columns = columns_b
+export interface columns_type extends Readable<$columns_type> {}
+export {
+	columns_b as b__columns
+}

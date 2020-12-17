@@ -19,5 +19,5 @@ export function data_rows_b<I extends row_type, C extends object = object>(ctx:C
 }
 export type $data_rows_type<I> = I[][]
 export type $maybe__data_rows_type<I> = maybe<$data_rows_type<I>>
-export type data_rows_type<I> = Readable<$maybe__data_rows_type<I>>
+export interface data_rows_type<I> extends Readable<$maybe__data_rows_type<I>> {}
 export { data_rows_b as b__rows__data }

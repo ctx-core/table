@@ -1,1 +1,2 @@
-export declare type column_offsets_type = Record<string, number>;
+export interface column_offsets_type extends Record<string, number> {
+}

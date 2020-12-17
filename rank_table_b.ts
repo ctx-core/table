@@ -13,7 +13,6 @@ export const rank_table_b = _b('rank_table', ctx=>
 		rows_b(ctx),
 		column_offsets_b(ctx),
 	], _rank_table))
-export const b__rank__table = rank_table_b
 function _rank_table<I extends row_type>(
 	maybe_columns:maybe<$columns_type>,
 	maybe_rows:I[],
@@ -58,4 +57,7 @@ function _rank_table<I extends row_type>(
 		rank_rows[i] = _row_proxy(rank_rows[i], column_offsets)
 	}
 	return table_rank
+}
+export {
+	rank_table_b as b__rank__table
 }

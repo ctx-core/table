@@ -3,6 +3,8 @@ import { derived, Readable } from '@ctx-core/store'
 import { _rows } from './_rows'
 import { $table_type, table_b } from './table_b'
 import { column_offsets_b } from './column_offsets_b'
+import type { column_offsets_type } from './column_offsets_type'
+import type { row_type } from './row_type'
 export function rows_b<I extends row_type, C extends object = object>(ctx:C) {
 	const table = table_b<I>(ctx)
 	return _b<Readable<I[]>, C>('rows', ctx=>
@@ -14,6 +16,6 @@ export function rows_b<I extends row_type, C extends object = object>(ctx:C) {
 		}) as Readable<I[]>
 	)(ctx)
 }
-export const b__rows = rows_b
-import type { column_offsets_type } from './column_offsets_type'
-import type { row_type } from './row_type'
+export {
+	rows_b as b__rows
+}

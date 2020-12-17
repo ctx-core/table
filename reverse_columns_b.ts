@@ -6,5 +6,9 @@ export const reverse_columns_b = _b('__reverse__columns', ctx=>
 		columns_b(ctx),
 		columns=>
 			columns
-			&& columns.slice(0).reverse()))
-export const b__reverse__columns = reverse_columns_b
+			&& columns.slice(0).reverse()
+	)
+)
+export {
+	reverse_columns_b as b__reverse__columns
+}

@@ -13,4 +13,6 @@ export function _row_proxy<I extends unknown, O = unknown>(
 		}
 	}
 }
-export const _proxy__row = _row_proxy
+export {
+	_row_proxy as _proxy__row
+}

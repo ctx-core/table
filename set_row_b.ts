@@ -30,4 +30,6 @@ export function set_row_b<I extends row_type>(ctx) {
 		}
 	})(ctx)
 }
-export const b__set__row = set_row_b
+export {
+	set_row_b as b__set__row
+}

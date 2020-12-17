@@ -8,4 +8,6 @@ export function _column_offsets(columns:string[]) {
 			return memo
 		}, {})
 }
-export const _offsets__column = _column_offsets
+export {
+	_column_offsets as _offsets__column
+}

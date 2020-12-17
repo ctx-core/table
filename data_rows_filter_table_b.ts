@@ -12,4 +12,6 @@ export function rows_data_filter_table_b<I extends row_type>(ctx?) {
 		)
 	)(ctx)
 }
-export const b__table__filter__rows__data = rows_data_filter_table_b
+export {
+	rows_data_filter_table_b as b__table__filter__rows__data
+}

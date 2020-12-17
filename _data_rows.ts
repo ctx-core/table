@@ -22,4 +22,6 @@ export function _data_rows<I extends row_type, O = unknown>(
 	}
 	return data_rows
 }
-export const _rows__data = _data_rows
+export {
+	_data_rows as _rows__data
+}
