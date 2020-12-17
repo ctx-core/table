@@ -1,5 +1,14 @@
 # @ctx-core/table
 
+## 8.2.8
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/array@19.1.8
+  - @ctx-core/store@23.1.10
+  - @ctx-core/dom@7.1.21
+
 ## 8.2.7
 
 ### Patch Changes
