@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 8.2.24
+
+### Patch Changes
+
+- @ctx-core/dom@7.1.37
+
 ## 8.2.23
 
 ### Patch Changes
