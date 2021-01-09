@@ -1,5 +1,14 @@
 # @ctx-core/table
 
+## 8.2.28
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+- Updated dependencies [undefined]
+  - @ctx-core/store@23.3.0
+  - @ctx-core/dom@7.1.41
+
 ## 8.2.27
 
 ### Patch Changes
