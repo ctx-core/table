@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "8.2.25",
+	"version": "8.2.26",
 	"description": "ctx-core table",
 	"keywords": [
 		"ctx-core",
@@ -29,10 +29,10 @@
 	"dependencies": {
 		"@ctx-core/array": "workspace:^19.1.21",
 		"@ctx-core/combinators": "workspace:^5.0.6",
-		"@ctx-core/dom": "workspace:^7.1.38",
+		"@ctx-core/dom": "workspace:^7.1.39",
 		"@ctx-core/function": "workspace:^16.8.1",
 		"@ctx-core/object": "workspace:^16.0.1",
-		"@ctx-core/store": "workspace:^23.1.25",
+		"@ctx-core/store": "workspace:^23.2.0",
 		"svelte": "3.31.2"
 	},
 	"devDependencies": {
