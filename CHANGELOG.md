@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 9.0.2
+
+### Patch Changes
+
+- @ctx-core/dom@8.0.2
+
 ## 9.0.1
 
 ### Patch Changes
