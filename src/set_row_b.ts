@@ -1,5 +1,5 @@
 import { _b } from '@ctx-core/object'
-import { has__dom } from '@ctx-core/dom'
+import { has_dom } from '@ctx-core/dom'
 import { get, subscribe } from '@ctx-core/store'
 import { row_id_b } from './row_id_b'
 import { table_b } from './table_b'
@@ -8,7 +8,7 @@ import { row_b } from './row_b'
 import type { row_type } from './row_type'
 export function set_row_b<I extends row_type>(ctx) {
 	return _b('set_row', ctx=>{
-		if (has__dom) {
+		if (has_dom) {
 			subscribe(row_id_b(ctx), set_row)
 			subscribe(table_b<I>(ctx), set_row)
 			set_row()
