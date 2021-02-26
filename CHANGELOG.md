@@ -1,5 +1,14 @@
 # @ctx-core/table
 
+## 9.0.25
+
+### Patch Changes
+
+- svelte: 3.33.0 -> 3.34.0
+- Updated dependencies [undefined]
+  - @ctx-core/store@24.1.3
+  - @ctx-core/dom@8.2.2
+
 ## 9.0.24
 
 ### Patch Changes
