@@ -1,5 +1,18 @@
 # @ctx-core/table
 
+## 9.0.40
+
+### Patch Changes
+
+- typescript: ^4.2.3 -> ^4.2.4
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.2.4
+  - @ctx-core/combinators@6.0.9
+  - @ctx-core/dom@8.2.17
+  - @ctx-core/function@17.4.5
+  - @ctx-core/object@17.4.4
+  - @ctx-core/store@24.1.18
+
 ## 9.0.39
 
 ### Patch Changes
