@@ -1,5 +1,13 @@
 # @ctx-core/table
 
+## 9.0.53
+
+### Patch Changes
+
+- update dependencies
+- Updated dependencies [undefined]
+  - @ctx-core/dom@8.2.30
+
 ## 9.0.52
 
 ### Patch Changes
