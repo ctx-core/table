@@ -1,5 +1,17 @@
 # @ctx-core/table
 
+## 9.0.69
+
+### Patch Changes
+
+- update dependencies
+- Updated dependencies [undefined]
+- Updated dependencies [undefined]
+  - @ctx-core/store@24.7.4
+  - @ctx-core/array@20.2.20
+  - @ctx-core/dom@8.2.45
+  - @ctx-core/object@17.5.17
+
 ## 9.0.68
 
 ### Patch Changes
