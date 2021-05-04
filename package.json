@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "9.0.75",
+	"version": "9.0.76",
 	"description": "ctx-core table",
 	"keywords": [
 		"ctx-core",
@@ -27,12 +27,12 @@
 		"prepublishOnly": "npm run compile"
 	},
 	"dependencies": {
-		"@ctx-core/array": "workspace:^20.2.21",
+		"@ctx-core/array": "workspace:^20.2.22",
 		"@ctx-core/combinators": "workspace:^6.0.10",
-		"@ctx-core/dom": "workspace:^8.2.51",
-		"@ctx-core/function": "workspace:^17.5.0",
-		"@ctx-core/object": "workspace:^17.5.18",
-		"@ctx-core/store": "workspace:^24.7.10",
+		"@ctx-core/dom": "workspace:^8.2.52",
+		"@ctx-core/function": "workspace:^17.6.0",
+		"@ctx-core/object": "workspace:^17.5.19",
+		"@ctx-core/store": "workspace:^24.7.11",
 		"svelte": "3.38.1"
 	},
 	"devDependencies": {
