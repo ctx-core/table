@@ -1,5 +1,13 @@
 # @ctx-core/table
 
+## 9.0.89
+
+### Patch Changes
+
+- update dependencies
+- Updated dependencies [undefined]
+  - @ctx-core/store@24.7.24
+
 ## 9.0.88
 
 ### Patch Changes
