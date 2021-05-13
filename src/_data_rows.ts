@@ -1,7 +1,7 @@
 import type { maybe } from '@ctx-core/function'
 import { _row_proxy } from './_row_proxy'
 import type { row_type } from './row_type'
-export function _data_rows<I extends row_type, O = unknown>(
+export function _data_rows<I extends row_type, O extends unknown = unknown>(
 	maybe_rows:maybe<I[]>,
 	data_columns:string[],
 	column_offsets:Record<string, number>

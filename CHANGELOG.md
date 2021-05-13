@@ -1,5 +1,16 @@
 # @ctx-core/table
 
+## 9.0.83
+
+### Patch Changes
+
+- fix: type issues
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.2.28
+  - @ctx-core/combinators@6.0.11
+  - @ctx-core/function@17.8.3
+  - @ctx-core/object@17.5.25
+
 ## 9.0.82
 
 ### Patch Changes

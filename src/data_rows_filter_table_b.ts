@@ -1,14 +1,20 @@
 import { _b } from '@ctx-core/object'
-import { derived } from '@ctx-core/store'
 import { _maybe_key_hash } from '@ctx-core/array'
+import { derived$ } from '@ctx-core/store'
 import { data_rows_filter_b } from './data_rows_filter_b'
-import type { $data_rows_type } from './data_rows_b'
 import type { row_type } from './row_type'
-export function rows_data_filter_table_b<I extends row_type>(ctx?) {
+import type { $maybe_data_rows_type } from './data_rows_b'
+export function rows_data_filter_table_b<Row extends row_type>(ctx?) {
 	return _b('rows_data_filter_table', ctx=>
-		derived(
-			data_rows_filter_b<I>(ctx),
-			$filter__rows__data=>_maybe_key_hash<$data_rows_type<I>>($filter__rows__data, 'row_id')
+		derived$(
+			data_rows_filter_b<Row>(ctx),
+			($data_rows_filter:$maybe_data_rows_type<Row>)=>
+				$data_rows_filter
+				&& ($data_rows_filter as Row[][]).map((row_a1:Row[])=>{
+					return _maybe_key_hash<Row, keyof Row>(
+						row_a1, 'row_id'
+					)
+				})
 		)
 	)(ctx)
 }

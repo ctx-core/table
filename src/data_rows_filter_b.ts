@@ -1,21 +1,21 @@
 import { _b } from '@ctx-core/object'
-import { derived } from '@ctx-core/store'
+import { derived$ } from '@ctx-core/store'
 import {
 	$rows_data_filter_inputs_maybe_type,
 	$rows_data_filter_inputs_type,
 	rows_data_filter_inputs_b
 } from './rows_data_filter_inputs_b'
-import { $data_rows_type, $maybe__data_rows_type, data_rows_b, data_rows_type } from './data_rows_b'
+import { $data_rows_type, $maybe_data_rows_type, data_rows_b, data_rows_type } from './data_rows_b'
 import type { row_type } from './row_type'
-export function data_rows_filter_b<I extends row_type>(ctx?) {
+export function data_rows_filter_b<I extends row_type>(ctx?):data_rows_type<I> {
 	return _b('data_rows_filter', (ctx)=>
-		derived([
+		derived$([
 				rows_data_filter_inputs_b<I>(ctx),
 				data_rows_b<I>(ctx)
 			],
 			(
 				[maybe__inputs__filter__rows__data, maybe__data_row_a1]:[
-					$rows_data_filter_inputs_maybe_type<I>, $maybe__data_rows_type<I>
+					$rows_data_filter_inputs_maybe_type<I>, $maybe_data_rows_type<I>
 				])=>{
 				if (!maybe__inputs__filter__rows__data || !maybe__data_row_a1) return
 				const inputs__filter__rows__data = maybe__inputs__filter__rows__data as $rows_data_filter_inputs_type<I>
