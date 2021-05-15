@@ -1,44 +1,46 @@
 import { _b } from '@ctx-core/object'
-import { spread_derived } from '@ctx-core/store'
-import type { maybe } from '@ctx-core/function'
+import { derived$ } from '@ctx-core/store'
+import type { falsy } from '@ctx-core/function'
 import { _row_proxy } from './_row_proxy'
 import { rows_b } from './rows_b'
 import { column_offsets_b } from './column_offsets_b'
-import type { $table_type } from './table_b'
-import { $columns_type, columns_b } from './columns_b'
-import type { row_type } from './row_type'
+import type { $table_T } from './table_b'
+import { $columns_T, columns_b } from './columns_b'
+import type { Row } from './Row'
 export const rank_table_b = _b('rank_table', ctx=>
-	spread_derived([
-		columns_b(ctx),
-		rows_b(ctx),
-		column_offsets_b(ctx),
-	], _rank_table))
-function _rank_table<I extends row_type>(
-	maybe_columns:maybe<$columns_type>,
-	maybe_rows:I[],
-	column_offsets
+	derived$([
+			columns_b(ctx),
+			rows_b(ctx),
+			column_offsets_b(ctx),
+		], ([$columns, $rows, $column_offsets])=>
+			_rank_table($columns, $rows, $column_offsets)
+	))
+function _rank_table<Val extends unknown = unknown>(
+	maybe_columns:$columns_T|falsy,
+	maybe_rows:Row<Val>[],
+	column_offsets:Record<string, number>,
 ) {
 	if (!maybe_columns || !maybe_rows) return
 	const columns = maybe_columns as string[]
-	const rows = maybe_rows as I[]
-	let table_rank = [] as $table_type<I>
+	const rows = maybe_rows as Row<Val>[]
+	let table_rank = [] as $table_T<Val>
 	table_rank.push(columns)
 	for (let i = 0; i < rows.length; i++) {
 		table_rank.push(...rows.slice(0))
 	}
-	const table_rows = table_rank.slice(1) as I[]
-	const rank_rows = [] as number[][]
+	const table_rows = table_rank.slice(1) as Row<Val>[]
+	const rank_rows:number[][] = []
 	for (let i = 0; i < columns.length; i++) {
-		const sorted_rows =
+		const sorted_rows:Row<Val>[] =
 			table_rows.slice(0).sort(
-				(a, b)=>
+				(a:Row<Val>, b:Row<Val>)=>
 					a[i] > b[i]
 					? -1
 					: a[i] < b[i]
 						? 1
 						: 0)
 		let rank = 0
-		let current_value:I|null = null
+		let current_value:Val|undefined = undefined
 		for (let j = 0; j < sorted_rows.length; j++) {
 			const sorted_row = sorted_rows[j]
 			const value = sorted_row[i]

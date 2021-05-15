@@ -1,36 +1,38 @@
 import { _b } from '@ctx-core/object'
 import { derived$ } from '@ctx-core/store'
 import {
-	$rows_data_filter_inputs_maybe_type,
-	$rows_data_filter_inputs_type,
-	rows_data_filter_inputs_b
+	$rows_data_filter_inputs_maybe_T, $rows_data_filter_inputs_T, rows_data_filter_inputs_b,
+	rows_data_filter_inputs_ctx_I
 } from './rows_data_filter_inputs_b'
-import { $data_rows_type, $maybe_data_rows_type, data_rows_b, data_rows_type } from './data_rows_b'
-import type { row_type } from './row_type'
-export function data_rows_filter_b<I extends row_type>(ctx?):data_rows_type<I> {
+import {
+	$data_rows_T, $maybe_data_rows_T, data_rows_b, data_rows_ctx_I, data_rows_T
+} from './data_rows_b'
+export function data_rows_filter_b<Val extends unknown = unknown>(
+	ctx:data_rows_filter_ctx_I<Val>
+):data_rows_T<Val> {
 	return _b('data_rows_filter', (ctx)=>
 		derived$([
-				rows_data_filter_inputs_b<I>(ctx),
-				data_rows_b<I>(ctx)
+				rows_data_filter_inputs_b<Val>(ctx),
+				data_rows_b<Val>(ctx)
 			],
 			(
-				[maybe__inputs__filter__rows__data, maybe__data_row_a1]:[
-					$rows_data_filter_inputs_maybe_type<I>, $maybe_data_rows_type<I>
+				[data_rows_filter_inputs_maybe, maybe_data_row_a1]:[
+					$rows_data_filter_inputs_maybe_T<Val>, $maybe_data_rows_T<Val>
 				])=>{
-				if (!maybe__inputs__filter__rows__data || !maybe__data_row_a1) return
-				const inputs__filter__rows__data = maybe__inputs__filter__rows__data as $rows_data_filter_inputs_type<I>
-				const data_row_a1 = maybe__data_row_a1 as $data_rows_type<I>
-				const filter_rows = [] as I[][]
+				if (!data_rows_filter_inputs_maybe || !maybe_data_row_a1) return
+				const data_rows_filter_inputs = data_rows_filter_inputs_maybe as $rows_data_filter_inputs_T<Val>
+				const data_row_a1 = maybe_data_row_a1 as $data_rows_T<Val>
+				const filter_rows = [] as Val[][]
 				for (let i = 0; i < (data_row_a1 as unknown[]).length; i++) {
 					const row = data_row_a1[i]
 					let every
-					for (let j = inputs__filter__rows__data.length; j--;) {
-						const input__rows__data = inputs__filter__rows__data[j]
-						const { column } = input__rows__data
+					for (let j = data_rows_filter_inputs.length; j--;) {
+						const data_rows_input = data_rows_filter_inputs[j]
+						const { column } = data_rows_input
 						const value =
 							row[column]
 							|| 0
-						if (input__rows__data.value > value) break
+						if (data_rows_input.value > value) break
 						if (!j) {
 							every = true
 						}
@@ -40,8 +42,12 @@ export function data_rows_filter_b<I extends row_type>(ctx?):data_rows_type<I> {
 					}
 				}
 				return filter_rows
-			}) as data_rows_type<I>
+			}) as data_rows_T<Val>
 	)(ctx)
+}
+export interface data_rows_filter_ctx_I<Val extends unknown = unknown>
+	extends rows_data_filter_inputs_ctx_I<Val>, data_rows_ctx_I<Val> {
+	data_rows_filter?:data_rows_T<Val>
 }
 export {
 	data_rows_filter_b as b__filter__rows__data

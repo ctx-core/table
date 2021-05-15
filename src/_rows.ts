@@ -1,9 +1,10 @@
 import { _row_proxy } from './_row_proxy'
-import type { $table_type } from './table_b'
-import type { column_offsets_type } from './column_offsets_type'
-export function _rows<I extends unknown, O = unknown>(
-	table:$table_type<I>,
-	column_offsets:column_offsets_type
+import type { $table_T } from './table_b'
+import type { column_offsets_T } from './column_offsets_T'
+import type { Row } from './Row'
+export function _rows<I extends unknown, O extends Row = Row>(
+	table:$table_T<I>,
+	column_offsets:column_offsets_T
 ) {
 	if (!table || !column_offsets) return
 	const data_row_a1 = table.slice(1) as I[][]

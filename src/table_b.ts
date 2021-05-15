@@ -1,13 +1,15 @@
 import { _b } from '@ctx-core/object'
-import { Writable, writable } from '@ctx-core/store'
-import type { row_type } from './row_type'
-export function table_b<I extends row_type, C extends object = object>(ctx:C) {
-	return _b<table_type<I>, C>('table', ()=>
-		writable<$table_type<I>>([]) as table_type<I>
+import { Writable$, writable$ } from '@ctx-core/store'
+export function table_b<Val extends unknown = unknown>(ctx:table_ctx_I<Val>) {
+	return _b<table_T<Val>>('table', ()=>
+		writable$<$table_T<Val>>([]) as table_T<Val>
 	)(ctx)
 }
-export type $table_type<I extends unknown> = [string[]?, ...I[]]
-export interface table_type<I extends unknown> extends Writable<$table_type<I>> {}
+export interface table_ctx_I<Val extends unknown = unknown> {
+	table?:table_T<Val>
+}
+export type $table_T<Val extends unknown = unknown> = [string[]?, ...Val[][]]
+export interface table_T<Val extends unknown = unknown> extends Writable$<$table_T<Val>> {}
 export {
 	table_b as b__table
 }

@@ -1,7 +1,9 @@
 import type { maybe_null } from '@ctx-core/function'
 import { writable, Writable } from '@ctx-core/store'
 import { _b } from '@ctx-core/object'
-export function table_data_highlight_rows_b<I extends unknown>(ctx?) {
+export function table_data_highlight_rows_b<I extends unknown>(
+	ctx:{ table_data_highlight_rows?:$table_data_highlight_rows_maybe_type<I> }
+) {
 	return _b<table_data_highlight_rows_maybe_type<I>>('table_data_highlight_rows', ()=>
 		writable(null) as table_data_highlight_rows_maybe_type<I>
 	)(ctx)
