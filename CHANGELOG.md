@@ -1,5 +1,18 @@
 # @ctx-core/table
 
+## 9.1.2
+
+### Patch Changes
+
+- .npmignore: + ~
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.3.2
+  - @ctx-core/combinators@6.1.2
+  - @ctx-core/dom@8.3.2
+  - @ctx-core/function@17.9.2
+  - @ctx-core/object@17.6.2
+  - @ctx-core/store@24.8.2
+
 ## 9.1.1
 
 ### Patch Changes
