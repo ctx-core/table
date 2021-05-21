@@ -7,10 +7,16 @@ import {
 import {
 	$data_rows_T, $maybe_data_rows_T, data_rows_b, data_rows_ctx_I, data_rows_T
 } from './data_rows_b'
+const key = 'data_rows_filter'
+export interface data_rows_filter_ctx_I<Val extends unknown = unknown>
+	extends rows_data_filter_inputs_ctx_I<Val>,
+		data_rows_ctx_I<Val> {
+	[key]?:data_rows_T<Val>
+}
 export function data_rows_filter_b<Val extends unknown = unknown>(
 	ctx:data_rows_filter_ctx_I<Val>
 ):data_rows_T<Val> {
-	return _b('data_rows_filter', (ctx)=>
+	return _b<data_rows_filter_ctx_I<Val>, typeof key>(key, (ctx)=>
 		derived$([
 				rows_data_filter_inputs_b<Val>(ctx),
 				data_rows_b<Val>(ctx)
@@ -44,10 +50,6 @@ export function data_rows_filter_b<Val extends unknown = unknown>(
 				return filter_rows
 			}) as data_rows_T<Val>
 	)(ctx)
-}
-export interface data_rows_filter_ctx_I<Val extends unknown = unknown>
-	extends rows_data_filter_inputs_ctx_I<Val>, data_rows_ctx_I<Val> {
-	data_rows_filter?:data_rows_T<Val>
 }
 export {
 	data_rows_filter_b as b__filter__rows__data

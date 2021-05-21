@@ -1,25 +1,33 @@
 import { _b } from '@ctx-core/object'
-import { derived$ } from '@ctx-core/store'
+import { derived$, Readable$ } from '@ctx-core/store'
 import type { falsy } from '@ctx-core/function'
 import { _row_proxy } from './_row_proxy'
-import { rows_b } from './rows_b'
-import { column_offsets_b } from './column_offsets_b'
+import { rows_b, rows_ctx_I } from './rows_b'
+import { column_offsets_b, column_offsets_ctx_I } from './column_offsets_b'
 import type { $table_T } from './table_b'
-import { $columns_T, columns_b } from './columns_b'
+import { $columns_T, columns_b, columns_ctx_I } from './columns_b'
 import type { Row } from './Row'
-export const rank_table_b = _b('rank_table', ctx=>
-	derived$([
-			columns_b(ctx),
-			rows_b(ctx),
-			column_offsets_b(ctx),
-		], ([$columns, $rows, $column_offsets])=>
-			_rank_table($columns, $rows, $column_offsets)
-	))
+const key = 'rank_table'
+export interface rank_table_ctx_I<Val extends unknown = unknown>
+	extends columns_ctx_I<Val>, rows_ctx_I<Val>, column_offsets_ctx_I<Val> {
+	rank_table?:Readable$<$table_T<Val>|undefined>
+}
+export function rank_table_b<Val extends unknown = unknown>(ctx:rank_table_ctx_I<Val>
+) {
+	return _b<rank_table_ctx_I<Val>, typeof key>(key, ()=>
+		derived$([
+				columns_b<Val>(ctx),
+				rows_b<Val>(ctx),
+				column_offsets_b<Val>(ctx),
+			], ([$columns, $rows, $column_offsets])=>
+				_rank_table<Val>($columns, $rows, $column_offsets)
+		))(ctx)
+}
 function _rank_table<Val extends unknown = unknown>(
 	maybe_columns:$columns_T|falsy,
 	maybe_rows:Row<Val>[],
 	column_offsets:Record<string, number>,
-) {
+):$table_T<Val>|undefined {
 	if (!maybe_columns || !maybe_rows) return
 	const columns = maybe_columns as string[]
 	const rows = maybe_rows as Row<Val>[]
