@@ -18,6 +18,7 @@ export * from './rows_b';
 export * from './rows_data_filter_inputs_b';
 export * from './set_row_b';
 export * from './table_b';
+export * from './table_Ctx';
 export * from './table_data_highlight_rows_b';
 export * from './table_domain_b';
 export * from './ticks_domain_b';

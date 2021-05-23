@@ -1,10 +1,7 @@
 import type { maybe_null } from '@ctx-core/function';
 import { Writable } from '@ctx-core/store';
-import { table_Ctx } from './table_b';
-export interface rows_data_filter_inputs_Ctx<Val extends unknown = unknown> extends table_Ctx<Val> {
-    rows_data_filter_inputs?: rows_data_filter_inputs_T<Val>;
-}
-export declare function rows_data_filter_inputs_b<Val extends unknown = unknown>(ctx: rows_data_filter_inputs_Ctx<Val>): rows_data_filter_inputs_T<Val>;
+import type { table_Ctx } from './table_Ctx';
+export declare function rows_data_filter_inputs_b<Val extends unknown = unknown>(ctx: table_Ctx<Val>): rows_data_filter_inputs_T<Val>;
 export interface $data_row_filter_input<I> {
     column: number;
     value: I;

@@ -2,16 +2,13 @@ import type { maybe_null } from '@ctx-core/function'
 import { _b } from '@ctx-core/object'
 import { has_dom } from '@ctx-core/dom'
 import { _clear_store, subscribe, writable, Writable } from '@ctx-core/store'
-import { table_b, table_Ctx } from './table_b'
+import { table_b } from './table_b'
+import type { table_Ctx } from './table_Ctx'
 const key = 'rows_data_filter_inputs'
-export interface rows_data_filter_inputs_Ctx<Val extends unknown = unknown>
-	extends table_Ctx<Val> {
-	rows_data_filter_inputs?:rows_data_filter_inputs_T<Val>
-}
 export function rows_data_filter_inputs_b<Val extends unknown = unknown>(
-	ctx:rows_data_filter_inputs_Ctx<Val>
+	ctx:table_Ctx<Val>
 ) {
-	return _b<rows_data_filter_inputs_Ctx<Val>, typeof key>(key, ()=>{
+	return _b<table_Ctx<Val>, typeof key>(key, ()=>{
 		const rows_data_filter_inputs = writable<$rows_data_filter_inputs_maybe_T<Val>>(
 			null
 		) as rows_data_filter_inputs_T<Val>

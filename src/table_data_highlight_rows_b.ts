@@ -1,13 +1,11 @@
-import { writable$, Writable$ } from '@ctx-core/store'
 import { _b } from '@ctx-core/object'
+import { writable$, Writable$ } from '@ctx-core/store'
+import type { table_Ctx } from './table_Ctx'
 const key = 'table_data_highlight_rows'
-export interface table_data_highlight_rows_Ctx<Val extends unknown = unknown> {
-	table_data_highlight_rows?:table_data_highlight_rows_maybe_T<Val>
-}
 export function table_data_highlight_rows_b<Val extends unknown = unknown>(
-	ctx:table_data_highlight_rows_Ctx<Val>
+	ctx:table_Ctx<Val>
 ) {
-	return _b<table_data_highlight_rows_Ctx<Val>, typeof key>(key, ()=>
+	return _b<table_Ctx<Val>, typeof key>(key, ()=>
 		writable$(undefined) as table_data_highlight_rows_maybe_T<Val>
 	)(ctx)
 }

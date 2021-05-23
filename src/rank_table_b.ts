@@ -1,20 +1,16 @@
 import { _b } from '@ctx-core/object'
-import { derived$, Readable$ } from '@ctx-core/store'
+import { derived$ } from '@ctx-core/store'
 import type { falsy } from '@ctx-core/function'
 import { _row_proxy } from './_row_proxy'
-import { rows_b, rows_Ctx } from './rows_b'
-import { column_offsets_b, column_offsets_Ctx } from './column_offsets_b'
+import { rows_b } from './rows_b'
+import { column_offsets_b } from './column_offsets_b'
 import type { $table_T } from './table_b'
-import { $columns_T, columns_b, columns_Ctx } from './columns_b'
+import { $columns_T, columns_b } from './columns_b'
 import type { Row } from './Row'
+import type { table_Ctx } from './table_Ctx'
 const key = 'rank_table'
-export interface rank_table_Ctx<Val extends unknown = unknown>
-	extends columns_Ctx<Val>, rows_Ctx<Val>, column_offsets_Ctx<Val> {
-	rank_table?:Readable$<$table_T<Val>|undefined>
-}
-export function rank_table_b<Val extends unknown = unknown>(ctx:rank_table_Ctx<Val>
-) {
-	return _b<rank_table_Ctx<Val>, typeof key>(key, ()=>
+export function rank_table_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
+	return _b<table_Ctx<Val>, typeof key>(key, ()=>
 		derived$([
 				columns_b<Val>(ctx),
 				rows_b<Val>(ctx),

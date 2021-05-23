@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 9.2.0
+
+### Minor Changes
+
+- - table_Ctx
+
 ## 9.1.8
 
 ### Patch Changes

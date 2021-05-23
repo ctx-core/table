@@ -1,19 +1,15 @@
-import type { falsy } from '@ctx-core/function'
 import { _b } from '@ctx-core/object'
 import { _maybe_key_hash } from '@ctx-core/array'
-import { derived$, Readable$ } from '@ctx-core/store'
-import { data_rows_filter_b, data_rows_filter_Ctx } from './data_rows_filter_b'
+import { derived$ } from '@ctx-core/store'
+import { data_rows_filter_b } from './data_rows_filter_b'
 import type { $maybe_data_rows_T } from './data_rows_b'
 import type { Row } from './Row'
+import type { table_Ctx } from './table_Ctx'
 const key = 'rows_data_filter_table'
-export interface rows_data_filter_table_Ctx<Val extends unknown = unknown>
-	extends data_rows_filter_Ctx<Val> {
-	rows_data_filter_table?:Readable$<falsy|Record<string, Val>[]>
-}
 export function rows_data_filter_table_b<Val extends Record<string, any>>(
-	ctx:rows_data_filter_table_Ctx<Val>
+	ctx:table_Ctx<Val>
 ) {
-	return _b<rows_data_filter_table_Ctx<Val>, typeof key>(key, ()=>
+	return _b<table_Ctx<Val>, typeof key>(key, ()=>
 		derived$(
 			data_rows_filter_b<Val>(ctx),
 			($data_rows_filter:$maybe_data_rows_T<Val>)=>

@@ -1,9 +1,7 @@
 import { _b } from '@ctx-core/object'
 import { Writable$, writable$ } from '@ctx-core/store'
+import type { table_Ctx } from './table_Ctx'
 const key = 'table'
-export interface table_Ctx<Val extends unknown = unknown> {
-	table?:table_T<Val>
-}
 export function table_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
 	return _b<table_Ctx<Val>, typeof key>(key, ()=>
 		writable$<$table_T<Val>>([]) as table_T<Val>
