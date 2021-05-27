@@ -3,9 +3,7 @@ import { derived$ } from '@ctx-core/store'
 import {
 	$rows_data_filter_inputs_maybe_T, $rows_data_filter_inputs_T, rows_data_filter_inputs_b,
 } from './rows_data_filter_inputs_b'
-import {
-	$data_rows_T, $maybe_data_rows_T, data_rows_b, data_rows_T
-} from './data_rows_b'
+import { $data_rows_T, data_rows_b, data_rows_T } from './data_rows_b'
 import type { table_Ctx } from './table_Ctx'
 const key = 'data_rows_filter'
 export interface data_rows_filter_Ctx<Val extends unknown = unknown>
@@ -22,7 +20,7 @@ export function data_rows_filter_b<Val extends unknown = unknown>(
 			],
 			(
 				[data_rows_filter_inputs_maybe, maybe_data_row_a1]:[
-					$rows_data_filter_inputs_maybe_T<Val>, $maybe_data_rows_T<Val>
+					$rows_data_filter_inputs_maybe_T<Val>, $data_rows_T<Val>|undefined
 				])=>{
 				if (!data_rows_filter_inputs_maybe || !maybe_data_row_a1) return
 				const data_rows_filter_inputs = data_rows_filter_inputs_maybe as $rows_data_filter_inputs_T<Val>

@@ -1,5 +1,5 @@
 import { _b } from '@ctx-core/object'
-import { derived$ } from '@ctx-core/store'
+import { derived$, Readable$ } from '@ctx-core/store'
 import type { falsy } from '@ctx-core/function'
 import { _row_proxy } from './_row_proxy'
 import { rows_b } from './rows_b'
@@ -64,6 +64,8 @@ function _rank_table<Val extends unknown = unknown>(
 	}
 	return table_rank
 }
+export type rank_table_T<Val extends unknown = unknown> =
+	Readable$<$table_T<Val>|undefined>
 export {
 	rank_table_b as b__rank__table
 }

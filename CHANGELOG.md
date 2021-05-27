@@ -1,5 +1,18 @@
 # @ctx-core/table
 
+## 9.5.0
+
+### Minor Changes
+
+- column_offsets_T->column_offsets_I
+- Row: row_id is required
+- - column_offsets_T,rows_data_filter_table_T,\$rows_data_filter_table_T,rank_table_T,row_id_T,set_row_T,
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.5.1
+
 ## 9.4.0
 
 ### Minor Changes

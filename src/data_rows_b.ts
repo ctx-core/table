@@ -1,4 +1,3 @@
-import type { falsy } from '@ctx-core/function'
 import { _b } from '@ctx-core/object'
 import { Readable$, derived$ } from '@ctx-core/store'
 import { _data_rows } from './_data_rows'
@@ -20,8 +19,6 @@ export function data_rows_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
 	)(ctx)
 }
 export type $data_rows_T<Val extends unknown = unknown> = Val[][]
-export type $maybe_data_rows_T<Val extends unknown = unknown> =
-	$data_rows_T<Val>|falsy
 export interface data_rows_T<Val extends unknown = unknown>
-	extends Readable$<$maybe_data_rows_T<Val>> {}
+	extends Readable$<$data_rows_T<Val>|undefined> {}
 export { data_rows_b as b__rows__data }

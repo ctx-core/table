@@ -34,6 +34,7 @@ export function set_row_b<Val extends unknown = unknown>(
 		}
 	})(ctx)
 }
+export type set_row_T = ()=>void
 export {
 	set_row_b as b__set__row
 }
