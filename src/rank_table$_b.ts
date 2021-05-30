@@ -1,33 +1,35 @@
-import { _b } from '@ctx-core/object'
+import { be_ } from '@ctx-core/object'
+import { tuple_ } from '@ctx-core/array'
 import { derived$, Readable$ } from '@ctx-core/store'
 import type { falsy } from '@ctx-core/function'
-import { _row_proxy } from './_row_proxy'
-import { rows_b } from './rows_b'
-import { column_offsets_b } from './column_offsets_b'
-import type { $table_T } from './table_b'
-import { $columns_T, columns_b } from './columns_b'
+import { row_proxy_ } from './row_proxy_'
+import { rows$_b } from './rows$_b'
+import { column_offsets$_b } from './column_offsets$_b'
+import type { table_T } from './table$_b'
+import { columns_T, columns$_b } from './columns$_b'
 import type { Row } from './Row'
 import type { table_Ctx } from './table_Ctx'
-const key = 'rank_table'
-export function rank_table_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
-	return _b<table_Ctx<Val>, typeof key>(key, ()=>
-		derived$([
-				columns_b<Val>(ctx),
-				rows_b<Val>(ctx),
-				column_offsets_b<Val>(ctx),
-			], ([$columns, $rows, $column_offsets])=>
-				_rank_table<Val>($columns, $rows, $column_offsets)
+import type { column_offsets_I } from './column_offsets_I'
+const key = 'rank_table$'
+export function rank_table$_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
+	return be_<table_Ctx<Val>, typeof key>(key, ()=>
+		derived$(tuple_(
+			columns$_b<Val>(ctx),
+			rows$_b<Val>(ctx),
+			column_offsets$_b<Val>(ctx),
+			), ([$columns, $rows, $column_offsets])=>
+				rank_table_<Val>($columns, $rows as Row<Val>[], $column_offsets as column_offsets_I)
 		))(ctx)
 }
-function _rank_table<Val extends unknown = unknown>(
-	maybe_columns:$columns_T|falsy,
+function rank_table_<Val extends unknown = unknown>(
+	maybe_columns:columns_T|falsy,
 	maybe_rows:Row<Val>[],
 	column_offsets:Record<string, number>,
-):$table_T<Val>|undefined {
+):table_T<Val>|undefined {
 	if (!maybe_columns || !maybe_rows) return
 	const columns = maybe_columns as string[]
 	const rows = maybe_rows as Row<Val>[]
-	let table_rank = [] as $table_T<Val>
+	let table_rank = [] as table_T<Val>
 	table_rank.push(columns)
 	for (let i = 0; i < rows.length; i++) {
 		table_rank.push(...rows.slice(0))
@@ -60,12 +62,12 @@ function _rank_table<Val extends unknown = unknown>(
 		}
 	}
 	for (let i = 0; i < rank_rows.length; i++) {
-		rank_rows[i] = _row_proxy(rank_rows[i], column_offsets)
+		rank_rows[i] = row_proxy_(rank_rows[i], column_offsets)
 	}
 	return table_rank
 }
-export type rank_table_T<Val extends unknown = unknown> =
-	Readable$<$table_T<Val>|undefined>
+export type rank_table$_T<Val extends unknown = unknown> =
+	Readable$<table_T<Val>|undefined>
 export {
-	rank_table_b as b__rank__table
+	rank_table$_b as b__rank__table
 }

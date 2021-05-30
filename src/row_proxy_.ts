@@ -1,4 +1,4 @@
-export function _row_proxy<I extends unknown = unknown, O extends unknown = unknown>(
+export function row_proxy_<I extends unknown = unknown, O extends unknown = unknown>(
 	data_row:I[],
 	column_offsets:Record<string, number>
 ) {
@@ -15,5 +15,6 @@ export function _row_proxy<I extends unknown = unknown, O extends unknown = unkn
 	}
 }
 export {
-	_row_proxy as _proxy__row
+	row_proxy_ as _row_proxy,
+	row_proxy_ as _proxy__row,
 }

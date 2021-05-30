@@ -1,7 +1,7 @@
 import type { falsy } from '@ctx-core/function'
-import { _row_proxy } from './_row_proxy'
+import { row_proxy_ } from './row_proxy_'
 import type { Row } from './Row'
-export function _data_rows<I extends Row, O extends unknown = unknown>(
+export function data_rows_<I extends Row, O extends unknown = unknown>(
 	maybe_rows:I[]|falsy,
 	data_columns:string[],
 	column_offsets:Record<string, number>
@@ -17,11 +17,12 @@ export function _data_rows<I extends Row, O extends unknown = unknown>(
 			data_row.push(row[column_offsets[column]])
 		}
 		data_rows.push(
-			_row_proxy<unknown, O>(data_row, column_offsets)
+			row_proxy_<unknown, O>(data_row, column_offsets)
 		)
 	}
 	return data_rows
 }
 export {
-	_data_rows as _rows__data
+	data_rows_ as _data_rows,
+	data_rows_ as _rows__data,
 }
