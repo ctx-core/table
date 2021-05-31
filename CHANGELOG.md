@@ -1,5 +1,13 @@
 nene# @ctx-core/table
 
+## 10.0.4
+
+### Patch Changes
+
+- update dependencies
+- Updated dependencies [undefined]
+  - @ctx-core/dom@9.0.2
+
 ## 10.0.3
 
 ### Patch Changes
