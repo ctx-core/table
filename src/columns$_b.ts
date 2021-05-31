@@ -1,10 +1,10 @@
-import { _b } from '@ctx-core/object'
+import { be_ } from '@ctx-core/object'
 import { derived$, Readable$ } from '@ctx-core/store'
 import { table_T, table$_b } from './table$_b'
 import type { table_Ctx } from './table_Ctx'
 const key = 'columns$'
 export function columns$_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
-	return _b<table_Ctx<Val>, typeof key>(key, ()=>
+	return be_<table_Ctx<Val>, typeof key>(key, ()=>
 		derived$(
 			table$_b<Val>(ctx),
 			($table:table_T<unknown>)=>$table?.[0] as columns_T,

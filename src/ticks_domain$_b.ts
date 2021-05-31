@@ -1,8 +1,8 @@
-import { _b } from '@ctx-core/object'
+import { be_ } from '@ctx-core/object'
 import { Writable$, writable$ } from '@ctx-core/store'
 import type { table_Ctx } from './table_Ctx'
 const key = 'ticks_domain$'
-export const ticks_domain$_b = _b<table_Ctx, typeof key>(key, ()=>
+export const ticks_domain$_b = be_<table_Ctx, typeof key>(key, ()=>
 	writable$([0, 5.0, 10.0])
 )
 export type ticks_domain_T = number[]

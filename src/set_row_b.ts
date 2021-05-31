@@ -1,4 +1,4 @@
-import { _b } from '@ctx-core/object'
+import { be_ } from '@ctx-core/object'
 import { has_dom } from '@ctx-core/dom'
 import { subscribe } from '@ctx-core/store'
 import { row_id$_b } from './row_id$_b'
@@ -11,7 +11,7 @@ const key = 'set_row'
 export function set_row_b<Val extends unknown = unknown>(
 	ctx:table_Ctx<Val>
 ) {
-	return _b<table_Ctx<Val>, typeof key>(key, ()=>{
+	return be_<table_Ctx<Val>, typeof key>(key, ()=>{
 		if (has_dom) {
 			subscribe(row_id$_b(ctx), set_row)
 			subscribe(table$_b<Val>(ctx), set_row)

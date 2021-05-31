@@ -1,4 +1,4 @@
-import { _b } from '@ctx-core/object'
+import { be_ } from '@ctx-core/object'
 import { Readable$, derived$ } from '@ctx-core/store'
 import { data_rows_ } from './data_rows_'
 import { rows$_b } from './rows$_b'
@@ -7,7 +7,7 @@ import { column_offsets$_b } from './column_offsets$_b'
 import type { table_Ctx } from './table_Ctx'
 const key = 'data_rows$'
 export function data_rows$_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
-	return _b<table_Ctx<Val>, typeof key>(key, ()=>
+	return be_<table_Ctx<Val>, typeof key>(key, ()=>
 		derived$([
 				rows$_b<Val>(ctx),
 				columns$_b<Val>(ctx),

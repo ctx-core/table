@@ -1,4 +1,4 @@
-import { _b } from '@ctx-core/object'
+import { be_ } from '@ctx-core/object'
 import { _maybe_key_hash } from '@ctx-core/array'
 import { derived$, Readable$ } from '@ctx-core/store'
 import { data_rows_filter$_b } from './data_rows_filter$_b'
@@ -10,7 +10,7 @@ const row_id_key = 'row_id'
 export function data_rows_filter_table$_b<Val extends unknown = unknown>(
 	ctx:table_Ctx<Val>
 ) {
-	return _b<table_Ctx<Val>, typeof key, data_rows_filter_table$_T>(key, ()=>
+	return be_<table_Ctx<Val>, typeof key, data_rows_filter_table$_T>(key, ()=>
 		derived$(
 			data_rows_filter$_b<Val>(ctx),
 			(data_rows_filter:data_rows_T<Val>|undefined)=>

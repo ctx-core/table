@@ -1,4 +1,4 @@
-import { _b } from '@ctx-core/object'
+import { be_ } from '@ctx-core/object'
 import { has_dom } from '@ctx-core/dom'
 import { _clear_store, subscribe, writable, Writable } from '@ctx-core/store'
 import { table$_b } from './table$_b'
@@ -7,7 +7,7 @@ const key = 'data_rows_filter_inputs$'
 export function data_rows_filter_inputs$_b<Val extends unknown = unknown>(
 	ctx:table_Ctx<Val>
 ) {
-	return _b<table_Ctx<Val>, typeof key>(key, ()=>{
+	return be_<table_Ctx<Val>, typeof key>(key, ()=>{
 		const data_rows_filter_inputs = writable<data_rows_filter_inputs_T<Val>|undefined>(
 			undefined
 		) as data_rows_filter_inputs$_T<Val>

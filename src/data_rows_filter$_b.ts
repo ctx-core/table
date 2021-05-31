@@ -1,4 +1,4 @@
-import { _b } from '@ctx-core/object'
+import { be_ } from '@ctx-core/object'
 import { tuple_ } from '@ctx-core/array'
 import { derived$ } from '@ctx-core/store'
 import { data_rows_filter_inputs_T, data_rows_filter_inputs$_b } from './data_rows_filter_inputs$_b'
@@ -12,7 +12,7 @@ export interface data_rows_filter_Ctx<Val extends unknown = unknown>
 export function data_rows_filter$_b<Val extends unknown = unknown>(
 	ctx:table_Ctx<Val>
 ):data_rows$_T<Val> {
-	return _b<data_rows_filter_Ctx<Val>, typeof key>(key, (ctx)=>
+	return be_<data_rows_filter_Ctx<Val>, typeof key>(key, (ctx)=>
 		derived$(tuple_(
 				data_rows_filter_inputs$_b<Val>(ctx),
 				data_rows$_b<Val>(ctx)

@@ -1,10 +1,10 @@
-import { _b } from '@ctx-core/object'
+import { be_ } from '@ctx-core/object'
 import { writable$, Writable$ } from '@ctx-core/store'
 import type { Row } from './Row'
 import type { table_Ctx } from './table_Ctx'
 const key = 'row$'
 export function row$_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
-	return _b<table_Ctx<Val>, typeof key>(key, ()=>
+	return be_<table_Ctx<Val>, typeof key>(key, ()=>
 		writable$<Row<Val>|undefined>(undefined)
 	)(ctx)
 }
