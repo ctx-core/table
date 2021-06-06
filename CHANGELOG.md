@@ -1,5 +1,15 @@
 nene# @ctx-core/table
 
+## 10.0.13
+
+### Patch Changes
+
+- update dependencies
+- Updated dependencies [undefined]
+  - @ctx-core/array@21.2.1
+  - @ctx-core/dom@9.0.7
+  - @ctx-core/store@25.1.8
+
 ## 10.0.12
 
 ### Patch Changes
