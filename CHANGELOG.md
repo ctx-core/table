@@ -1,5 +1,13 @@
 nene# @ctx-core/table
 
+## 10.0.12
+
+### Patch Changes
+
+- tup instead of tuple\_
+- Updated dependencies [undefined]
+  - @ctx-core/store@25.1.7
+
 ## 10.0.11
 
 ### Patch Changes

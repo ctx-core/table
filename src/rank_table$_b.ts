@@ -1,5 +1,5 @@
 import { be_ } from '@ctx-core/object'
-import { tuple_ } from '@ctx-core/array'
+import { tup } from '@ctx-core/array'
 import { derived$, Readable$ } from '@ctx-core/store'
 import type { falsy } from '@ctx-core/function'
 import { row_proxy_ } from './row_proxy_'
@@ -13,7 +13,7 @@ import type { column_offsets_I } from './column_offsets_I'
 const key = 'rank_table$'
 export function rank_table$_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
 	return be_<table_Ctx<Val>, typeof key>(key, ()=>
-		derived$(tuple_(
+		derived$(tup(
 			columns$_b<Val>(ctx),
 			rows$_b<Val>(ctx),
 			column_offsets$_b<Val>(ctx),
