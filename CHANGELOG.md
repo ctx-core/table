@@ -1,5 +1,18 @@
 nene# @ctx-core/table
 
+## 10.0.18
+
+### Patch Changes
+
+- version bump: run build
+- Updated dependencies [undefined]
+  - @ctx-core/array@21.2.7
+  - @ctx-core/combinators@6.3.3
+  - @ctx-core/dom@9.0.10
+  - @ctx-core/function@18.1.3
+  - @ctx-core/object@19.1.3
+  - @ctx-core/store@25.1.13
+
 ## 10.0.17
 
 ### Patch Changes
