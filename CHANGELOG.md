@@ -1,5 +1,11 @@
 nene# @ctx-core/table
 
+## 10.0.25
+
+### Patch Changes
+
+- fix: B: inferred type issue
+
 ## 10.0.24
 
 ### Patch Changes

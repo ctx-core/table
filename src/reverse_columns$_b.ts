@@ -1,9 +1,9 @@
-import { be_ } from '@ctx-core/object'
+import { B, be_ } from '@ctx-core/object'
 import { derived$ } from '@ctx-core/store'
 import { columns$_b, columns$_T } from './columns$_b'
 import type { table_Ctx } from './table_Ctx'
 const key = 'reverse_columns$'
-export const reverse_columns$_b = be_<table_Ctx, typeof key>(key, ctx=>
+export const reverse_columns$_b:B<table_Ctx, typeof key> = be_(key, ctx=>
 	derived$(
 		columns$_b(ctx),
 		columns=>
