@@ -1,5 +1,21 @@
 nene# @ctx-core/table
 
+## 11.0.0
+
+### Major Changes
+
+- move from dist to src directory
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/array@22.0.0
+  - @ctx-core/combinators@7.0.0
+  - @ctx-core/dom@10.0.0
+  - @ctx-core/function@19.0.0
+  - @ctx-core/object@20.0.0
+  - @ctx-core/store@26.0.0
+
 ## 10.0.27
 
 ### Patch Changes
