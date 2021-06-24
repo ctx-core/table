@@ -1,5 +1,18 @@
 nene# @ctx-core/table
 
+## 11.0.12
+
+### Patch Changes
+
+- tsconfig.json: "lib": ["dom", "ESNext"]
+- Updated dependencies [undefined]
+  - @ctx-core/array@22.0.11
+  - @ctx-core/combinators@7.0.8
+  - @ctx-core/dom@10.0.10
+  - @ctx-core/function@19.1.8
+  - @ctx-core/object@20.1.1
+  - @ctx-core/store@26.0.12
+
 ## 11.0.11
 
 ### Patch Changes
