@@ -1,5 +1,13 @@
 # @ctx-core/table
 
+## 11.0.27
+
+### Patch Changes
+
+- update dependencies
+- Updated dependencies [undefined]
+  - @ctx-core/dom@10.0.24
+
 ## 11.0.26
 
 ### Patch Changes
