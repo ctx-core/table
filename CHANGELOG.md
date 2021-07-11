@@ -1,5 +1,13 @@
 # @ctx-core/table
 
+## 11.0.30
+
+### Patch Changes
+
+- update dependencies
+- Updated dependencies [undefined]
+  - @ctx-core/store@26.0.27
+
 ## 11.0.29
 
 ### Patch Changes
