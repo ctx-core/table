@@ -1,7 +1,7 @@
-import { row_proxy_ } from './row_proxy_'
-import type { table_T } from './table$_b'
-import type { column_offsets_I } from './column_offsets_I'
-import type { Row } from './Row'
+import { row_proxy_ } from './row_proxy_.js'
+import type { table_T } from './table$_b.js'
+import type { column_offsets_I } from './column_offsets_I.js'
+import type { Row } from './Row.js'
 export function rows_<I extends unknown, O extends Row = Row>(
 	table:table_T<I>,
 	column_offsets:column_offsets_I

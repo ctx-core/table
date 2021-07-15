@@ -1,6 +1,6 @@
 import { be_ } from '@ctx-core/object'
 import { derived$, Readable$ } from '@ctx-core/store'
-import { table_T, table$_b } from './table$_b'
+import { table_T, table$_b } from './table$_b.js'
 import type { table_Ctx } from './table_Ctx'
 const key = 'columns$'
 export function columns$_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {

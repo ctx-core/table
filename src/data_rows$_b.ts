@@ -1,9 +1,9 @@
 import { be_ } from '@ctx-core/object'
 import { Readable$, derived$ } from '@ctx-core/store'
-import { data_rows_ } from './data_rows_'
-import { rows$_b } from './rows$_b'
-import { columns$_b } from './columns$_b'
-import { column_offsets$_b } from './column_offsets$_b'
+import { data_rows_ } from './data_rows_.js'
+import { rows$_b } from './rows$_b.js'
+import { columns$_b } from './columns$_b.js'
+import { column_offsets$_b } from './column_offsets$_b.js'
 import type { table_Ctx } from './table_Ctx'
 const key = 'data_rows$'
 export function data_rows$_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {

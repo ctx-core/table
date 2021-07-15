@@ -1,6 +1,6 @@
 import type { falsy } from '@ctx-core/function'
-import { row_proxy_ } from './row_proxy_'
-import type { Row } from './Row'
+import { row_proxy_ } from './row_proxy_.js'
+import type { Row } from './Row.js'
 export function data_rows_<I extends Row, O extends unknown = unknown>(
 	maybe_rows:I[]|falsy,
 	data_columns:string[],

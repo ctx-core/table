@@ -1,9 +1,9 @@
 import { be_ } from '@ctx-core/object'
-import { _maybe_key_hash } from '@ctx-core/array'
+import { maybe_key_r_ } from '@ctx-core/array'
 import { derived$, Readable$ } from '@ctx-core/store'
-import { data_rows_filter$_b } from './data_rows_filter$_b'
-import type { Row } from './Row'
-import type { table_Ctx } from './table_Ctx'
+import { data_rows_filter$_b } from './data_rows_filter$_b.js'
+import type { Row } from './Row.js'
+import type { table_Ctx } from './table_Ctx.js'
 import type { data_rows_T } from './data_rows$_b'
 const key = 'data_rows_filter_table$'
 const row_id_key = 'row_id'
@@ -15,7 +15,7 @@ export function data_rows_filter_table$_b<Val extends unknown = unknown>(
 			data_rows_filter$_b<Val>(ctx),
 			(data_rows_filter:data_rows_T<Val>|undefined)=>
 				data_rows_filter
-				? _maybe_key_hash<typeof row_id_key, Row<Val>>(
+				? maybe_key_r_<typeof row_id_key, Row<Val>>(
 					data_rows_filter as Row<Val>[], row_id_key
 				)
 				: null

@@ -1,8 +1,8 @@
 import { be_ } from '@ctx-core/object'
 import { tup } from '@ctx-core/array'
 import { derived$ } from '@ctx-core/store'
-import { data_rows_filter_inputs_T, data_rows_filter_inputs$_b } from './data_rows_filter_inputs$_b'
-import { data_rows_T, data_rows$_b, data_rows$_T } from './data_rows$_b'
+import { data_rows_filter_inputs_T, data_rows_filter_inputs$_b } from './data_rows_filter_inputs$_b.js'
+import { data_rows_T, data_rows$_b, data_rows$_T } from './data_rows$_b.js'
 import type { table_Ctx } from './table_Ctx'
 const key = 'data_rows_filter'
 export interface data_rows_filter_Ctx<Val extends unknown = unknown>
