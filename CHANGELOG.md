@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 12.0.27
+
+### Patch Changes
+
+- update dependencies
+
 ## 12.0.26
 
 ### Patch Changes
