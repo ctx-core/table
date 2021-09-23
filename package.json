@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "12.0.34",
+	"version": "12.0.35",
 	"description": "ctx-core table",
 	"keywords": [
 		"ctx-core",
@@ -41,9 +41,9 @@
 		"@ctx-core/dom": "workspace:^11.0.26",
 		"@ctx-core/function": "workspace:^20.2.1",
 		"@ctx-core/object": "workspace:^21.0.20",
-		"@ctx-core/store": "workspace:^27.0.31",
+		"@ctx-core/store": "workspace:^27.0.32",
 		"esm": "^3.2.25",
-		"svelte": "3.42.6"
+		"svelte": "3.43.0"
 	},
 	"devDependencies": {
 		"typescript": "^4.4.3"
