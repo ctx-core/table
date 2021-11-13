@@ -1,5 +1,18 @@
 # @ctx-core/table
 
+## 12.0.42
+
+### Patch Changes
+
+- @swc/core: ^1.2.107 -> ^1.2.108
+- Updated dependencies
+  - @ctx-core/array@23.0.24
+  - @ctx-core/combinators@8.0.18
+  - @ctx-core/dom@11.0.31
+  - @ctx-core/function@20.2.4
+  - @ctx-core/object@21.0.23
+  - @ctx-core/store@27.0.37
+
 ## 12.0.41
 
 ### Patch Changes
