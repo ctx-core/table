@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 13.0.0
+
+### Major Changes
+
+- simplify types: data_rows\$\_T
+
 ## 12.0.42
 
 ### Patch Changes

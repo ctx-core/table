@@ -1,6 +1,6 @@
 import { B, be_ } from '@ctx-core/object'
 import { Writable$, writable$ } from '@ctx-core/store'
-import type { table_Ctx } from './table_Ctx'
+import type { table_Ctx } from './table_Ctx.js'
 const key = 'ticks_domain$'
 export const ticks_domain$_b:B<table_Ctx, typeof key> = be_(key, ()=>
 	writable$([0, 5.0, 10.0])

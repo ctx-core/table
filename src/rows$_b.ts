@@ -1,11 +1,11 @@
 import { be_ } from '@ctx-core/object'
 import { derived$, Readable$ } from '@ctx-core/store'
-import { rows_ } from './rows_.js'
-import { table_T, table$_b } from './table$_b.js'
 import { column_offsets$_b } from './column_offsets$_b.js'
 import type { column_offsets_I } from './column_offsets_I.js'
 import type { Row } from './Row.js'
-import type { table_Ctx } from './table_Ctx'
+import { rows_ } from './rows_.js'
+import { table_T, table$_b } from './table$_b.js'
+import type { table_Ctx } from './table_Ctx.js'
 const key = 'rows$'
 export function rows$_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
 	const table = table$_b<Val>(ctx)

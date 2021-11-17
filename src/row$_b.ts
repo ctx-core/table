@@ -1,7 +1,7 @@
 import { be_ } from '@ctx-core/object'
 import { writable$, Writable$ } from '@ctx-core/store'
 import type { Row } from './Row.js'
-import type { table_Ctx } from './table_Ctx'
+import type { table_Ctx } from './table_Ctx.js'
 const key = 'row$'
 export function row$_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
 	return be_<table_Ctx<Val>, typeof key>(key, ()=>

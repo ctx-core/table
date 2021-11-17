@@ -1,6 +1,6 @@
 import { B, be_ } from '@ctx-core/object'
 import { Writable$, writable$ } from '@ctx-core/store'
-import type { table_Ctx } from './table_Ctx'
+import type { table_Ctx } from './table_Ctx.js'
 const key = 'row_id$'
 export const row_id$_b:B<table_Ctx, typeof key> = be_(key, ()=>
 	writable$(undefined) as Writable$<string|undefined>

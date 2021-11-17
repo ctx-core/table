@@ -1,6 +1,6 @@
 import { be_ } from '@ctx-core/object'
 import { writable$, Writable$ } from '@ctx-core/store'
-import type { table_Ctx } from './table_Ctx'
+import type { table_Ctx } from './table_Ctx.js'
 const key = 'table_data_highlight_rows$'
 export function table_data_highlight_rows$_b<Val extends unknown = unknown>(
 	ctx:table_Ctx<Val>

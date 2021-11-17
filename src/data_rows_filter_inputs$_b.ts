@@ -1,8 +1,8 @@
-import { be_ } from '@ctx-core/object'
 import { has_dom } from '@ctx-core/dom'
+import { be_ } from '@ctx-core/object'
 import { _clear_store, subscribe, writable, Writable } from '@ctx-core/store'
 import { table$_b } from './table$_b.js'
-import type { table_Ctx } from './table_Ctx'
+import type { table_Ctx } from './table_Ctx.js'
 const key = 'data_rows_filter_inputs$'
 export function data_rows_filter_inputs$_b<Val extends unknown = unknown>(
 	ctx:table_Ctx<Val>

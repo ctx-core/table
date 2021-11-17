@@ -1,10 +1,10 @@
-import { be_ } from '@ctx-core/object'
 import { maybe_key_r_ } from '@ctx-core/array'
+import { be_ } from '@ctx-core/object'
 import { derived$, Readable$ } from '@ctx-core/store'
+import type { data_rows_T } from './data_rows$_b'
 import { data_rows_filter$_b } from './data_rows_filter$_b.js'
 import type { Row } from './Row.js'
 import type { table_Ctx } from './table_Ctx.js'
-import type { data_rows_T } from './data_rows$_b'
 const key = 'data_rows_filter_table$'
 const row_id_key = 'row_id'
 export function data_rows_filter_table$_b<Val extends unknown = unknown>(
