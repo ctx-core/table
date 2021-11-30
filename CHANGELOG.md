@@ -1,5 +1,35 @@
 # @ctx-core/table
 
+## 13.0.3
+
+### Patch Changes
+
+- @swc/cli: ^0.1.51 -> ^0.1.52
+- @swc/core: ^1.2.111 -> ^1.2.113
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/array@23.0.27
+  - @ctx-core/combinators@8.0.21
+  - @ctx-core/dom@11.0.34
+  - @ctx-core/function@20.2.7
+  - @ctx-core/object@21.0.26
+  - @ctx-core/store@27.0.40
+
+## 13.0.2
+
+### Patch Changes
+
+- svelte: 3.44.1 -> 3.44.2
+- @swc/core: ^1.2.110 -> ^1.2.111
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/store@27.0.39
+  - @ctx-core/array@23.0.26
+  - @ctx-core/combinators@8.0.20
+  - @ctx-core/dom@11.0.33
+  - @ctx-core/function@20.2.6
+  - @ctx-core/object@21.0.25
+
 ## 13.0.1
 
 ### Patch Changes
