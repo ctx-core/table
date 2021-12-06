@@ -1,5 +1,16 @@
 # @ctx-core/table
 
+## 13.0.8
+
+### Patch Changes
+
+- package.json: - "main": explicitly not support cjs
+- Updated dependencies
+  - @ctx-core/array@23.0.32
+  - @ctx-core/combinators@8.0.25
+  - @ctx-core/dom@11.0.39
+  - @ctx-core/store@27.0.45
+
 ## 13.0.7
 
 ### Patch Changes
