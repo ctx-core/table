@@ -1,9 +1,8 @@
-import { be_ } from '@ctx-core/object'
+import { be_, Ctx } from '@ctx-core/object'
 import { Writable$, writable$ } from '@ctx-core/store'
-import type { table_Ctx } from './table_Ctx.js'
 const key = 'table$'
-export function table$_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
-	return be_<table_Ctx<Val>, typeof key>(key, ()=>
+export function table$_b<Val extends unknown = unknown>(ctx:Ctx) {
+	return be_<table$_T<Val>>(key, ()=>
 		writable$<table_T<Val>>([]) as table$_T<Val>
 	)(ctx)
 }
