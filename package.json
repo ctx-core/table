@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "14.0.1",
+	"version": "14.0.2",
 	"description": "ctx-core table",
 	"keywords": [
 		"ctx-core",
@@ -32,12 +32,12 @@
 		"prepublishOnly": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"@ctx-core/array": "workspace:^23.0.33",
-		"@ctx-core/combinators": "workspace:^8.0.26",
-		"@ctx-core/dom": "workspace:^11.0.40",
-		"@ctx-core/function": "workspace:^20.2.12",
-		"@ctx-core/object": "workspace:^22.0.0",
-		"@ctx-core/store": "workspace:^27.0.47",
+		"@ctx-core/array": "workspace:^23.0.34",
+		"@ctx-core/combinators": "workspace:^8.0.27",
+		"@ctx-core/dom": "workspace:^11.0.41",
+		"@ctx-core/function": "workspace:^20.2.13",
+		"@ctx-core/object": "workspace:^22.0.1",
+		"@ctx-core/store": "workspace:^27.0.48",
 		"svelte": "^3.44.3"
 	},
 	"devDependencies": {
@@ -49,5 +49,6 @@
 	"publishConfig": {
 		"access": "public",
 		"cache": "~/.npm"
-	}
+	},
+	"svelte": "./dist/index.js"
 }
