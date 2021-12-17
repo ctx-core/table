@@ -1,5 +1,18 @@
 # @ctx-core/table
 
+## 14.0.8
+
+### Patch Changes
+
+- tsconfig.json: "target": "ES2021"
+- Updated dependencies
+  - @ctx-core/array@23.0.40
+  - @ctx-core/combinators@8.0.33
+  - @ctx-core/dom@11.0.47
+  - @ctx-core/function@20.2.19
+  - @ctx-core/object@22.0.7
+  - @ctx-core/store@27.0.54
+
 ## 14.0.7
 
 ### Patch Changes
