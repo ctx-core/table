@@ -1,17 +1,14 @@
 import { has_dom } from '@ctx-core/dom'
-import { be_ } from '@ctx-core/object'
+import { be_, Ctx } from '@ctx-core/object'
 import { subscribe } from '@ctx-core/store'
 import type { Row } from './Row.js'
 import { row$_b } from './row$_b.js'
 import { row_id$_b } from './row_id$_b.js'
 import { rows$_b } from './rows$_b.js'
 import { table$_b } from './table$_b.js'
-import type { table_Ctx } from './table_Ctx.js'
 const key = 'set_row'
-export function set_row_b<Val extends unknown = unknown>(
-	ctx:table_Ctx<Val>
-) {
-	return be_<table_Ctx<Val>, typeof key>(key, ()=>{
+export function set_row_b<Val extends unknown = unknown>(ctx:Ctx) {
+	return be_<set_row_T>(key, ()=>{
 		if (has_dom) {
 			subscribe(row_id$_b(ctx), set_row)
 			subscribe(table$_b<Val>(ctx), set_row)

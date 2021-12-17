@@ -5,7 +5,7 @@ import type { table_T } from './table$_b.js'
 export function rows_<I extends unknown, O extends Row = Row>(
 	table:table_T<I>,
 	column_offsets:column_offsets_I
-) {
+):O[]|undefined {
 	if (!table || !column_offsets) return
 	const data_row_a = table.slice(1) as I[][]
 	let rows = [] as O[]

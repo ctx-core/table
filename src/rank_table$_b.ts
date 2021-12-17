@@ -1,18 +1,17 @@
 import { tup } from '@ctx-core/array'
 import type { falsy } from '@ctx-core/function'
-import { be_ } from '@ctx-core/object'
+import { be_, Ctx } from '@ctx-core/object'
 import { derived$, Readable$ } from '@ctx-core/store'
 import { column_offsets$_b } from './column_offsets$_b.js'
-import { columns_T, columns$_b } from './columns$_b.js'
+import { columns$_b } from './columns$_b.js'
 import type { column_offsets_I } from './column_offsets_I.js'
 import { rows$_b } from './rows$_b.js'
 import { row_proxy_ } from './row_proxy_.js'
 import type { table_T } from './table$_b.js'
 import type { Row } from './Row.js'
-import type { table_Ctx } from './table_Ctx.js'
 const key = 'rank_table$'
-export function rank_table$_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
-	return be_<table_Ctx<Val>, typeof key>(key, ()=>
+export function rank_table$_b<Val extends unknown = unknown>(ctx:Ctx) {
+	return be_<rank_table$_T>(key, ()=>
 		derived$(tup(
 			columns$_b<Val>(ctx),
 			rows$_b<Val>(ctx),
@@ -22,7 +21,7 @@ export function rank_table$_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>)
 		))(ctx)
 }
 function rank_table_<Val extends unknown = unknown>(
-	maybe_columns:columns_T|falsy,
+	maybe_columns:string[]|falsy,
 	maybe_rows:Row<Val>[],
 	column_offsets:Record<string, number>,
 ):table_T<Val>|undefined {

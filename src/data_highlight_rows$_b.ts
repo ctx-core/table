@@ -1,17 +1,13 @@
-import { be_ } from '@ctx-core/object'
+import { be_, Ctx } from '@ctx-core/object'
 import { writable$, Writable$ } from '@ctx-core/store'
-import type { table_Ctx } from './table_Ctx.js'
 const key = 'data_highlight_rows$'
-export function data_highlight_rows$_b<Val extends unknown = unknown>(
-	ctx:table_Ctx<Val>
-) {
-	return be_<table_Ctx<Val>, typeof key>(key, ()=>
+export function data_highlight_rows$_b<Val extends unknown = unknown>(ctx:Ctx) {
+	return be_<data_highlight_rows$_T>(key, ()=>
 		writable$(undefined) as data_highlight_rows$_T<Val>
 	)(ctx)
 }
-export type data_highlight_rows_T<Val extends unknown = unknown> = Val[][]
-export interface data_highlight_rows$_T<Val extends unknown = unknown>
-	extends Writable$<data_highlight_rows_T<Val>|undefined> {}
+export type data_highlight_rows$_T<Val extends unknown = unknown> =
+	Writable$<Val[][]|undefined>
 export {
 	data_highlight_rows$_b as b__highlight__rows__data
 }

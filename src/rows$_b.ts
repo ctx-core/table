@@ -1,15 +1,14 @@
-import { be_ } from '@ctx-core/object'
+import { be_, Ctx } from '@ctx-core/object'
 import { derived$, Readable$ } from '@ctx-core/store'
 import { column_offsets$_b } from './column_offsets$_b.js'
 import type { column_offsets_I } from './column_offsets_I.js'
 import type { Row } from './Row.js'
 import { rows_ } from './rows_.js'
 import { table_T, table$_b } from './table$_b.js'
-import type { table_Ctx } from './table_Ctx.js'
 const key = 'rows$'
-export function rows$_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
+export function rows$_b<Val extends unknown = unknown>(ctx:Ctx):rows$_T<Val> {
 	const table = table$_b<Val>(ctx)
-	return be_<table_Ctx<Val>, typeof key>(key, ctx=>
+	return be_<rows$_T<Val>>(key, ctx=>
 		derived$([
 			table,
 			column_offsets$_b(ctx)
@@ -18,7 +17,7 @@ export function rows$_b<Val extends unknown = unknown>(ctx:table_Ctx<Val>) {
 		}) as rows$_T<Val>
 	)(ctx)
 }
-export interface rows$_T<Val extends unknown = unknown> extends Readable$<Row<Val>[]> {}
+export type rows$_T<Val extends unknown = unknown> = Readable$<Row<Val>[]>
 export {
 	rows$_b as b__rows
 }
