@@ -1,6 +1,5 @@
 import { has_dom } from '@ctx-core/dom'
 import { be_, Ctx } from '@ctx-core/object'
-import { subscribe } from '@ctx-core/store'
 import type { Row } from './Row.js'
 import { row$_b } from './row$_b.js'
 import { row_id$_b } from './row_id$_b.js'
@@ -10,8 +9,8 @@ const key = 'set_row'
 export function set_row_b<Val extends unknown = unknown>(ctx:Ctx) {
 	return be_<set_row_T>(key, ()=>{
 		if (has_dom) {
-			subscribe(row_id$_b(ctx), set_row)
-			subscribe(table$_b<Val>(ctx), set_row)
+			row_id$_b(ctx).subscribe(set_row)
+			table$_b<Val>(ctx).subscribe(set_row)
 			set_row()
 		}
 		return set_row

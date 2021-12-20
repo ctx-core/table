@@ -1,6 +1,5 @@
-import { tup } from '@ctx-core/array'
+import { computed$, } from '@ctx-core/nanostores'
 import { be_, Ctx } from '@ctx-core/object'
-import { derived$, } from '@ctx-core/store'
 import { data_rows$_b, data_rows$_T } from './data_rows$_b.js'
 import { data_row_filter_inputs_T, data_rows_filter_inputs$_b, } from './data_rows_filter_inputs$_b.js'
 const key = 'data_rows_filter'
@@ -8,12 +7,11 @@ export function data_rows_filter$_b<Val extends unknown = unknown>(
 	ctx:Ctx
 ):data_rows$_T<Val> {
 	return be_<data_rows$_T<Val>>(key, (ctx)=>
-		derived$(tup(
+		computed$([
 				data_rows_filter_inputs$_b<Val>(ctx),
 				data_rows$_b<Val>(ctx)
-			),
-			(
-				[data_rows_filter_inputs_maybe, maybe_data_row_a])=>{
+			],
+			(data_rows_filter_inputs_maybe, maybe_data_row_a)=>{
 				if (!data_rows_filter_inputs_maybe || !maybe_data_row_a) return
 				const data_rows_filter_inputs = data_rows_filter_inputs_maybe as data_row_filter_inputs_T<Val>[]
 				const data_row_a = maybe_data_row_a as Val[][]

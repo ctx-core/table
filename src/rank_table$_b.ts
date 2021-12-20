@@ -1,7 +1,7 @@
 import { tup } from '@ctx-core/array'
 import type { falsy } from '@ctx-core/function'
+import { computed$, ReadableAtom$ } from '@ctx-core/nanostores'
 import { be_, Ctx } from '@ctx-core/object'
-import { derived$, Readable$ } from '@ctx-core/store'
 import { column_offsets$_b } from './column_offsets$_b.js'
 import { columns$_b } from './columns$_b.js'
 import type { column_offsets_I } from './column_offsets_I.js'
@@ -12,12 +12,12 @@ import type { Row } from './Row.js'
 const key = 'rank_table$'
 export function rank_table$_b<Val extends unknown = unknown>(ctx:Ctx) {
 	return be_<rank_table$_T>(key, ()=>
-		derived$(tup(
+		computed$(tup(
 			columns$_b<Val>(ctx),
 			rows$_b<Val>(ctx),
 			column_offsets$_b<Val>(ctx),
-			), ([$columns, $rows, $column_offsets])=>
-				rank_table_<Val>($columns, $rows as Row<Val>[], $column_offsets as column_offsets_I)
+			), (columns, rows, column_offsets)=>
+				rank_table_<Val>(columns, rows as Row<Val>[], column_offsets as column_offsets_I)
 		))(ctx)
 }
 function rank_table_<Val extends unknown = unknown>(
@@ -66,7 +66,7 @@ function rank_table_<Val extends unknown = unknown>(
 	return table_rank
 }
 export type rank_table$_T<Val extends unknown = unknown> =
-	Readable$<table_T<Val>|undefined>
+	ReadableAtom$<table_T<Val>|undefined>
 export {
 	rank_table$_b as b__rank__table
 }
