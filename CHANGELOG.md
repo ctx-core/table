@@ -1,5 +1,15 @@
 # @ctx-core/table
 
+## 15.0.6
+
+### Patch Changes
+
+- .js + .d.ts instead of .ts
+- Updated dependencies
+  - @ctx-core/dom@11.1.2
+  - @ctx-core/function@20.2.21
+  - @ctx-core/nanostores@0.3.1
+
 ## 15.0.5
 
 ### Patch Changes
