@@ -1,5 +1,18 @@
 # @ctx-core/table
 
+## 15.0.7
+
+### Patch Changes
+
+- version bump
+- Updated dependencies
+  - @ctx-core/array@23.1.2
+  - @ctx-core/combinators@8.0.35
+  - @ctx-core/dom@11.1.3
+  - @ctx-core/function@20.2.23
+  - @ctx-core/nanostores@0.3.2
+  - @ctx-core/object@22.0.10
+
 ## 15.0.6
 
 ### Patch Changes
