@@ -1,5 +1,18 @@
 # @ctx-core/table
 
+## 15.0.9
+
+### Patch Changes
+
+- sideEffects = false
+- Updated dependencies
+  - @ctx-core/array@23.1.4
+  - @ctx-core/combinators@8.0.37
+  - @ctx-core/dom@11.1.5
+  - @ctx-core/function@20.2.25
+  - @ctx-core/nanostores@0.3.4
+  - @ctx-core/object@22.0.12
+
 ## 15.0.8
 
 ### Patch Changes
