@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 15.0.16
+
+### Patch Changes
+
+- update dependencies
+
 ## 15.0.15
 
 ### Patch Changes
