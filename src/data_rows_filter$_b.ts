@@ -6,7 +6,7 @@ const key = 'data_rows_filter'
 export function data_rows_filter$_b<Val extends unknown = unknown>(
 	ctx:Ctx
 ):data_rows$_T<Val> {
-	return be_<data_rows$_T<Val>>(key, (ctx)=>
+	return be_<data_rows$_T<Val>>(key, ctx=>
 		computed$([
 				data_rows_filter_inputs$_b<Val>(ctx),
 				data_rows$_b<Val>(ctx)
