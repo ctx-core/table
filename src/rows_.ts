@@ -1,10 +1,10 @@
-import type { column_offsets_I } from './column_offsets_I.js'
+import type { column_offsets_T } from './column_offsets_T.js'
 import type { Row } from './Row.js'
 import { row_proxy_ } from './row_proxy_.js'
-import type { table_T } from './table$_b.js'
+import type { table_T } from './table$_.js'
 export function rows_<I extends unknown, O extends Row = Row>(
 	table:table_T<I>,
-	column_offsets:column_offsets_I
+	column_offsets:column_offsets_T
 ):O[]|undefined {
 	if (!table || !column_offsets) return
 	const data_row_a = table.slice(1) as I[][]

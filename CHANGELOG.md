@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 16.0.0
+
+### Major Changes
+
+- flatten functions: remove \_b suffix from exports
+
 ## 15.0.18
 
 ### Patch Changes

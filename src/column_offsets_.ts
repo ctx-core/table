@@ -1,7 +1,7 @@
 import { reduce } from '@ctx-core/array'
-import type { column_offsets_I } from './column_offsets_I.js'
-export function column_offsets_(columns:string[]):column_offsets_I {
-	return reduce<string, column_offsets_I>(
+import type { column_offsets_T } from './column_offsets_T.js'
+export function column_offsets_(columns:string[]):column_offsets_T {
+	return reduce<string, column_offsets_T>(
 		columns, (memo, column, i
 		)=>{
 			memo[column] = i
