@@ -2,13 +2,12 @@ import { computed$, ReadableAtom$, } from '@ctx-core/nanostores'
 import { be_, Ctx } from '@ctx-core/object'
 import { data_rows$_, data_rows$_T } from './data_rows$_.js'
 import { data_row_filter_inputs_T, data_rows_filter_inputs$_, } from './data_rows_filter_inputs$_.js'
-const key = 'data_rows_filter'
 export function data_rows_filter$_<Val extends unknown = unknown>(
 	ctx:Ctx
 ):data_rows$_T<Val> {
 	return data_rows_filter$_b(ctx) as data_rows_filter$_T<Val>
 }
-const data_rows_filter$_b = be_<data_rows$_T>(key, ctx=>
+const data_rows_filter$_b = be_<data_rows$_T>('data_rows_filter', ctx=>
 	computed$([
 			data_rows_filter_inputs$_(ctx),
 			data_rows$_<number>(ctx)

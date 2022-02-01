@@ -4,11 +4,10 @@ import type { Row } from './Row.js'
 import { row$_ } from './row$_.js'
 import { row_id$_ } from './row_id$_.js'
 import { rows$_ } from './rows$_.js'
-const key = 'set_row'
 export function set_row(ctx:Ctx) {
-	return set_row_b(ctx)()
+	return _set_row(ctx)()
 }
-const set_row_b = be_<set_row_T>(key, ctx=>{
+const _set_row = be_<set_row_T>('set_row', ctx=>{
 	if (has_dom) {
 		_set_row()
 	}

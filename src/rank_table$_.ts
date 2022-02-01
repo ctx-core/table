@@ -9,11 +9,10 @@ import { rows$_ } from './rows$_.js'
 import { row_proxy_ } from './row_proxy_.js'
 import type { table_T } from './table$_.js'
 import type { Row } from './Row.js'
-const key = 'rank_table$'
 export function rank_table$_<Val extends unknown = unknown>(ctx:Ctx) {
 	return rank_table$_b(ctx) as rank_table$_T<Val>
 }
-const rank_table$_b = be_<rank_table$_T>(key, ctx=>
+const rank_table$_b = be_<rank_table$_T>('rank_table$', ctx=>
 	computed$(tup(
 			columns$_(ctx),
 			rows$_(ctx),

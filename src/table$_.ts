@@ -2,11 +2,10 @@ import { atom$, WritableAtom$ } from '@ctx-core/nanostores'
 import { be_, Ctx } from '@ctx-core/object'
 import { has_dom } from '@ctx-core/dom'
 import { set_row } from './set_row'
-const key = 'table$'
 export function table$_<Val extends unknown = unknown>(ctx:Ctx) {
-	return table$_b(ctx) as table$_T<Val>
+	return _table$_(ctx) as table$_T<Val>
 }
-const table$_b = be_<table$_T>(key, ctx=>{
+const _table$_ = be_<table$_T>('table$', ctx=>{
 	const table$ = atom$<table_T>([])
 	if (has_dom) {
 		table$.subscribe(()=>set_row(ctx))
