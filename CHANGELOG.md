@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 16.0.13
+
+### Patch Changes
+
+- version bump
+
 ## 16.0.12
 
 ### Patch Changes
