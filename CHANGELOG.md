@@ -1,5 +1,18 @@
 # @ctx-core/table
 
+## 16.0.17
+
+### Patch Changes
+
+- package.json: exports: update
+- Updated dependencies
+  - @ctx-core/array@26.1.3
+  - @ctx-core/combinators@8.0.38
+  - @ctx-core/dom@11.1.10
+  - @ctx-core/function@20.6.1
+  - @ctx-core/nanostores@1.0.11
+  - @ctx-core/object@22.1.4
+
 ## 16.0.16
 
 ### Patch Changes
