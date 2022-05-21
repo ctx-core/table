@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "16.0.25",
+	"version": "16.0.26",
 	"description": "ctx-core table",
 	"keywords": [
 		"ctx-core",
@@ -33,16 +33,16 @@
 		"prepublishOnly": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"@ctx-core/array": "^26.2.4",
+		"@ctx-core/array": "^26.3.0",
 		"@ctx-core/combinators": "^8.0.38",
 		"@ctx-core/dom": "^11.1.18",
 		"@ctx-core/function": "^20.8.0",
-		"@ctx-core/nanostores": "^1.0.18",
+		"@ctx-core/nanostores": "^1.0.19",
 		"@ctx-core/object": "^22.1.10"
 	},
 	"devDependencies": {
 		"@swc/cli": "^0.1.57",
-		"@swc/core": "^1.2.187",
+		"@swc/core": "^1.2.189",
 		"rimraf": "^3.0.2",
 		"typescript": "next"
 	},
