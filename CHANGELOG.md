@@ -1,5 +1,14 @@
 # @ctx-core/table
 
+## 16.0.30
+
+### Patch Changes
+
+- @ctx-core/object: 22.2.0
+- Updated dependencies
+  - @ctx-core/array@26.4.3
+  - @ctx-core/dom@11.1.21
+
 ## 16.0.29
 
 ### Patch Changes
