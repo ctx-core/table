@@ -1,4 +1,4 @@
-import { computed$, ReadableAtom$, } from '@ctx-core/nanostores'
+import { computed_, ReadableAtom_, } from '@ctx-core/nanostores'
 import { be_, Ctx } from '@ctx-core/object'
 import { data_rows$_, data_rows$_T } from './data_rows$_.js'
 import { data_row_filter_inputs_T, data_rows_filter_inputs$_, } from './data_rows_filter_inputs$_.js'
@@ -8,7 +8,7 @@ export function data_rows_filter$_<Val extends unknown = unknown>(
 	return _data_rows_filter$_(ctx) as data_rows_filter$_T<Val>
 }
 const _data_rows_filter$_ = be_<data_rows$_T>('data_rows_filter$', ctx=>
-	computed$([
+	computed_([
 			data_rows_filter_inputs$_(ctx),
 			data_rows$_<number>(ctx)
 		],
@@ -40,4 +40,4 @@ const _data_rows_filter$_ = be_<data_rows$_T>('data_rows_filter$', ctx=>
 			return filter_rows
 		}) as data_rows$_T
 )
-export type data_rows_filter$_T<Val extends unknown = unknown> = ReadableAtom$<Val[][]>
+export type data_rows_filter$_T<Val extends unknown = unknown> = ReadableAtom_<Val[][]>

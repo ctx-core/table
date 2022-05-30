@@ -1,6 +1,6 @@
 import { tup } from '@ctx-core/array'
 import type { falsy } from '@ctx-core/function'
-import { computed$, ReadableAtom$ } from '@ctx-core/nanostores'
+import { computed_, ReadableAtom_ } from '@ctx-core/nanostores'
 import { be_, Ctx } from '@ctx-core/object'
 import { column_offsets$_ } from './column_offsets$_.js'
 import { columns$_ } from './columns$_.js'
@@ -13,7 +13,7 @@ export function rank_table$_<Val extends unknown = unknown>(ctx:Ctx) {
 	return _rank_table$_(ctx) as rank_table$_T<Val>
 }
 const _rank_table$_ = be_<rank_table$_T>('rank_table$', ctx=>
-	computed$(tup(
+	computed_(tup(
 			columns$_(ctx),
 			rows$_(ctx),
 			column_offsets$_(ctx),
@@ -66,7 +66,7 @@ function rank_table_<Val extends unknown = unknown>(
 	return table_rank
 }
 export type rank_table$_T<Val extends unknown = unknown> =
-	ReadableAtom$<table_T<Val>|undefined>
+	ReadableAtom_<table_T<Val>|undefined>
 export {
 	rank_table$_ as b__rank__table
 }
