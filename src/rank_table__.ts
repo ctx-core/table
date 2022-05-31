@@ -2,21 +2,21 @@ import { tup } from '@ctx-core/array'
 import type { falsy } from '@ctx-core/function'
 import { computed_, ReadableAtom_ } from '@ctx-core/nanostores'
 import { be_, Ctx } from '@ctx-core/object'
-import { column_offsets$_ } from './column_offsets$_.js'
-import { columns$_ } from './columns$_.js'
+import { column_offsets__ } from './column_offsets__.js'
+import { columns__ } from './columns__.js'
 import type { column_offsets_T } from './column_offsets_T.js'
-import { rows$_ } from './rows$_.js'
+import { rows__ } from './rows__.js'
 import { row_proxy_ } from './row_proxy_.js'
-import type { table_T } from './table$_.js'
+import type { table_T } from './table__.js'
 import type { Row } from './Row.js'
-export function rank_table$_<Val extends unknown = unknown>(ctx:Ctx) {
-	return _rank_table$_(ctx) as rank_table$_T<Val>
+export function rank_table__<Val extends unknown = unknown>(ctx:Ctx) {
+	return _rank_table__(ctx) as rank_table__T<Val>
 }
-const _rank_table$_ = be_<rank_table$_T>('rank_table$', ctx=>
+const _rank_table__ = be_<rank_table__T>('rank_table__', ctx=>
 	computed_(tup(
-			columns$_(ctx),
-			rows$_(ctx),
-			column_offsets$_(ctx),
+			columns__(ctx),
+			rows__(ctx),
+			column_offsets__(ctx),
 		), (columns, rows, column_offsets)=>
 			rank_table_(columns, rows as Row[], column_offsets as column_offsets_T)
 	))
@@ -65,8 +65,9 @@ function rank_table_<Val extends unknown = unknown>(
 	}
 	return table_rank
 }
-export type rank_table$_T<Val extends unknown = unknown> =
+export type rank_table__T<Val extends unknown = unknown> =
 	ReadableAtom_<table_T<Val>|undefined>
 export {
-	rank_table$_ as b__rank__table
+	rank_table__ as rank_table$_,
+	rank_table__ as b__rank__table
 }
