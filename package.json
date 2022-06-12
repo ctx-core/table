@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "16.1.1",
+	"version": "16.1.2",
 	"description": "ctx-core table",
 	"keywords": [
 		"ctx-core",
@@ -33,7 +33,7 @@
 		"prepublishOnly": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"@ctx-core/array": "^26.5.2",
+		"@ctx-core/array": "^26.6.0",
 		"@ctx-core/combinators": "^8.0.38",
 		"@ctx-core/dom": "^11.1.21",
 		"@ctx-core/function": "^20.8.0",
