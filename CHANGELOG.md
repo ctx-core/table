@@ -1,5 +1,16 @@
 # @ctx-core/table
 
+## 16.1.7
+
+### Patch Changes
+
+- @ctx-core/function: 20.10.0
+- Updated dependencies
+  - @ctx-core/array@26.7.4
+  - @ctx-core/dom@11.1.24
+  - @ctx-core/nanostores@1.4.5
+  - @ctx-core/object@22.2.4
+
 ## 16.1.6
 
 ### Patch Changes
