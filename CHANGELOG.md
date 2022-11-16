@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 16.1.14
+
+### Patch Changes
+
+- @ctx-core/dom: ^11.1.28 -> ^11.2.0
+
 ## 16.1.13
 
 ### Patch Changes
