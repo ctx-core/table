@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 16.1.35
+
+### Patch Changes
+
+- rimraf: ^3.0.2 -> ^4.0.1
+
 ## 16.1.34
 
 ### Patch Changes
