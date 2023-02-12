@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 16.1.58
+
+### Patch Changes
+
+- @ctx-core/array: ^26.10.0 -> ^26.10.1
+
 ## 16.1.57
 
 ### Patch Changes
