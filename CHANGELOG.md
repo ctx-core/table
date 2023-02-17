@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 16.2.0
+
+### Minor Changes
+
+- extract _.js & _.d.ts into directories
+
 ## 16.1.64
 
 ### Patch Changes
