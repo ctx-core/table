@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "16.2.5",
+	"version": "16.2.6",
 	"description": "ctx-core table",
 	"keywords": [
 		"ctx-core",
@@ -33,12 +33,12 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/array": "^26.11.1",
+		"@ctx-core/array": "^26.11.2",
 		"@ctx-core/combinators": "^8.0.41",
-		"@ctx-core/dom": "^11.4.3",
-		"@ctx-core/function": "^21.7.0",
-		"@ctx-core/nanostores": "^2.2.24",
-		"@ctx-core/object": "^24.1.5"
+		"@ctx-core/dom": "^11.4.4",
+		"@ctx-core/function": "^21.7.1",
+		"@ctx-core/nanostores": "^2.2.25",
+		"@ctx-core/object": "^24.1.6"
 	},
 	"devDependencies": {
 		"c8": "^7.13.0",
