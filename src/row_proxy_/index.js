@@ -1,16 +1,19 @@
 /**
- * @param data_row{unknown[]}
- * @param column_offset_a{Record<string, number>}
+ * @param {import('../_types').Row<unknown>}row
+ * @param {Map<string, number>}column_M_column_idx
  * @returns {unknown}
  */
-export function row_proxy_(data_row, column_offset_a) {
-	return new Proxy(data_row, {
+export function row_proxy_(
+	row,
+	column_M_column_idx
+) {
+	return new Proxy(row, {
 		get
 	})
 	function get(target, name) {
-		const key = Reflect.get(column_offset_a, name)
-		if (key != null) {
-			return data_row[key]
+		const column_idx = column_M_column_idx.get(name)
+		if (column_idx != null) {
+			return row[column_idx]
 		} else {
 			return target[name]
 		}

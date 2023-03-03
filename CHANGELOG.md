@@ -1,5 +1,52 @@
 # @ctx-core/table
 
+## 18.0.0
+
+### Major Changes
+
+- - column*offsets*
+- - \_offsets\_\_column
+- - table\_\_T
+- - column_offset_a\_\_
+- Row: - row_id
+- - filter**data_row_a**,data*rows_filter\_\_,\_data_rows_filter$*,filter**data*row_a*,filter**data_row_a\_\_set
+- - column_offsets_T
+- - filter**table**,data*rows_filter_table\_\_,data_rows_filter_table$*,filter**table\_,filter**table**set,filter**table_T,data_rows_filter_table_T
+- - data_rows\_\_T
+- - column_offset_a\_\_new
+- - column*offsets$*
+- - column*offsets*
+- - data_highlight_row_a\_\_T
+- table_T: { column_a:string[], row_a:Row<Val>[] }
+- - data_highlight_row_a\_\_T
+- - data_row_a\_\_T
+- - \_column_offsets
+- - data*highlight_rows**,data_highlight_rows**,data_highlight_rows$*,data*highlight_rows*,data_highlight_row_a\_\_set
+- - column_offsets\_\_set
+- - data*row_a\_\_,data_row_a*,data_row_a**set,data_row_a**new
+- - table*data_highlight_row_a**,table_data_highlight_rows**,table_data_highlight_rows$*,table*data_highlight_row_a*,table_data_highlight_row_a\_\_set,table_data_highlight_row_a_T,table_data_highlight_rows_T
+- - data*row_a_filter_input_a**,data_rows_filter_inputs**,data_rows_filter_inputs$*,data*row_a_filter_input_a*,data_row_a_filter_input_a\_\_set,data_row_a_filter_input_a_T,data_row_filter_inputs_T
+
+### Minor Changes
+
+- - column*M_column_idx*
+- - table**row_a**,table\__row_a_
+- - row_M_row_idx\_\_set
+- - row*M_row_idx*
+- - column_M_column_idx\_\_set
+- - column_M_column_idx\_\_
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/nanostores@3.0.0
+  - @ctx-core/object@27.0.0
+  - @ctx-core/array@26.11.12
+  - @ctx-core/dom@11.4.22
+
 ## 17.0.1
 
 ### Patch Changes

@@ -1,14 +1,15 @@
 import type { ReadableAtom_ } from '@ctx-core/nanostores'
 import type { Ctx } from '@ctx-core/object'
-import { Row } from '../_types'
-export declare function data_row_a__<
+import type { Row } from '../_types'
+export declare function table__row_a__<
 	Val extends unknown = unknown
->(ctx:Ctx):data_row_a__T<Val>
+>(ctx:Ctx):ReadableAtom_<Val[][]|undefined>
 export {
-	data_row_a__ as data_rows__,
-	data_row_a__ as data_rows$_,
+	table__row_a__ as data_row_a__,
+	table__row_a__ as data_rows__,
+	table__row_a__ as data_rows$_,
 }
-export declare function data_row_a_(ctx:Ctx):Val[][]
+export declare function table__row_a_(ctx:Ctx):Val[][]
 export declare function data_row_a__set(ctx:Ctx, data_rows:Val[][]):void
 export declare function data_row_a__new<
 	I extends Row,
@@ -16,15 +17,9 @@ export declare function data_row_a__new<
 >(
 	maybe_row_a:I[]|undefined,
 	data_column_a:string[],
-	column_offset_a:Record<string, number>
+	column_M_column_idx:Map<string, number>
 ):O[]|undefined
 export {
 	data_row_a__new as _data_rows,
 	data_row_a__new as _rows__data,
 }
-export type data_row_a__T<
-	Val extends unknown = unknown
-> = ReadableAtom_<Val[][]|undefined>
-export declare type data_rows__T<
-	Val extends unknown = unknown
-> = data_row_a__T<Val>
