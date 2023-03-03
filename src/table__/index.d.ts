@@ -10,3 +10,9 @@ export type table__T<
 	Val extends unknown = unknown
 > = WritableAtom_<table_T<Val>>
 export { table__ as table$_ }
+export declare function table_<
+	Val extends unknown = unknown
+>(ctx:Ctx):table_T<Val>
+export declare function table__set<
+	Val extends unknown = unknown
+>(ctx:Ctx, table:table_T<Val>):void

@@ -1,5 +1,69 @@
 # @ctx-core/table
 
+## 17.0.0
+
+### Major Changes
+
+- - ticks**domain**
+- - table**domain**
+- - row\_\_T
+- - row\_\_set
+- - data_rows_filter_inputs\_\_T
+- - table_data_highlight_rows\_\_T
+- - rank_table\_\_T
+- rows\_=>row_a\_\_new
+- - rows\_\_T
+- - \_rows
+
+### Minor Changes
+
+- - row*id*
+- - reverse*column_a*
+- - filter\__table_
+- - filter\_\_data_row_a\_\_: aliased by data_rows_filter\_\_
+- - data*row_a*: aliased by data*rows*
+- - filter\__data_row_a_
+- - data_row_a**: aliased by data_rows**
+- - filter**table**set
+- - table\_
+- - column_offset_a\_
+- - data_row_a_filter**: aliased by data_rows_filter**
+- - row_a**: aliased by rows**
+- - data_row_a_filter_input_a**: aliased by data_rows_filter_inputs**
+- - data_highlight_row_a\_\_set
+- - reverse_column_a\_\_set
+- - rank_table\_\_set
+- - data_row_a_filter_input_a_T: aliased by data_row_filter_inputs_T
+- - filter**table**: aliased by data_rows_filter_table\_\_
+- - row_id\_\_set
+- - filter**data_row_a**set
+- - table_data_highlight_row_a\_\_set
+- - data_highlight_row_a**T: aliased by data_highlight_rows**T
+- column_offset_a\_\_new: aliased by column_offsets\_
+- - data*highlight_row_a*
+- - row\_
+- - row_a\_\_set
+- - table*data_highlight_row_a*
+- - reverse_column_a\_\_set
+- - row\_\_set
+- - filter\_\_table_T: aliased by data_rows_filter_table_T
+- - row*a*
+- - data_highlight_row_a**: aliased by data_highlight_rows**
+- - data_rows_filter_table\_\_T
+- table\_\_set
+- - reverse*column_a*
+- - table_data_highlight_row_a_T: aliased by table_data_highlight_rows_T
+- - data_row_a**T: aliased by data_rows**T
+- - rank*table*
+- - reverse_column_a**: aliased by reverse_columns**
+- - column_a**: aliased by columns**
+- - column_offset_a\_\_set
+
+### Patch Changes
+
+- - jsdocs
+- fix: jsdocs
+
 ## 16.2.24
 
 ### Patch Changes

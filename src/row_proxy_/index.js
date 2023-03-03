@@ -1,14 +1,14 @@
 /**
  * @param data_row{unknown[]}
- * @param column_offsets{Record<string, number>}
+ * @param column_offset_a{Record<string, number>}
  * @returns {unknown}
  */
-export function row_proxy_(data_row, column_offsets) {
+export function row_proxy_(data_row, column_offset_a) {
 	return new Proxy(data_row, {
 		get
 	})
 	function get(target, name) {
-		const key = Reflect.get(column_offsets, name)
+		const key = Reflect.get(column_offset_a, name)
 		if (key != null) {
 			return data_row[key]
 		} else {

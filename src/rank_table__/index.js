@@ -1,39 +1,54 @@
 import { tup } from '@ctx-core/array'
 import { computed_ } from '@ctx-core/nanostores'
 import { be_ } from '@ctx-core/object'
-import { column_offsets__ } from '../column_offsets__/index.js'
-import { columns__ } from '../columns__/index.js'
-import { rows__ } from '../rows__/index.js'
+import { column_offset_a__ } from '../column_offset_a__/index.js'
+import { column_a__ } from '../column_a__/index.js'
+import { row_a__ } from '../row_a__/index.js'
 import { row_proxy_ } from '../row_proxy_/index.js'
-/**
- * @param ctx{import('@ctx-core/object').Ctx}
- * @returns {import('./index.d.ts').rank_table__T}
- */
-export function rank_table__(ctx) {
-	return _rank_table__(ctx)
-}
-const _rank_table__ = be_('rank_table__', ctx=>
+/** @typedef {import('@ctx-core/object').Ctx}Ctx */
+/** @typedef {import('../table__').table_T}table_T */
+/** @type {typeof import('./index.d.ts').rank_table__} */
+export const rank_table__ = be_('rank_table__', ctx=>
 	computed_(
-		tup(columns__(ctx), rows__(ctx), column_offsets__(ctx)), (
+		tup(column_a__(ctx), row_a__(ctx), column_offset_a__(ctx)), (
 			columns,
 			rows,
-			column_offsets
+			column_offset_a
 		)=>
-			rank_table_(columns, rows, column_offsets)))
+			rank_table_(columns, rows, column_offset_a)))
+export {
+	rank_table__ as rank_table$_,
+	rank_table__ as b__rank__table,
+}
+/**
+ * @param {Ctx}ctx
+ * @returns {table_T<unknown>}
+ * @private
+ */
+export function rank_table_(ctx) {
+  return rank_table__(ctx).$
+}
+/**
+ * @param {Ctx}ctx
+ * @param {table_T<unknown>}rank_table
+ */
+export function rank_table__set(ctx, rank_table) {
+  rank_table_(ctx).$ = rank_table
+}
 /**
  * @param maybe_columns{string[]}
- * @param maybe_rows{import('../Row').Row[]}
- * @param column_offsets{import('../_types').column_offsets_T}
+ * @param maybe_row_a{import('../Row').Row[]}
+ * @param column_offset_a{import('../_types').column_offsets_T}
  * @returns {import('../table__').table_T|undefined}
  */
 function rank_table_(
 	maybe_columns,
-	maybe_rows,
-	column_offsets
+	maybe_row_a,
+	column_offset_a
 ) {
-	if (!maybe_columns || !maybe_rows) return
+	if (!maybe_columns || !maybe_row_a) return
 	const columns = maybe_columns
-	const rows = maybe_rows
+	const rows = maybe_row_a
 	let table_rank = []
 	table_rank.push(columns)
 	for (let i = 0; i < rows.length; i++) {
@@ -60,11 +75,7 @@ function rank_table_(
 		}
 	}
 	for (let i = 0; i < rank_rows.length; i++) {
-		rank_rows[i] = row_proxy_(rank_rows[i], column_offsets)
+		rank_rows[i] = row_proxy_(rank_rows[i], column_offset_a)
 	}
 	return table_rank
-}
-export {
-	rank_table__ as rank_table$_,
-	rank_table__ as b__rank__table,
 }
