@@ -20,8 +20,8 @@ export function column_a_(ctx) {
 }
 /**
  * @param {Ctx}ctx
- * @param {string[]}columns
+ * @param {string[]}column_a
  */
-export function column_a__set(ctx, columns) {
-  column_a__(ctx).$ = columns
+export function column_a__set(ctx, column_a) {
+  column_a__(ctx).$ = column_a
 }

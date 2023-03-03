@@ -6,9 +6,9 @@ import { column_a__ } from '../column_a__/index.js'
 export const reverse_column_a__ = be_('reverse_column_a__', ctx=>
 	computed_(
 		column_a__(ctx),
-		columns=>
-			columns
-			? columns.slice(0).reverse()
+		column_a=>
+			column_a
+			? column_a.slice(0).reverse()
 			: null))
 export {
 	reverse_column_a__ as reverse_columns__,

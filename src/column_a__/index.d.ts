@@ -6,4 +6,4 @@ export {
 	column_a__ as columns$_,
 }
 export declare function column_a_(ctx:Ctx):string[]
-export declare function column_a__set(ctx:Ctx, columns:string[]):void
+export declare function column_a__set(ctx:Ctx, column_a:string[]):void

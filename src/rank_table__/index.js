@@ -11,11 +11,11 @@ import { row_proxy_ } from '../row_proxy_/index.js'
 export const rank_table__ = be_('rank_table__', ctx=>
 	computed_(
 		tup(column_a__(ctx), row_a__(ctx), column_offset_a__(ctx)), (
-			columns,
-			rows,
+			column_a,
+			row_a,
 			column_offset_a
 		)=>
-			rank_table_(columns, rows, column_offset_a)))
+			rank_table_(column_a, row_a, column_offset_a)))
 export {
 	rank_table__ as rank_table$_,
 	rank_table__ as b__rank__table,
@@ -36,27 +36,27 @@ export function rank_table__set(ctx, rank_table) {
   rank_table_(ctx).$ = rank_table
 }
 /**
- * @param maybe_columns{string[]}
+ * @param maybe_column_a{string[]}
  * @param maybe_row_a{import('../Row').Row[]}
  * @param column_offset_a{import('../_types').column_offsets_T}
  * @returns {import('../table__').table_T|undefined}
  */
 function rank_table_(
-	maybe_columns,
+	maybe_column_a,
 	maybe_row_a,
 	column_offset_a
 ) {
-	if (!maybe_columns || !maybe_row_a) return
-	const columns = maybe_columns
-	const rows = maybe_row_a
+	if (!maybe_column_a || !maybe_row_a) return
+	const column_a = maybe_column_a
+	const row_a = maybe_row_a
 	let table_rank = []
-	table_rank.push(columns)
-	for (let i = 0; i < rows.length; i++) {
-		table_rank.push(...rows.slice(0))
+	table_rank.push(column_a)
+	for (let i = 0; i < row_a.length; i++) {
+		table_rank.push(...row_a.slice(0))
 	}
 	const table_rows = table_rank.slice(1)
 	const rank_rows = []
-	for (let i = 0; i < columns.length; i++) {
+	for (let i = 0; i < column_a.length; i++) {
 		const sorted_rows = table_rows.slice(0).sort((a, b)=>a[i] > b[i] ? -1 : a[i] < b[i] ? 1 : 0)
 		let rank = 0
 		let current_value = undefined

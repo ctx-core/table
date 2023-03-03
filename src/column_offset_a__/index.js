@@ -7,8 +7,8 @@ import { column_a__ } from '../column_a__/index.js'
 /** @type {typeof import('./index.d.ts').column_offset_a__} */
 export const column_offset_a__ = be_('column_offset_a__', ctx=>
 	computed_(column_a__(ctx),
-		columns=>
-			column_offset_a__new(columns)))
+		column_a=>
+			column_offset_a__new(column_a)))
 export { column_offset_a__ as column_offsets$_ }
 /**
  * @param {Ctx}ctx

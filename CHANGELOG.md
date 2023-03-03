@@ -1,5 +1,16 @@
 # @ctx-core/table
 
+## 17.0.1
+
+### Patch Changes
+
+- variable renames:
+
+  columns=>column_a
+  maybe_columns=>maybe_column_a
+  rows=>row_a
+  maybe_rows=>maybe_row_a
+
 ## 17.0.0
 
 ### Major Changes

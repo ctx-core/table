@@ -12,11 +12,11 @@ export const data_row_a__ = be_('data_row_a__', ()=>
 		column_a__(ctx),
 		column_offset_a__(ctx)
 	], (
-		rows,
-		columns,
+		row_a,
+		column_a,
 		column_offset_a
 	)=>
-		data_row_a__new(rows, columns, column_offset_a)))
+		data_row_a__new(row_a, column_a, column_offset_a)))
 export {
 	data_row_a__ as data_rows__,
 	data_row_a__ as data_rows$_,
@@ -48,10 +48,10 @@ export function data_row_a__new(
 	column_offset_a
 ) {
 	if (!maybe_row_a) return
-	const rows = maybe_row_a
+	const row_a = maybe_row_a
 	let data_rows = []
-	for (let i = 0; i < rows.length; i++) {
-		const row = rows[i]
+	for (let i = 0; i < row_a.length; i++) {
+		const row = row_a[i]
 		let data_row = []
 		for (let j = 0; j < data_column_a.length; j++) {
 			const column = data_column_a[j]
