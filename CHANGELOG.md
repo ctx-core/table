@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 19.0.2
+
+### Patch Changes
+
+- data*row*: fix: jsdocs
+
 ## 19.0.1
 
 ### Patch Changes

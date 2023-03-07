@@ -14,21 +14,34 @@ export function data_row_(
 	column_M_row_idx
 ) {
 	datum_a_M_column_M_row_idx.set(datum_a, column_M_row_idx)
-	return new Proxy(datum_a, { get, set })
+	return new Proxy(
+		/** @type {data_row_T<unknown>} */datum_a,
+		/** @type {ProxyHandler} */
+		{ get, set })
 }
 export {
 	data_row_ as _row_proxy,
 	data_row_ as _proxy__row,
 }
-function get(target, name) {
-	const column_idx = datum_a_M_column_M_row_idx.get(target).get(name)
+/**
+ * @param {data_row_T}target
+ * @param {string}prop_name
+ * @returns {unknown}
+ */
+function get(target, prop_name) {
+	const column_idx = datum_a_M_column_M_row_idx.get(target).get(prop_name)
 	if (column_idx != null) {
 		return target[column_idx]
 	} else {
-		return target[name]
+		return target[prop_name]
 	}
 }
-function set(target, prop, val) {
+/**
+ * @param {data_row_T}target
+ * @param {string}prop_name
+ * @param {unknown}val
+ */
+function set(target, prop_name, val) {
 	const column_idx = datum_a_M_column_M_row_idx.get(target).get(name)
 	if (column_idx != null) {
 		target[column_idx] = val
