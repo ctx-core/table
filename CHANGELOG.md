@@ -1,5 +1,42 @@
 # @ctx-core/table
 
+## 19.0.0
+
+### Major Changes
+
+- - reverse*column_a\_\_,reverse_column_a*,reverse_column_a\_\_set
+- - rank*table\_\_,rank_table*,rank*table\_\_set,rank_table$*,b**rank**table,rank_table\_\_new
+- table**,table\_,table**set,table\_\_new,table_T
+
+  generics: ColDefs extends (([string, any][])|any[]|object)
+
+- - row**,row$_,row_,row**set
+- - row*id\_\_,row_id*,row_id\_\_set
+- - row*a\_\_,row_a*,row_a\_\_set
+- - table**row_a**,table\__row_a_
+- - row*M_row_idx\_\_,row_M_row_idx*,row_M_row_idx\_\_set
+
+### Minor Changes
+
+- - header_row_T
+- - data_row_o_T
+- - data*row_a\_\_,data_row_a*,data_row_a\_\_set
+- - column*M_row_idx*: aliased by column*M_column_idx*
+- - data*row_M_data_row_a_idx\_\_,data_row_M_data_row_a_idx*
+- - tuple\_\_union_T
+- - header*row\_\_,header_row*,header_row**set,header_row**new,header_row_T
+- - column_M_row_idx\_\_new
+- - column_a_T
+- - column_T
+- - data_row_M_data_row_a_idx**set,data_row_M_data_row_a_idx**new
+- data_row_T: aliased by Row
+
+  generics: ColDefs extends (([string, any][])|any[]|object)
+
+- - column_M_row_idx**: aliased by column_M_column_idx**
+- - data*row*: aliased by \_row_proxy,\_proxy\_\_row
+- - tuple\_\_o_T
+
 ## 18.0.15
 
 ### Patch Changes
