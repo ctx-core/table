@@ -1,5 +1,15 @@
 # @ctx-core/table
 
+## 19.0.1
+
+### Patch Changes
+
+- data*row*: performance:
+
+  get,set: extract to top-level functions to reduce dynamic closure scope
+
+  - datum_a_M_column_M_row_idx: WeakMap to store datum_a->column_M_row_idx: supports get,set extraction to top-level
+
 ## 19.0.0
 
 ### Major Changes
