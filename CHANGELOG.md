@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 19.0.3
+
+### Patch Changes
+
+- @ctx-core/array: ^26.11.20 -> ^26.11.21
+
 ## 19.0.2
 
 ### Patch Changes
