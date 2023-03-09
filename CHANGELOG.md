@@ -1,5 +1,12 @@
 # @ctx-core/table
 
+## 19.1.0
+
+### Minor Changes
+
+- - length_sym
+- data*row*: data_row[length_sym]: returns target array length: fix: collision with length column values
+
 ## 19.0.6
 
 ### Patch Changes
