@@ -1,5 +1,22 @@
 # @ctx-core/table
 
+## 19.1.1
+
+### Patch Changes
+
+- types using ColDefs generic: fix: type logic:
+
+  column_T
+  data_row_T
+  Row
+  data_row_tuple_T
+  header_row_T
+
+- ColDefs generic: fix: default type:
+
+  ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
+  column_T
+
 ## 19.1.0
 
 ### Minor Changes
