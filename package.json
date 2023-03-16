@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "19.1.10",
+	"version": "19.1.11",
 	"description": "ctx-core table",
 	"keywords": [
 		"ctx-core",
@@ -37,7 +37,7 @@
 		"@ctx-core/combinators": "^8.0.41",
 		"@ctx-core/dom": "^13.2.0",
 		"@ctx-core/function": "^21.12.1",
-		"@ctx-core/nanostores": "^3.1.8",
+		"@ctx-core/nanostores": "^3.1.9",
 		"@ctx-core/object": "^27.1.6"
 	},
 	"devDependencies": {
