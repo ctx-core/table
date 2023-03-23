@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 19.3.5
+
+### Patch Changes
+
+- data_row_tuple_T: generics: object: fix: use given object type
+
 ## 19.3.4
 
 ### Patch Changes
