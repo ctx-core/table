@@ -1,5 +1,13 @@
 # @ctx-core/table
 
+## 19.3.1
+
+### Patch Changes
+
+- @ctx-core/nanostores: ^3.1.11 -> ^3.1.12
+- @ctx-core/array: ^26.12.2 -> ^26.12.3
+- @ctx-core/dom: ^14.0.5 -> ^14.0.6
+
 ## 19.3.0
 
 ### Minor Changes
