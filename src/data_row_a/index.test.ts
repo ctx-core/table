@@ -69,12 +69,21 @@ test('data_row_a__new', ()=>{
 	equal(data_row_a[1].col3, 3.14)
 })
 test('data_row_a_|data_row_tuple_T[] argument', ()=>{
-	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
-	const header_M_row_idx = header_M_row_idx_(header_row)
-	const data_row_a = data_row_a_([
+	const header_row = header_row__new<[
+		['col0', string],
+		['col1', string],
+		['col2', string],
+		['col3', number],
+	]>(['col0', 'col1', 'col2', 'col3'])
+	const data_row_a = data_row_a_<[
+		['col0', string],
+		['col1', string],
+		['col2', string],
+		['col3', number],
+	]>([
 		['foo', 'bar', 'baz', 1.23],
 		['zzz', 'yyy', 'xxx', 3.14]
-	], header_M_row_idx)
+	], header_row)
 	equal(data_row_a, [
 		['foo', 'bar', 'baz', 1.23],
 		['zzz', 'yyy', 'xxx', 3.14]

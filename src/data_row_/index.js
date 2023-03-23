@@ -1,7 +1,9 @@
 import { globalThis__prop__ensure } from '@ctx-core/object'
+import { header_M_row_idx_ } from '../header_M_row_idx/index.js'
 /** @typedef {import('../_types').data_row_T}data_row_T */
 /** @typedef {import('../_types').data_row_tuple_T}data_row_tuple_T */
 /** @typedef {import('../_types').header_M_row_idx_T}header_M_row_idx_T */
+/** @typedef {import('../_types').header_row_T}header_row_T */
 export const length_sym = Symbol.for('length')
 export const header_M_row_idx_sym = Symbol.for('header_M_row_idx')
 const datum_a_M_column_M_row_idx = globalThis__prop__ensure(
@@ -10,18 +12,22 @@ const datum_a_M_column_M_row_idx = globalThis__prop__ensure(
 /** @typedef {import('../_types').data_row_tuple_T}data_row_tuple_T */
 /**
  * @param {data_row_tuple_T}data_row_tuple
- * @param {header_M_row_idx_T}header_M_row_idx
+ * @param {header_row_T|header_M_row_idx_T}header_row_or_header_M_row_idx
  * @returns {data_row_T<unknown>}
  * @private
  */
 export function data_row_(
 	data_row_tuple,
-	header_M_row_idx
+	header_row_or_header_M_row_idx
 ) {
-	if (!header_M_row_idx) {
-		throw new Error('data_row_: header_M_row_idx: missing')
+	if (!header_row_or_header_M_row_idx) {
+		throw new Error('data_row_: header_row_or_header_M_row_idx: missing')
 	}
-	datum_a_M_column_M_row_idx.set(data_row_tuple, header_M_row_idx)
+	datum_a_M_column_M_row_idx.set(
+		data_row_tuple,
+		typeof header_row_or_header_M_row_idx.get === 'function'
+		? header_row_or_header_M_row_idx
+		: header_M_row_idx_(/** @type {header_row_T} */header_row_or_header_M_row_idx))
 	return new Proxy(
 		/** @type {data_row_T<unknown>} */data_row_tuple,
 		/** @type {ProxyHandler} */

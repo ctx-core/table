@@ -1,5 +1,15 @@
 # @ctx-core/table
 
+## 19.3.0
+
+### Minor Changes
+
+- function argument polymorphism: + header_row:header_row_T<ColDefs>:
+
+  data*row*
+  data*row_a*
+  data_row_a\_\_new
+
 ## 19.2.0
 
 ### Minor Changes

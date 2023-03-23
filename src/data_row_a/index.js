@@ -2,12 +2,14 @@ import { nullish__check_ } from '@ctx-core/function'
 import { computed_ } from '@ctx-core/nanostores'
 import { be_, clone, is_ctx_ } from '@ctx-core/object'
 import { table_, table__, table__new, table__set } from '../table/index.js'
-import { header_M_row_idx_sym, data_row_ } from '../data_row_/index.js'
+import { data_row_, header_M_row_idx_sym } from '../data_row_/index.js'
 import { header_row__new } from '../header_row/index.js'
+import { header_M_row_idx_ } from '../header_M_row_idx/index.js'
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
 /** @typedef {import('../_types').data_row_T}data_row_T */
 /** @typedef {import('../_types').data_row_tuple_T}data_row_tuple_T */
 /** @typedef {import('../_types').header_M_row_idx_T}header_M_row_idx_T */
+/** @typedef {import('../_types').header_row_T}header_row_T */
 /** @type {typeof import('./index.d.ts').data_row_a__} */
 export const data_row_a__ = be_('data_row_a__', ctx=>
 	computed_(table__(ctx), table=>
@@ -20,15 +22,15 @@ export {
 }
 /**
  * @param {Ctx|data_row_tuple_T[]}ctx_or_data_tuple_a
- * @param {header_M_row_idx_T}[header_M_row_idx]
+ * @param {header_row_T|header_M_row_idx_T}[header_row_or_header_M_row_idx]
  * @returns {data_row_T[]}
  * @private
  */
-export function data_row_a_(ctx_or_data_tuple_a, header_M_row_idx) {
+export function data_row_a_(ctx_or_data_tuple_a, header_row_or_header_M_row_idx) {
 	if (is_ctx_(ctx_or_data_tuple_a)) {
 		return data_row_a__(/** @type {Ctx} */ctx_or_data_tuple_a).$
 	}
-	return data_row_a__new(ctx_or_data_tuple_a, header_M_row_idx)
+	return data_row_a__new(ctx_or_data_tuple_a, header_row_or_header_M_row_idx)
 }
 export {
 	data_row_a_ as row_a_,
@@ -57,13 +59,17 @@ export {
 }
 /**
  * @param {data_row_tuple_T[]}data_row_tuple_a
- * @param {header_M_row_idx_T}header_M_row_idx
+ * @param {header_row_T|header_M_row_idx_T}header_row_or_header_M_row_idx
  * @returns {data_row_T[]}
  */
 export function data_row_a__new(
 	data_row_tuple_a,
-	header_M_row_idx
+	header_row_or_header_M_row_idx
 ) {
-	return data_row_tuple_a.map(data_row_tuple=>
+	const header_M_row_idx =
+		typeof header_row_or_header_M_row_idx.get === 'function'
+		? /** @type {header_M_row_idx_T} */header_row_or_header_M_row_idx
+		: header_M_row_idx_(header_row_or_header_M_row_idx)
+	return /** @type {data_row_T[]} */data_row_tuple_a.map(data_row_tuple=>
 		data_row_(data_row_tuple, header_M_row_idx))
 }
