@@ -1,25 +1,29 @@
+import { globalThis__prop__ensure } from '@ctx-core/object'
+/** @typedef {import('../_types').data_row_T}data_row_T */
+/** @typedef {import('../_types').data_row_tuple_T}data_row_tuple_T */
+/** @typedef {import('../_types').header_M_row_idx_T}header_M_row_idx_T */
 export const length_sym = Symbol.for('length')
-const datum_a_M_column_M_row_idx__sym = Symbol.for('datum_a_M_column_M_row_idx')
-if (!globalThis[datum_a_M_column_M_row_idx__sym]) {
-	globalThis[datum_a_M_column_M_row_idx__sym] = new WeakMap()
-}
-const datum_a_M_column_M_row_idx = globalThis[datum_a_M_column_M_row_idx__sym]
+export const header_M_row_idx_sym = Symbol.for('header_M_row_idx')
+const datum_a_M_column_M_row_idx = globalThis__prop__ensure(
+	Symbol.for('datum_a_M_column_M_row_idx'),
+	()=>new WeakMap())
+/** @typedef {import('../_types').data_row_tuple_T}data_row_tuple_T */
 /**
- * @param {unknown[]}datum_a
- * @param {column_M_row_idx_T}column_M_row_idx
+ * @param {data_row_tuple_T}data_row_tuple
+ * @param {header_M_row_idx_T}header_M_row_idx
  * @returns {data_row_T<unknown>}
  * @private
  */
 export function data_row_(
-	datum_a,
-	column_M_row_idx
+	data_row_tuple,
+	header_M_row_idx
 ) {
-	if (!column_M_row_idx) {
-		throw new Error('data_row_: column_M_row_idx: missing')
+	if (!header_M_row_idx) {
+		throw new Error('data_row_: header_M_row_idx: missing')
 	}
-	datum_a_M_column_M_row_idx.set(datum_a, column_M_row_idx)
+	datum_a_M_column_M_row_idx.set(data_row_tuple, header_M_row_idx)
 	return new Proxy(
-		/** @type {data_row_T<unknown>} */datum_a,
+		/** @type {data_row_T<unknown>} */data_row_tuple,
 		/** @type {ProxyHandler} */
 		{ get, set })
 }
@@ -36,7 +40,9 @@ function get(target, prop_name) {
 	if (prop_name === length_sym) {
 		return target.length
 	}
-	const column_idx = datum_a_M_column_M_row_idx.get(target).get(prop_name)
+	const column_M_row_idx = datum_a_M_column_M_row_idx.get(target)
+	if (prop_name === header_M_row_idx_sym) return column_M_row_idx
+	const column_idx = column_M_row_idx.get(prop_name)
 	if (column_idx != null) {
 		return target[column_idx]
 	} else {

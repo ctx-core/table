@@ -1,7 +1,7 @@
 import { nullish__check_ } from '@ctx-core/function'
 import { computed_ } from '@ctx-core/nanostores'
 import { be_, is_ctx_ } from '@ctx-core/object'
-import { data_row_a__ } from '../data_row_a/index.js'
+import { data_row_a__, data_row_a__set } from '../data_row_a/index.js'
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
 /** @typedef {import('../_types').data_row_T}data_row_T */
 /** @typedef {import('./index.d.ts').data_row_M_data_row_a_idx_T}data_row_M_data_row_a_idx_T */
@@ -9,8 +9,7 @@ import { data_row_a__ } from '../data_row_a/index.js'
 export const data_row_M_data_row_a_idx__ = be_('data_row_M_data_row_a_idx__', ctx=>
 	computed_(data_row_a__(ctx),
 		/**
-		 * @param {data_row_T<unknown>}data_row_a
-		 * @param {data_row_T<unknown>[]}table__row_a
+		 * @param {data_row_T<unknown>[]}data_row_a
 		 * @returns {Map<data_row_T<unknown>, number>}
 		 */
 		data_row_a=>
@@ -25,7 +24,9 @@ export {
  * @private
  */
 export function data_row_M_data_row_a_idx_(ctx_or_data_row_a) {
-	if (is_ctx_(ctx_or_data_row_a)) return data_row_M_data_row_a_idx__(ctx_or_data_row_a).$
+	if (is_ctx_(ctx_or_data_row_a)) {
+		return data_row_M_data_row_a_idx__(/** @type {Ctx} */ctx_or_data_row_a).$
+	}
 	return data_row_M_data_row_a_idx__new(ctx_or_data_row_a)
 }
 export {
@@ -33,14 +34,16 @@ export {
 }
 /**
  * @param {Ctx}ctx
- * @param {data_row_M_data_row_a_idx_T}row_M_row_idx
+ * @param {data_row_M_data_row_a_idx_T}data_row_M_data_row_a_idx
  * @private
  */
 export function data_row_M_data_row_a_idx__set(
 	ctx,
-	row_M_row_idx
+	data_row_M_data_row_a_idx
 ) {
-	data_row_M_data_row_a_idx__(ctx).$ = row_M_row_idx
+	data_row_a__set(
+		ctx,
+		/** @type {data_row_T[]} */[...data_row_M_data_row_a_idx.keys()])
 }
 export {
 	data_row_M_data_row_a_idx__set as row_M_row_idx__set,

@@ -1,9 +1,13 @@
 import { nullish__check_ } from '@ctx-core/function'
 import { computed_ } from '@ctx-core/nanostores'
-import { be_ } from '@ctx-core/object'
-import { table__ } from '../table/index.js'
+import { be_, clone, is_ctx_ } from '@ctx-core/object'
+import { table_, table__, table__new, table__set } from '../table/index.js'
+import { header_M_row_idx_sym, data_row_ } from '../data_row_/index.js'
+import { header_row__new } from '../header_row/index.js'
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
-/** @typedef {import('../_types').data_row_T}Row */
+/** @typedef {import('../_types').data_row_T}data_row_T */
+/** @typedef {import('../_types').data_row_tuple_T}data_row_tuple_T */
+/** @typedef {import('../_types').header_M_row_idx_T}header_M_row_idx_T */
 /** @type {typeof import('./index.d.ts').data_row_a__} */
 export const data_row_a__ = be_('data_row_a__', ctx=>
 	computed_(table__(ctx), table=>
@@ -15,23 +19,51 @@ export {
 	data_row_a__ as rows$_,
 }
 /**
- * @param {Ctx}ctx
- * @returns {Row<unknown>[]}
+ * @param {Ctx|data_row_tuple_T[]}ctx_or_data_tuple_a
+ * @param {header_M_row_idx_T}[header_M_row_idx]
+ * @returns {data_row_T[]}
  * @private
  */
-export function data_row_a_(ctx) {
-	return data_row_a__(ctx).$
+export function data_row_a_(ctx_or_data_tuple_a, header_M_row_idx) {
+	if (is_ctx_(ctx_or_data_tuple_a)) {
+		return data_row_a__(/** @type {Ctx} */ctx_or_data_tuple_a).$
+	}
+	return data_row_a__new(ctx_or_data_tuple_a, header_M_row_idx)
 }
 export {
 	data_row_a_ as row_a_,
 }
 /**
  * @param {Ctx}ctx
- * @param {Row<unknown>[]}row_a
+ * @param {data_row_T[]}data_row_a
  */
-export function data_row_a__set(ctx, row_a) {
-	data_row_a__(ctx).$ = row_a
+export function data_row_a__set(ctx, data_row_a) {
+	let table = table_(ctx)
+	if (table) {
+		table = clone(table, { data_row_a })
+	} else {
+		const data_row_0 = data_row_a[0]
+		table = table__new(
+			data_row_a,
+			header_row__new(
+				data_row_0
+				? [...data_row_0[header_M_row_idx_sym].keys()]
+				: 0))
+	}
+	table__set(ctx, table)
 }
 export {
 	data_row_a__set as row_a__set,
+}
+/**
+ * @param {data_row_tuple_T[]}data_row_tuple_a
+ * @param {header_M_row_idx_T}header_M_row_idx
+ * @returns {data_row_T[]}
+ */
+export function data_row_a__new(
+	data_row_tuple_a,
+	header_M_row_idx
+) {
+	return data_row_tuple_a.map(data_row_tuple=>
+		data_row_(data_row_tuple, header_M_row_idx))
 }

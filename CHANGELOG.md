@@ -1,5 +1,37 @@
 # @ctx-core/table
 
+## 19.2.0
+
+### Minor Changes
+
+- - data_row\_\_sym_props_o_T:
+
+    - [length_sym]: number
+    - [header_m_row_idx_sym]: header_M_row_idx_T<ColDefs>
+
+- - header_M_row_idx_sym
+- - header_M_row_idx\_\_new: aliased by column_M_row_idx\_\_new
+- - header_M_row_idx\_\_set: aliased by column_M_row_idx\_\_set
+- - data_row_a\_\_new
+- - header_M_row_idx_sym
+- - header*M_row_idx*: aliased by column*M_row_idx*
+- - header_M_row_idx\_\_: aliased by column_M_row_idx\_\_
+- data*row_a*: + polymorphic function: (data_row_tuple_a:data_row_tuple_T<ColDefs>[], header_M_row_idx:header_M_row_idx_T<ColDefs>):data_row_T<ColDefs>[]
+
+### Patch Changes
+
+- table*row*: argument name: column_M_column_idx=>header_M_row_idx
+- data_row_tuple_T: fix: number member types
+- data*row*: argument names:
+
+  datum_a=>data_row_tuple
+  column_M_row_idx=>header_M_row_idx
+
+- data_row_a\_\_set: fix: update table\_\_
+- header_row\_\_set: fix: update table\_\_
+- Updated dependencies
+  - @ctx-core/object@27.3.0
+
 ## 19.1.19
 
 ### Patch Changes

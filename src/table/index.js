@@ -15,7 +15,7 @@ export { table__ as table$_ }
  * @private
  */
 export function table_(ctx_or_data_row_a, header_row) {
-	if (is_ctx_(ctx_or_data_row_a)) return table__(ctx_or_data_row_a).$
+	if (is_ctx_(ctx_or_data_row_a)) return table__(/** @type {Ctx} */ctx_or_data_row_a).$
 	return table__new(ctx_or_data_row_a, header_row)
 }
 /**
