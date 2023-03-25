@@ -11,11 +11,6 @@ export const header_row__ = be_('header_row__', ctx=>
 	computed_(table__(ctx), table=>
 		nullish__check_([table], ()=>
 			table.header_row)))
-export {
-	header_row__ as column_a__,
-	header_row__ as columns__,
-	header_row__ as columns$_,
-}
 /**
  * @param {Ctx|string[]|number[]|number}ctx_or_column_a_or_length
  * @returns {column_a_T}
@@ -26,9 +21,6 @@ export function header_row_(ctx_or_column_a_or_length) {
 		return header_row__(/** @type {Ctx} */ctx_or_column_a_or_length).$
 	}
 	return header_row__new(ctx_or_column_a_or_length)
-}
-export {
-	header_row_ as column_a_,
 }
 /**
  * @param {Ctx}ctx
@@ -42,9 +34,6 @@ export function header_row__set(ctx, header_row) {
 		table = table__new([], header_row)
 	}
 	table__set(ctx, table)
-}
-export {
-	header_row__set as column_a__set,
 }
 /**
  * @param {string[]|number[]|number}column_a_or_length

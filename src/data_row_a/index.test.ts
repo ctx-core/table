@@ -7,7 +7,7 @@ import {
 	data_row_a__,
 	data_row_a__new,
 	data_row_a__set,
-	header_M_row_idx_,
+	header_M_col_idx_,
 	header_row__new,
 	table_,
 	table__set
@@ -17,12 +17,12 @@ test('data_row_a__', ()=>{
 	equal(data_row_a__(ctx).$, undefined)
 	equal(table_(ctx), undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
-	const header_M_row_idx = header_M_row_idx_(header_row)
+	const header_M_col_idx = header_M_col_idx_(header_row)
 	table__set(ctx, {
 		header_row,
 		data_row_a: [
-			data_row_(['foo', 'bar', 'baz', 1.23], header_M_row_idx),
-			data_row_(['zzz', 'yyy', 'xxx', 3.14], header_M_row_idx),
+			data_row_(['foo', 'bar', 'baz', 1.23], header_M_col_idx),
+			data_row_(['zzz', 'yyy', 'xxx', 3.14], header_M_col_idx),
 		]
 	})
 	equal(data_row_a__(ctx).$, [
@@ -35,12 +35,12 @@ test('data_row_a_|Ctx argument', ()=>{
 	equal(data_row_a__(ctx).$, undefined)
 	equal(table_(ctx), undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
-	const header_M_row_idx = header_M_row_idx_(header_row)
+	const header_M_col_idx = header_M_col_idx_(header_row)
 	table__set(ctx, {
 		header_row,
 		data_row_a: [
-			data_row_(['foo', 'bar', 'baz', 1.23], header_M_row_idx),
-			data_row_(['zzz', 'yyy', 'xxx', 3.14], header_M_row_idx),
+			data_row_(['foo', 'bar', 'baz', 1.23], header_M_col_idx),
+			data_row_(['zzz', 'yyy', 'xxx', 3.14], header_M_col_idx),
 		]
 	})
 	equal(data_row_a_(ctx), [
@@ -50,7 +50,7 @@ test('data_row_a_|Ctx argument', ()=>{
 })
 test('data_row_a__new', ()=>{
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
-	const header_M_row_idx = header_M_row_idx_(header_row)
+	const header_M_col_idx = header_M_col_idx_(header_row)
 	const data_row_a = data_row_a__new<[
 		['col0', string],
 		['col1', string],
@@ -59,7 +59,7 @@ test('data_row_a__new', ()=>{
 	]>([
 		['foo', 'bar', 'baz', 1.23],
 		['zzz', 'yyy', 'xxx', 3.14]
-	], header_M_row_idx)
+	], header_M_col_idx)
 	equal(data_row_a, [
 		['foo', 'bar', 'baz', 1.23],
 		['zzz', 'yyy', 'xxx', 3.14]
@@ -107,11 +107,11 @@ test('data_row_a__set', ()=>{
 	equal(data_row_a_(ctx), undefined)
 	equal(table_(ctx), undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
-	const header_M_row_idx = header_M_row_idx_(header_row)
+	const header_M_col_idx = header_M_col_idx_(header_row)
 	const data_row_a = data_row_a__new([
-		data_row_(['foo', 'bar', 'baz', 1.23], header_M_row_idx),
-		data_row_(['zzz', 'yyy', 'xxx', 3.14], header_M_row_idx),
-	], header_M_row_idx)
+		data_row_(['foo', 'bar', 'baz', 1.23], header_M_col_idx),
+		data_row_(['zzz', 'yyy', 'xxx', 3.14], header_M_col_idx),
+	], header_M_col_idx)
 	data_row_a__set(ctx, data_row_a)
 	equal(data_row_a_(ctx), [
 		['foo', 'bar', 'baz', 1.23],

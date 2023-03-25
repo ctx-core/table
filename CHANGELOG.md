@@ -1,5 +1,38 @@
 # @ctx-core/table
 
+## 20.0.0
+
+### Major Changes
+
+- - aliases:
+
+    - \_row_proxy
+    - \_proxy**row
+      header_M_row_idx**new=>header_M_col_idx\_\_new
+    - row_M_row_idx\_\_
+    - row*M_row_idx*
+    - row_M_row_idx\_\_set
+    - row_a\_\_
+    - rows\_\_
+    - rows$\_
+    - row_a\_\_set
+    - column_M_row_idx\_\_
+    - column_M_column_idx\_\_
+    - column*M_column_idx*
+    - column_M_column_idx\_\_set
+    - column_a\_\_
+    - columns\_\_
+    - columns$\_
+    - column*a*
+    - column_a\_\_set
+    - table$\_
+
+- name changes:
+
+  header_M_row_idx_T=>header_M_col_idx_T
+  header_M_row_idx_T=>header_M_col_idx_T
+  header_M_row_idx_sym=>header_M_col_idx_sym
+
 ## 19.3.6
 
 ### Patch Changes

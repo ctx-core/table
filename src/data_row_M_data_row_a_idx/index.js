@@ -15,9 +15,6 @@ export const data_row_M_data_row_a_idx__ = be_('data_row_M_data_row_a_idx__', ct
 		data_row_a=>
 			nullish__check_([data_row_a], ()=>
 				data_row_M_data_row_a_idx__new(data_row_a))))
-export {
-	data_row_M_data_row_a_idx__ as row_M_row_idx__,
-}
 /**
  * @param {Ctx|data_row_T[]}ctx_or_data_row_a
  * @returns{data_row_M_data_row_a_idx_T}
@@ -28,9 +25,6 @@ export function data_row_M_data_row_a_idx_(ctx_or_data_row_a) {
 		return data_row_M_data_row_a_idx__(/** @type {Ctx} */ctx_or_data_row_a).$
 	}
 	return data_row_M_data_row_a_idx__new(ctx_or_data_row_a)
-}
-export {
-	data_row_M_data_row_a_idx_ as row_M_row_idx_,
 }
 /**
  * @param {Ctx}ctx
@@ -44,9 +38,6 @@ export function data_row_M_data_row_a_idx__set(
 	data_row_a__set(
 		ctx,
 		/** @type {data_row_T[]} */[...data_row_M_data_row_a_idx.keys()])
-}
-export {
-	data_row_M_data_row_a_idx__set as row_M_row_idx__set,
 }
 /**
  * @param {data_row_T[]}data_row_a

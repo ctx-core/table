@@ -7,7 +7,6 @@ import { be_, is_ctx_ } from '@ctx-core/object'
 /** @type {typeof import('./index.d.ts').table__} */
 export const table__ = be_('table__', ctx=>
 	atom_(undefined))
-export { table__ as table$_ }
 /**
  * @param {Ctx|data_row_T[]}ctx_or_data_row_a
  * @param {header_row_T}[header_row]
