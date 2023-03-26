@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 20.1.0
+
+### Minor Changes
+
+- - table\_\_hydrate
+
 ## 20.0.0
 
 ### Major Changes

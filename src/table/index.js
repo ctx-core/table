@@ -1,9 +1,9 @@
 import { atom_ } from '@ctx-core/nanostores'
 import { be_, is_ctx_ } from '@ctx-core/object'
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
-/** @typedef {import('./index.d.ts').table_T}table_T */
 /** @typedef {import('../_types').data_row_T}data_row_T */
 /** @typedef {import('../_types').header_row_T}header_row_T */
+/** @typedef {import('../_types').table_T}table_T */
 /** @type {typeof import('./index.d.ts').table__} */
 export const table__ = be_('table__', ctx=>
 	atom_(undefined))
