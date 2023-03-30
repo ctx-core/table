@@ -1,6 +1,7 @@
 import { globalThis__prop__ensure } from '@ctx-core/object'
 import { header_M_col_idx_ } from '../header_M_col_idx/index.js'
 /** @typedef {import('../_types').data_row_T}data_row_T */
+/** @typedef {import('../_types').data_row_o_T}data_row_o_T */
 /** @typedef {import('../_types').data_row_tuple_T}data_row_tuple_T */
 /** @typedef {import('../_types').header_M_col_idx_T}header_M_col_idx_T */
 /** @typedef {import('../_types').header_row_T}header_row_T */
@@ -60,4 +61,17 @@ function set(target, prop_name, val) {
 	} else {
 		target[name] = val
 	}
+}
+/**
+ * @param {data_row_T}data_row
+ * @returns {data_row_o_T}
+ * @private
+ */
+export function data_row_o_(data_row) {
+	const header_M_col_idx = data_row[header_M_col_idx_sym]
+	const data_row_o = {}
+	for (const header of header_M_col_idx.keys()) {
+		data_row_o[header] = data_row[header]
+	}
+	return data_row_o
 }

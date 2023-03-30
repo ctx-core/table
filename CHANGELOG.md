@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 20.2.0
+
+### Minor Changes
+
+- - data*row_o*
+
 ## 20.1.0
 
 ### Minor Changes
