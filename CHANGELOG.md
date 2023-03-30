@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 20.2.3
+
+### Patch Changes
+
+- data_row_tuple_T<object>: ValueOf<ColDefs>[]
+
 ## 20.2.2
 
 ### Patch Changes

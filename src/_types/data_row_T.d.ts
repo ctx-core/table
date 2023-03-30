@@ -13,5 +13,5 @@ export type data_row_tuple_T<
 	: ColDefs extends any[]
 		? ColDefs
 		: ColDefs extends object
-			? ColDefs
+			? ValueOf<ColDefs>[]
 			: string
