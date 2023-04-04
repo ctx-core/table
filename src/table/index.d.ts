@@ -13,6 +13,12 @@ export declare function table_<
 	data_row_a:data_row_T<ColDefs>[],
 	header_row:header_row_T<ColDefs>
 ):table_T<ColDefs>
+export declare function table_<
+	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
+>(
+	ctx_or_data_row_a:Ctx|data_row_T<ColDefs>[],
+	header_row?:header_row_T<ColDefs>
+):table_T<ColDefs>
 export declare function table__set<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
 >(ctx:Ctx, table:table_T<ColDefs>):void

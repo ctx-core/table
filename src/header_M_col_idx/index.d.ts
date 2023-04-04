@@ -10,6 +10,11 @@ export declare function header_M_col_idx_<
 export declare function header_M_col_idx_<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
 >(column_a:column_a_T<ColDefs>):header_M_col_idx_T<ColDefs>
+export declare function header_M_col_idx_<
+	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
+>(
+	ctx_or_column_a:Ctx|column_a_T<ColDefs>
+):header_M_col_idx_T<ColDefs>
 export declare function header_M_col_idx__set<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
 >(

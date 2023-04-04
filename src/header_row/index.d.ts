@@ -1,13 +1,13 @@
 import type { ReadableAtom_ } from '@ctx-core/nanostores'
 import type { be__params_T, Ctx } from '@ctx-core/object'
 import type { column_a_T, header_row_T } from '../_types'
-declare function header_row__<
+export declare function header_row__<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
 >(ctx:Ctx, opts?:be__params_T):ReadableAtom_<header_row_T<ColDefs>>
-declare function header_row_<
+export declare function header_row_<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
 >(ctx:Ctx):header_row_T<ColDefs>
-declare function header_row_<
+export declare function header_row_<
 	ColDefs extends any[]
 >(
 	column_a_OR_length:column_a_T<ColDefs>|number

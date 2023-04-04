@@ -1,5 +1,17 @@
 # @ctx-core/table
 
+## 20.3.1
+
+### Patch Changes
+
+- fix: function override type definitions:
+
+  data*row_M_data_row_a_idx*
+  data*row_a*
+  header*M_col_idx*
+  header*row*
+  table\_
+
 ## 20.3.0
 
 ### Minor Changes

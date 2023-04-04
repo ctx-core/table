@@ -10,6 +10,11 @@ export declare function data_row_M_data_row_a_idx_<
 export declare function data_row_M_data_row_a_idx_<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
 >(data_row_a:data_row_T<ColDefs>[]):data_row_M_data_row_a_idx_T<ColDefs>
+export declare function data_row_M_data_row_a_idx_<
+	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
+>(
+	ctx_or_data_row_a:Ctx|data_row_T<ColDefs>[]
+):data_row_M_data_row_a_idx_T<ColDefs>
 export declare function data_row_M_data_row_a_idx__set<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
 >(ctx:Ctx, row_M_row_idx:data_row_M_data_row_a_idx_T<ColDefs>):void

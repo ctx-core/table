@@ -8,10 +8,6 @@ import { data_row_a__, data_row_a__set } from '../data_row_a/index.js'
 /** @type {typeof import('./index.d.ts').data_row_M_data_row_a_idx__} */
 export const data_row_M_data_row_a_idx__ = be_('data_row_M_data_row_a_idx__', ctx=>
 	computed_(data_row_a__(ctx),
-		/**
-		 * @param {data_row_T<unknown>[]}data_row_a
-		 * @returns {Map<data_row_T<unknown>, number>}
-		 */
 		data_row_a=>
 			nullish__check_([data_row_a], ()=>
 				data_row_M_data_row_a_idx__new(data_row_a))))
