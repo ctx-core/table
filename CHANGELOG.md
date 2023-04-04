@@ -1,5 +1,12 @@
 # @ctx-core/table
 
+## 20.2.12
+
+### Patch Changes
+
+- global tracking prop: datum_a_M_header_M_col_idx=>datum_a_MM_header_M_col_idx
+- data*row*: Proxy: set: fix: implementation
+
 ## 20.2.11
 
 ### Patch Changes
