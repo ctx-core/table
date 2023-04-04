@@ -12,7 +12,7 @@ export const header_row__ = be_('header_row__', ctx=>
 		nullish__check_([table], ()=>
 			table.header_row)))
 /**
- * @param {Ctx|string[]|number[]|number}ctx_or_column_a_or_length
+ * @param {Ctx|column_a_T|number}ctx_or_column_a_or_length
  * @returns {column_a_T}
  * @private
  */
@@ -25,6 +25,7 @@ export function header_row_(ctx_or_column_a_or_length) {
 /**
  * @param {Ctx}ctx
  * @param {column_a_T}header_row
+ * @private
  */
 export function header_row__set(ctx, header_row) {
 	let table = table_(ctx)
@@ -38,6 +39,7 @@ export function header_row__set(ctx, header_row) {
 /**
  * @param {string[]|number[]|number}column_a_or_length
  * @returns {string[]|number[]}
+ * @private
  */
 export function header_row__new(column_a_or_length) {
 	if (isArray(column_a_or_length)) return column_a_or_length

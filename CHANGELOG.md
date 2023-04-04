@@ -1,5 +1,22 @@
 # @ctx-core/table
 
+## 20.3.0
+
+### Minor Changes
+
+- - row_T:
+
+    ∈ header_row_T,data_row_T
+
+### Patch Changes
+
+- header*row*: argument types: fix: column_a_T instead of column_T
+- data_row_tuple_T: else type: fix: string[]
+- header_row_T: fix: + ColDefs extends object: check:
+
+  ? KeyOf<ColDefs>[]
+  : string[]
+
 ## 20.2.13
 
 ### Patch Changes
