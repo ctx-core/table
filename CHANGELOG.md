@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 20.2.8
+
+### Patch Changes
+
+- @ctx-core/nanostores: ^3.1.18 -> ^3.1.19
+
 ## 20.2.7
 
 ### Patch Changes
