@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 20.2.13
+
+### Patch Changes
+
+- data*row*: type: fix: polymorphic argument types
+
 ## 20.2.12
 
 ### Patch Changes
