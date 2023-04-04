@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 20.2.11
+
+### Patch Changes
+
+- data*row*: polymorphic types: fix: \*.js files recognizing header_M_col_idx:header_M_col_idx_T<ColDefs> argument
+
 ## 20.2.10
 
 ### Patch Changes
