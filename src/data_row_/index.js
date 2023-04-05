@@ -39,7 +39,10 @@ export function data_row_(
  * @param {string|symbol}prop_name
  * @returns {unknown}
  */
-function get(target, prop_name) {
+function get(
+	target,
+	prop_name
+) {
 	if (prop_name === length_sym) return target.length
 	const header_M_col_idx = datum_a_MM_header_M_col_idx.get(target)
 	if (prop_name === header_M_col_idx_sym) return header_M_col_idx
@@ -54,7 +57,11 @@ function get(target, prop_name) {
  * @param {string}prop_name
  * @param {unknown}val
  */
-function set(target, prop_name, val) {
+function set(
+	target,
+	prop_name,
+	val
+) {
 	const column_idx = datum_a_MM_header_M_col_idx.get(target).get(prop_name)
 	if (column_idx != null) {
 		target[column_idx] = val

@@ -16,7 +16,9 @@ export const data_row_M_data_row_a_idx__ = be_('data_row_M_data_row_a_idx__', ct
  * @returns{data_row_M_data_row_a_idx_T}
  * @private
  */
-export function data_row_M_data_row_a_idx_(ctx_or_data_row_a) {
+export function data_row_M_data_row_a_idx_(
+	ctx_or_data_row_a
+) {
 	if (is_ctx_(ctx_or_data_row_a)) {
 		return data_row_M_data_row_a_idx__(/** @type {Ctx} */ctx_or_data_row_a).$
 	}
@@ -40,7 +42,9 @@ export function data_row_M_data_row_a_idx__set(
  * @returns{data_row_M_data_row_a_idx_T}
  * @private
  */
-export function data_row_M_data_row_a_idx__new(data_row_a) {
+export function data_row_M_data_row_a_idx__new(
+	data_row_a
+) {
 	/** @type {data_row_M_data_row_a_idx_T} */
 	const data_row_M_data_row_a_idx = new Map()
 	for (let data_row_a_idx = 0; data_row_a_idx < data_row_a.length; data_row_a_idx++) {

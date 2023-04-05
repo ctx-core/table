@@ -21,7 +21,10 @@ export const data_row_a__ = be_('data_row_a__', ctx=>
  * @returns {data_row_T[]}
  * @private
  */
-export function data_row_a_(ctx_or_data_tuple_a, header_row_or_header_M_col_idx) {
+export function data_row_a_(
+	ctx_or_data_tuple_a,
+	header_row_or_header_M_col_idx
+) {
 	if (is_ctx_(ctx_or_data_tuple_a)) {
 		return data_row_a__(/** @type {Ctx} */ctx_or_data_tuple_a).$
 	}
@@ -31,7 +34,10 @@ export function data_row_a_(ctx_or_data_tuple_a, header_row_or_header_M_col_idx)
  * @param {Ctx}ctx
  * @param {data_row_T[]}data_row_a
  */
-export function data_row_a__set(ctx, data_row_a) {
+export function data_row_a__set(
+	ctx,
+	data_row_a
+) {
 	let table = table_(ctx)
 	if (table) {
 		table = clone(table, { data_row_a })

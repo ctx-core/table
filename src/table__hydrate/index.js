@@ -5,7 +5,9 @@ import { data_row_a__new } from '../data_row_a/index.js'
  * @param {unhydrated_table_T}unhydrated_table
  * @returns {table_T}
  */
-export function table__hydrate(unhydrated_table) {
+export function table__hydrate(
+	unhydrated_table
+) {
 	const { header_row } = unhydrated_table
 	return {
 		header_row,

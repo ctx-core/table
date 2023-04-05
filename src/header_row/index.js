@@ -16,7 +16,9 @@ export const header_row__ = be_('header_row__', ctx=>
  * @returns {column_a_T}
  * @private
  */
-export function header_row_(ctx_or_column_a_or_length) {
+export function header_row_(
+	ctx_or_column_a_or_length
+) {
 	if (is_ctx_(ctx_or_column_a_or_length)) {
 		return header_row__(/** @type {Ctx} */ctx_or_column_a_or_length).$
 	}
@@ -27,7 +29,10 @@ export function header_row_(ctx_or_column_a_or_length) {
  * @param {column_a_T}header_row
  * @private
  */
-export function header_row__set(ctx, header_row) {
+export function header_row__set(
+	ctx,
+	header_row
+) {
 	let table = table_(ctx)
 	if (table) {
 		table = clone(table, { header_row: header_row })
@@ -41,7 +46,9 @@ export function header_row__set(ctx, header_row) {
  * @returns {string[]|number[]}
  * @private
  */
-export function header_row__new(column_a_or_length) {
+export function header_row__new(
+	column_a_or_length
+) {
 	if (isArray(column_a_or_length)) return column_a_or_length
 	return idx_a_(column_a_or_length)
 }

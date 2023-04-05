@@ -13,7 +13,10 @@ export const table__ = be_('table__', ctx=>
  * @returns {table_T}
  * @private
  */
-export function table_(ctx_or_data_row_a, header_row) {
+export function table_(
+	ctx_or_data_row_a,
+	header_row
+) {
 	if (is_ctx_(ctx_or_data_row_a)) return table__(/** @type {Ctx} */ctx_or_data_row_a).$
 	return table__new(ctx_or_data_row_a, header_row)
 }
@@ -22,7 +25,10 @@ export function table_(ctx_or_data_row_a, header_row) {
  * @param {table_T}table
  * @private
  */
-export function table__set(ctx, table) {
+export function table__set(
+	ctx,
+	table
+) {
 	table__(ctx).$ = table
 }
 /**
@@ -31,7 +37,10 @@ export function table__set(ctx, table) {
  * @returns {{header_row, data_row_a}}
  * @private
  */
-export function table__new(data_row_a, header_row) {
+export function table__new(
+	data_row_a,
+	header_row
+) {
 	return {
 		data_row_a,
 		header_row,

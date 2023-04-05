@@ -15,7 +15,9 @@ export const header_M_col_idx__ = be_('header_M_col_idx__', ctx=>
  * @returns {header_M_col_idx_T}
  * @private
  */
-export function header_M_col_idx_(ctx_or_column_a) {
+export function header_M_col_idx_(
+	ctx_or_column_a
+) {
 	if (is_ctx_(ctx_or_column_a)) {
 		return /** @type {header_M_col_idx_T} */header_M_col_idx__(ctx_or_column_a).$
 	}
@@ -26,7 +28,10 @@ export function header_M_col_idx_(ctx_or_column_a) {
  * @param {header_M_col_idx_T}column_M_column_idx
  * @private
  */
-export function header_M_col_idx__set(ctx, column_M_column_idx) {
+export function header_M_col_idx__set(
+	ctx,
+	column_M_column_idx
+) {
 	header_row__set(ctx, [...column_M_column_idx.keys()])
 }
 /**
@@ -34,7 +39,9 @@ export function header_M_col_idx__set(ctx, column_M_column_idx) {
  * @returns {header_M_col_idx_T}
  * @private
  */
-export function header_M_col_idx__new(column_a) {
+export function header_M_col_idx__new(
+	column_a
+) {
 	/** @type {header_M_col_idx_T} */
 	const column_M_column_idx = new Map()
 	for (let column_idx = 0; column_idx < column_a.length; column_idx++) {
