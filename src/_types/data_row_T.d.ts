@@ -1,8 +1,13 @@
+import type { data_row__sym_props_o_T } from './data_row__sym_props_o_T'
 import type { data_row_o_T } from './data_row_o_T'
 import type { row_T } from './row_T'
 export type data_row_T<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
-> = data_row_tuple_T<ColDefs>&data_row_o_T<ColDefs>&row_T<ColDefs>
+> =
+	data_row_tuple_T<ColDefs>
+	&data_row_o_T<ColDefs>
+	&data_row__sym_props_o_T<ColDefs>
+	&row_T<ColDefs>
 export type Row<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
 > = data_row_T<ColDefs>

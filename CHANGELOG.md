@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 20.3.3
+
+### Patch Changes
+
+- data_row_o_T: ColDefs = [string, any][]: fix: type inference
+
 ## 20.3.2
 
 ### Patch Changes

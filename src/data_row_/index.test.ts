@@ -59,3 +59,9 @@ test('data_row_o_', ()=>{
 	})
 })
 test.run()
+// interface o_T {
+// 	col0:string
+// 	col1:string
+// 	col2:string
+// 	col3:number
+// }
