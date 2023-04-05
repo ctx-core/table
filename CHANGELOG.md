@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 20.3.2
+
+### Patch Changes
+
+- types: imports: fix: import type
+
 ## 20.3.1
 
 ### Patch Changes

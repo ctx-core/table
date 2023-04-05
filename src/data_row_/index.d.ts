@@ -1,5 +1,5 @@
 import type { data_row_T, data_row_tuple_T, header_M_col_idx_T, header_row_T } from '../_types'
-import { data_row_o_T } from '../_types'
+import type { data_row_o_T } from '../_types'
 declare function data_row_<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
 >(
