@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 21.3.0
+
+### Minor Changes
+
+- - data_row\_\_hydrate
+
 ## 21.2.0
 
 ### Minor Changes
