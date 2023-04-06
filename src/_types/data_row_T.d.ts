@@ -22,3 +22,24 @@ export type data_row_tuple_T<
 			: ColDefs extends object
 				? ValueOf<ColDefs>[]
 				: string[])
+export type dehydrated_data_row_tuple_T<
+	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
+> =
+	row_T<ColDefs>
+	&(ColDefs extends [string, any][]
+		? {
+			[K in keyof ColDefs]:
+			ColDefs[K][1] extends Date
+			? string
+			: ColDefs[K][1]
+		}
+		: ColDefs extends any[]
+			? {
+				[K in keyof ColDefs]:
+				ColDefs[K][1] extends Date
+				? string
+				: ColDefs[K][1]
+			}
+			: ColDefs extends object
+				? Exclude<ValueOf<ColDefs>, Date>[]
+				: string[])

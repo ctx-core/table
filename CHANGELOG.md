@@ -1,5 +1,12 @@
 # @ctx-core/table
 
+## 21.2.0
+
+### Minor Changes
+
+- - dehydrated_data_row_tuple_T
+- hydrated_json_val\_\_T: arguments: data_row=>dehydrated_data_row_tuple: dehydrated_data_row_tuple_T<ColDefs>
+
 ## 21.1.0
 
 ### Minor Changes
