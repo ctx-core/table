@@ -1,5 +1,12 @@
 # @ctx-core/table
 
+## 21.1.0
+
+### Minor Changes
+
+- - hydrated_json_val\_\_T
+- table**hydrate: arguments: + val**hydrate?:hydrated_json_val\_\_T<ColDefs, H>
+
 ## 21.0.0
 
 ### Major Changes

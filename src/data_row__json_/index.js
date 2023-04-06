@@ -17,10 +17,10 @@ export function data_row__json_(
 	/** @type {header_row_T} */
 	const header_row = data_row[header_M_col_idx_sym].header_row
 	return /** @type {json_T} */JSON.stringify(
-		data_row.map((hydrated_json_val, idx)=>
+		data_row.map((hydrated_json_val, col_idx)=>
 			dehydrated_json_val_(
 				hydrated_json_val,
-				header_row[idx],
+				header_row[col_idx],
 				data_row,
-				idx)))
+				col_idx)))
 }
