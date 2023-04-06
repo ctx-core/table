@@ -9,7 +9,7 @@ test('table__hydrate', ()=>{
 		'col3',
 		'col4',
 	])
-	const unhydrated_table = {
+	const dehydrated_table = {
 		header_row,
 		data_row_a: [
 			['foo', 'bar', 'baz', 1.23, '2020-5-5'],
@@ -22,7 +22,7 @@ test('table__hydrate', ()=>{
 		['col2', string],
 		['col3', number],
 		['col4', Date],
-	]>(unhydrated_table as dehydrated_table_T<[
+	]>(dehydrated_table as dehydrated_table_T<[
 		['col0', string],
 		['col1', string],
 		['col2', string],

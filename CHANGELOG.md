@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 20.5.1
+
+### Patch Changes
+
+- variable name: unhydrated_table=>dehydrated_table
+
 ## 20.5.0
 
 ### Minor Changes
