@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 20.5.0
+
+### Minor Changes
+
+- - dehydrated_table_T: aliased by unhydrated_table_T
+
 ## 20.4.0
 
 ### Minor Changes

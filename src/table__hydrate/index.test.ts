@@ -1,6 +1,6 @@
 import { test } from 'uvu'
 import { equal } from 'uvu/assert'
-import { data_row_a__new, header_row__new, table__hydrate, unhydrated_table_T } from '../index.js'
+import { data_row_a__new, header_row__new, table__hydrate, dehydrated_table_T } from '../index.js'
 test('table__hydrate', ()=>{
 	const header_row = header_row__new([
 		'col0',
@@ -22,7 +22,7 @@ test('table__hydrate', ()=>{
 		['col2', string],
 		['col3', number],
 		['col4', Date],
-	]>(unhydrated_table as unhydrated_table_T<[
+	]>(unhydrated_table as dehydrated_table_T<[
 		['col0', string],
 		['col1', string],
 		['col2', string],

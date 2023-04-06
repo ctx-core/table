@@ -1,8 +1,8 @@
 import { data_row_a__new } from '../data_row_a/index.js'
 /** @typedef {import('../_types').table_T}table_T */
-/** @typedef {import('../_types').unhydrated_table_T}unhydrated_table_T */
+/** @typedef {import('../_types').dehydrated_table_T}dehydrated_table_T */
 /**
- * @param {unhydrated_table_T}unhydrated_table
+ * @param {dehydrated_table_T}unhydrated_table
  * @returns {table_T}
  */
 export function table__hydrate(
