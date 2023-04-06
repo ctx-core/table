@@ -4,7 +4,8 @@ import { equal } from 'uvu/assert'
 import {
 	header_M_col_idx_,
 	header_M_col_idx__,
-	header_M_col_idx__new, header_M_col_idx__set,
+	header_M_col_idx__new,
+	header_M_col_idx__set, header_row__new,
 	header_row__set,
 	table_,
 	table__set
@@ -33,14 +34,19 @@ test('header_M_col_idx_|Ctx argument', ()=>{
 	]))
 })
 test('header_M_col_idx__new', ()=>{
+	const header_row =
+		header_row__new(['col0', 'col1', 'col2', 'col3'])
+	const header_M_col_idx =
+		header_M_col_idx__new(header_row)
 	equal(
-		header_M_col_idx__new(['col0', 'col1', 'col2', 'col3']),
+		header_M_col_idx,
 		new Map<string, number>([
 			['col0', 0],
 			['col1', 1],
 			['col2', 2],
 			['col3', 3]
 		]))
+	equal(header_M_col_idx.header_row, header_row)
 })
 test('header_M_col_idx_|column_a_T argument', ()=>{
 	const ctx = ctx_()
@@ -59,23 +65,14 @@ test('header_M_col_idx_|column_a_T argument', ()=>{
 test('header_M_col_idx__set', ()=>{
 	const ctx = ctx_()
 	equal(table_(ctx), undefined)
-	header_M_col_idx__set(ctx, new Map<string, number>([
-		['col0', 0],
-		['col1', 1],
-		['col2', 2],
-		['col3', 3]
-	]))
+	header_M_col_idx__set(ctx,
+		header_M_col_idx__new(['col0', 'col1', 'col2', 'col3']))
 	equal(table_(ctx), {
 		header_row: ['col0', 'col1', 'col2', 'col3'],
 		data_row_a: []
 	})
-	header_M_col_idx__set(ctx, new Map<string, number>([
-		['col0', 0],
-		['col1', 1],
-		['col2', 2],
-		['col3', 3],
-		['col4', 4]
-	]))
+	header_M_col_idx__set(ctx,
+		header_M_col_idx__new(['col0', 'col1', 'col2', 'col3', 'col4']))
 	equal(table_(ctx), {
 		header_row: ['col0', 'col1', 'col2', 'col3', 'col4'],
 		data_row_a: []

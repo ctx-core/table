@@ -49,8 +49,20 @@ test('data_row_a_|Ctx argument', ()=>{
 	])
 })
 test('data_row_a__new', ()=>{
-	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
-	const header_M_col_idx = header_M_col_idx_(header_row)
+	const header_row =
+		header_row__new<[
+			['col0', string],
+			['col1', string],
+			['col2', string],
+			['col3', number],
+		]>(['col0', 'col1', 'col2', 'col3'])
+	const header_M_col_idx =
+		header_M_col_idx_<[
+			['col0', string],
+			['col1', string],
+			['col2', string],
+			['col3', number],
+		]>(header_row)
 	const data_row_a = data_row_a__new<[
 		['col0', string],
 		['col1', string],

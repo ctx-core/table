@@ -1,9 +1,10 @@
 import { nullish__check_ } from '@ctx-core/function'
 import { computed_ } from '@ctx-core/nanostores'
-import { be_, is_ctx_ } from '@ctx-core/object'
+import { assign, be_, is_ctx_ } from '@ctx-core/object'
 import { header_row__, header_row__set } from '../header_row/index.js'
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
-/** @typedef {typeof import('../_types').column_a_T}column_a_T */
+/** @typedef {typeof import('../_types').header_row_sym}header_row_sym */
+/** @typedef {typeof import('../_types').header_row_T}header_row_T */
 /** @typedef {typeof import('../_types').header_M_col_idx_T}header_M_col_idx_T */
 /** @type {typeof import('./index.d.ts').header_M_col_idx__} */
 export const header_M_col_idx__ = be_('header_M_col_idx__', ctx=>
@@ -11,42 +12,48 @@ export const header_M_col_idx__ = be_('header_M_col_idx__', ctx=>
 		nullish__check_([header_a], ()=>
 			header_M_col_idx__new(header_a))))
 /**
- * @param {Ctx|column_a_T}ctx_or_column_a
+ * @param {Ctx|header_row_T}ctx_or_header_row
  * @returns {header_M_col_idx_T}
  * @private
  */
 export function header_M_col_idx_(
-	ctx_or_column_a
+	ctx_or_header_row
 ) {
-	if (is_ctx_(ctx_or_column_a)) {
-		return /** @type {header_M_col_idx_T} */header_M_col_idx__(ctx_or_column_a).$
+	if (is_ctx_(ctx_or_header_row)) {
+		return /** @type {header_M_col_idx_T} */header_M_col_idx__(ctx_or_header_row).$
 	}
-	return header_M_col_idx__new(/** @type {column_a_T} */ctx_or_column_a)
+	return header_M_col_idx__new(/** @type {header_row_T} */ctx_or_header_row)
 }
 /**
  * @param {Ctx}ctx
- * @param {header_M_col_idx_T}column_M_column_idx
+ * @param {header_M_col_idx_T}header_M_col_idx
  * @private
  */
 export function header_M_col_idx__set(
 	ctx,
-	column_M_column_idx
+	header_M_col_idx
 ) {
-	header_row__set(ctx, [...column_M_column_idx.keys()])
+	header_row__set(ctx, [...header_M_col_idx.keys()])
 }
 /**
- * @param {column_a_T}column_a
+ * @param {header_row_T}header_row
  * @returns {header_M_col_idx_T}
  * @private
  */
 export function header_M_col_idx__new(
-	column_a
+	header_row
 ) {
 	/** @type {header_M_col_idx_T} */
-	const column_M_column_idx = new Map()
-	for (let column_idx = 0; column_idx < column_a.length; column_idx++) {
-		const column = column_a[column_idx]
-		column_M_column_idx.set(column, column_idx)
+	const column_M_column_idx = assign(
+		new Map(),
+		{
+			get header_row() {
+				return header_row
+			}
+		})
+	for (let column_idx = 0; column_idx < header_row.length; column_idx++) {
+		const header = header_row[column_idx]
+		column_M_column_idx.set(header, column_idx)
 	}
 	return column_M_column_idx
 }

@@ -1,5 +1,21 @@
 # @ctx-core/table
 
+## 21.0.0
+
+### Major Changes
+
+- header_M_col_idx\__new,header_M_col_idx_: arguments: header_row: type change: column_a_T=>header_row_T
+
+### Minor Changes
+
+- - hydrated_json_val_T
+- - data_row\__json_
+- header_M_col_idx_T: + header_row prop
+- header_M_col_idx_T: + get header_row():header_row_T<ColDefs>
+- - - json_val\_\_hydrate
+- - dehydrated_json_val\_\_T
+- - dehydrated_json_val_T
+
 ## 20.5.1
 
 ### Patch Changes
