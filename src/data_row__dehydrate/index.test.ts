@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import { equal } from 'uvu/assert'
-import { data_row_, data_row__json_, type dehydrated_json_val_T, header_row_ } from '../index.js'
-test('data_row__json_|-dehydrated_json_val_', ()=>{
+import { data_row_, data_row__dehydrate, type dehydrated_json_val_T, header_row_ } from '../index.js'
+test('data_row__dehydrate|-dehydrated_val_', ()=>{
 	const header_row = header_row_([
 		'col0',
 		'col1',
@@ -13,10 +13,10 @@ test('data_row__json_|-dehydrated_json_val_', ()=>{
 		['foo', 'bar', 'baz', 1.23, new Date('2014-5-5')],
 		header_row)
 	equal(
-		data_row__json_(data_row),
-		JSON.stringify(['foo', 'bar', 'baz', 1.23, new Date('2014-5-5')]))
+		data_row__dehydrate(data_row),
+		['foo', 'bar', 'baz', 1.23, new Date('2014-5-5').toISOString()])
 })
-test('data_row__json_|+dehydrated_json_val_', ()=>{
+test('data_row__dehydrate|+dehydrated_val_', ()=>{
 	const header_row =
 		header_row_<[
 			['col0', string],
@@ -36,7 +36,7 @@ test('data_row__json_|+dehydrated_json_val_', ()=>{
 			['foo', 'bar', 'baz', 1.23, new Date('2014-5-5')],
 			header_row)
 	equal(
-		data_row__json_<[
+		data_row__dehydrate<[
 			['col0', string],
 			['col1', string],
 			['col2', string],
@@ -52,11 +52,12 @@ test('data_row__json_|+dehydrated_json_val_', ()=>{
 				header === 'col4'
 				? data_row.col4.toDateString()
 				: val as dehydrated_json_val_T),
-		JSON.stringify([
+		[
 			'foo',
 			'bar',
 			'baz',
 			1.23,
-			new Date('2014-5-5').toDateString()]))
+			new Date('2014-5-5').toDateString()
+		])
 })
 test.run()

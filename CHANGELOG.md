@@ -1,5 +1,18 @@
 # @ctx-core/table
 
+## 21.4.0
+
+### Minor Changes
+
+- hydrated_json_val_T: union: + |Object
+- - json_val\_\_dehydrate
+- - data_row\_\_dehydrate
+- - dehydrated_val\_\_T: aliased by dehydrated_json_val\_\_T
+- dehydrated_data_row_tuple_T: aliases data_row_tuple_T
+- - dehydrated_json_data_row_tuple_T: renamed from dehydrated_data_row_tuple_T:
+
+    - row_T<ColDefs>
+
 ## 21.3.0
 
 ### Minor Changes

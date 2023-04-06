@@ -1,6 +1,6 @@
 import { test } from 'uvu'
 import { equal } from 'uvu/assert'
-import { data_row__hydrate, dehydrated_data_row_tuple_T, header_row__new } from '../index.js'
+import { data_row__hydrate, dehydrated_json_data_row_tuple_T, header_row__new } from '../index.js'
 test('data_row__hydrate|-val__hydrate', ()=>{
 	const header_row =
 		header_row__new<[
@@ -17,7 +17,7 @@ test('data_row__hydrate|-val__hydrate', ()=>{
 			'col4',
 		])
 	const dehydrated_data_row_tuple =
-		['foo', 'bar', 'baz', 1.23, '2020-5-5'] as dehydrated_data_row_tuple_T<[
+		['foo', 'bar', 'baz', 1.23, '2020-5-5'] as dehydrated_json_data_row_tuple_T<[
 			['col0', string],
 			['col1', string],
 			['col2', string],
@@ -59,7 +59,7 @@ test('data_row__hydrate|+val__hydrate', ()=>{
 			'col4',
 		])
 	const dehydrated_data_row_tuple =
-		['foo', 'bar', 'baz', 1.23, '2020-05-05'] as dehydrated_data_row_tuple_T<[
+		['foo', 'bar', 'baz', 1.23, '2020-05-05'] as dehydrated_json_data_row_tuple_T<[
 			['col0', string],
 			['col1', string],
 			['col2', string],
