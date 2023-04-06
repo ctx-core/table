@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 20.4.0
+
+### Minor Changes
+
+- table\_\_hydrate: + hydrate Date objects from json
+
 ## 20.3.6
 
 ### Patch Changes
