@@ -1,4 +1,3 @@
-import { json_val__hydrate } from '../json_val__hydrate/index.js'
 import { data_row__hydrate } from '../data_row__hydrate/index.js'
 import { header_M_col_idx_ } from '../header_M_col_idx/index.js'
 /** @typedef {import('../_types').dehydrated_table_T}dehydrated_table_T */
@@ -11,7 +10,7 @@ import { header_M_col_idx_ } from '../header_M_col_idx/index.js'
  */
 export function table__hydrate(
 	dehydrated_table,
-	val__hydrate = json_val__hydrate
+	val__hydrate = $=>$
 ) {
 	const { header_row } = dehydrated_table
 	const header_M_col_idx = header_M_col_idx_(header_row)
@@ -20,6 +19,9 @@ export function table__hydrate(
 		data_row_a:
 			dehydrated_table.data_row_a
 				.map(dehydrated_data_row_tuple=>
-					data_row__hydrate(dehydrated_data_row_tuple, header_M_col_idx))
+					data_row__hydrate(
+						dehydrated_data_row_tuple,
+						header_M_col_idx,
+						val__hydrate))
 	}
 }

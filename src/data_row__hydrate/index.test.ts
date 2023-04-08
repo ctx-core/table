@@ -36,12 +36,12 @@ test('data_row__hydrate|-val__hydrate', ()=>{
 			header_row)
 	equal(
 		data_row,
-		['foo', 'bar', 'baz', 1.23, new Date('2020-5-5')])
+		['foo', 'bar', 'baz', 1.23, '2020-5-5'])
 	equal(data_row.col0, 'foo')
 	equal(data_row.col1, 'bar')
 	equal(data_row.col2, 'baz')
 	equal(data_row.col3, 1.23)
-	equal(data_row.col4, new Date('2020-5-5'))
+	equal(data_row.col4, '2020-5-5')
 })
 test('data_row__hydrate|+val__hydrate', ()=>{
 	const header_row =

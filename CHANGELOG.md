@@ -1,5 +1,18 @@
 # @ctx-core/table
 
+## 22.0.0
+
+### Major Changes
+
+- - json_val\_\_hydrate
+- table**hydrate|-val**hydrate: - automatic Date parsing
+
+### Patch Changes
+
+- data_row\_\_hydrate: fix: header argument
+- dependencies: fix: @ctx-core/types
+- ∋ @ctx-core/combinators
+
 ## 21.4.3
 
 ### Patch Changes
