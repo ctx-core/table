@@ -1,5 +1,16 @@
 # @ctx-core/table
 
+## 22.1.0
+
+### Minor Changes
+
+- dehydrated_val\_\_T: arguments: hydrated_json_val:ValueOf<data_row_T<ColDefs>>
+- - hydrated_val**T: aliased by hydrated_json_val**T
+
+### Patch Changes
+
+- hydrated_json_val_T: union: - Date
+
 ## 22.0.0
 
 ### Major Changes
