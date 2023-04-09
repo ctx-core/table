@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 22.2.0
+
+### Minor Changes
+
+- - hydrated_val\_\_header_T<ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object>
+
 ## 22.1.0
 
 ### Minor Changes
