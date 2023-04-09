@@ -1,5 +1,25 @@
 # @ctx-core/table
 
+## 23.2.0
+
+### Minor Changes
+
+- hydrated_val\_\_T,hydrated_json_val\_\_T,csv\__table_,csv\_\_table\__parse_o_,data_row\_\_hydrate,table\_\_hydrate: generics:
+
+      ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object,
+      D = dehydrated_json_val_T,
+      H = hydrated_json_val_T
+
+## 23.1.0
+
+### Minor Changes
+
+- bring back hydrated_val**header_T: - hydrated_val**arg_a_T
+
+### Patch Changes
+
+- hydrated_val\_\_T: arguments: val: fix: limit to dehydrated_json_val_T
+
 ## 23.0.1
 
 ### Patch Changes
