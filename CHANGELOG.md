@@ -4,14 +4,14 @@
 
 ### Minor Changes
 
-- - hydrated_val\_\_header_T<ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object>
+- - hydrated_val\__header_T<ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object>
 
 ## 22.1.0
 
 ### Minor Changes
 
-- dehydrated_val\_\_T: arguments: hydrated_json_val:ValueOf<data_row_T<ColDefs>>
-- - hydrated_val**T: aliased by hydrated_json_val**T
+- dehydrated_val\__T: arguments: hydrated_json_val:ValueOf<data_row_T<ColDefs>>
+- - hydrated_val\__T: aliased by hydrated_json_val\__T
 
 ### Patch Changes
 
@@ -21,12 +21,12 @@
 
 ### Major Changes
 
-- - json_val\_\_hydrate
-- table**hydrate|-val**hydrate: - automatic Date parsing
+- - json_val\__hydrate
+- table\__hydrate|-val\__hydrate: - automatic Date parsing
 
 ### Patch Changes
 
-- data_row\_\_hydrate: fix: header argument
+- data_row\__hydrate: fix: header argument
 - dependencies: fix: @ctx-core/types
 - ∋ @ctx-core/combinators
 
@@ -58,9 +58,9 @@
 ### Minor Changes
 
 - hydrated_json_val_T: union: + |Object
-- - json_val\_\_dehydrate
-- - data_row\_\_dehydrate
-- - dehydrated_val\_\_T: aliased by dehydrated_json_val\_\_T
+- - json_val\__dehydrate
+- - data_row\__dehydrate
+- - dehydrated_val\__T: aliased by dehydrated_json_val\__T
 - dehydrated_data_row_tuple_T: aliases data_row_tuple_T
 - - dehydrated_json_data_row_tuple_T: renamed from dehydrated_data_row_tuple_T:
 
@@ -70,21 +70,21 @@
 
 ### Minor Changes
 
-- - data_row\_\_hydrate
+- - data_row\__hydrate
 
 ## 21.2.0
 
 ### Minor Changes
 
 - - dehydrated_data_row_tuple_T
-- hydrated_json_val\_\_T: arguments: data_row=>dehydrated_data_row_tuple: dehydrated_data_row_tuple_T<ColDefs>
+- hydrated_json_val\__T: arguments: data_row=>dehydrated_data_row_tuple: dehydrated_data_row_tuple_T<ColDefs>
 
 ## 21.1.0
 
 ### Minor Changes
 
-- - hydrated_json_val\_\_T
-- table**hydrate: arguments: + val**hydrate?:hydrated_json_val\_\_T<ColDefs, H>
+- - hydrated_json_val\__T
+- table\__hydrate: arguments: + val\__hydrate?:hydrated_json_val\__T<ColDefs, H>
 
 ## 21.0.0
 
@@ -98,8 +98,8 @@
 - - data_row\__json_
 - header_M_col_idx_T: + header_row prop
 - header_M_col_idx_T: + get header_row():header_row_T<ColDefs>
-- - - json_val\_\_hydrate
-- - dehydrated_json_val\_\_T
+- - - json_val\__hydrate
+- - dehydrated_json_val\__T
 - - dehydrated_json_val_T
 
 ## 20.5.1
@@ -118,7 +118,7 @@
 
 ### Minor Changes
 
-- table\_\_hydrate: + hydrate Date objects from json
+- table\__hydrate: + hydrate Date objects from json
 
 ## 20.3.6
 
@@ -161,10 +161,10 @@
 
 - fix: function override type definitions:
 
-  data*row_M_data_row_a_idx*
-  data*row_a*
-  header*M_col_idx*
-  header*row*
+  data_row_M_data_row_a_idx_
+  data_row_a_
+  header_M_col_idx_
+  header_row_
   table\_
 
 ## 20.3.0
@@ -177,7 +177,7 @@
 
 ### Patch Changes
 
-- header*row*: argument types: fix: column_a_T instead of column_T
+- header_row_: argument types: fix: column_a_T instead of column_T
 - data_row_tuple_T: else type: fix: string[]
 - header_row_T: fix: + ColDefs extends object: check:
 
@@ -188,20 +188,20 @@
 
 ### Patch Changes
 
-- data*row*: type: fix: polymorphic argument types
+- data_row_: type: fix: polymorphic argument types
 
 ## 20.2.12
 
 ### Patch Changes
 
 - global tracking prop: datum_a_M_header_M_col_idx=>datum_a_MM_header_M_col_idx
-- data*row*: Proxy: set: fix: implementation
+- data_row_: Proxy: set: fix: implementation
 
 ## 20.2.11
 
 ### Patch Changes
 
-- data*row*: polymorphic types: fix: \*.js files recognizing header_M_col_idx:header_M_col_idx_T<ColDefs> argument
+- data_row_: polymorphic types: fix: \_.js files recognizing header_M_col_idx:header_M_col_idx_T<ColDefs> argument
 
 ## 20.2.10
 
@@ -295,13 +295,13 @@
 
 ### Minor Changes
 
-- - data*row_o*
+- - data_row_o_
 
 ## 20.1.0
 
 ### Minor Changes
 
-- - table\_\_hydrate
+- - table\__hydrate
 
 ## 20.0.0
 
@@ -310,24 +310,24 @@
 - - aliases:
 
     - \_row_proxy
-    - \_proxy**row
-      header_M_row_idx**new=>header_M_col_idx\_\_new
-    - row_M_row_idx\_\_
-    - row*M_row_idx*
-    - row_M_row_idx\_\_set
-    - row_a\_\_
-    - rows\_\_
+    - \_proxy\__row
+      header_M_row_idx\__new=>header_M_col_idx\__new
+    - row_M_row_idx\__
+    - row_M_row_idx_
+    - row_M_row_idx\__set
+    - row_a\__
+    - rows\__
     - rows$\_
-    - row_a\_\_set
-    - column_M_row_idx\_\_
-    - column_M_column_idx\_\_
-    - column*M_column_idx*
-    - column_M_column_idx\_\_set
-    - column_a\_\_
-    - columns\_\_
+    - row_a\__set
+    - column_M_row_idx\__
+    - column_M_column_idx\__
+    - column_M_column_idx_
+    - column_M_column_idx\__set
+    - column_a\__
+    - columns\__
     - columns$\_
-    - column*a*
-    - column_a\_\_set
+    - column_a_
+    - column_a\__set
     - table$\_
 
 - name changes:
@@ -384,39 +384,39 @@
 
 - function argument polymorphism: + header_row:header_row_T<ColDefs>:
 
-  data*row*
-  data*row_a*
-  data_row_a\_\_new
+  data_row_
+  data_row_a_
+  data_row_a\__new
 
 ## 19.2.0
 
 ### Minor Changes
 
-- - data_row\_\_sym_props_o_T:
+- - data_row\__sym_props_o_T:
 
     - [length_sym]: number
     - [header_m_row_idx_sym]: header_M_row_idx_T<ColDefs>
 
 - - header_M_row_idx_sym
-- - header_M_row_idx\_\_new: aliased by column_M_row_idx\_\_new
-- - header_M_row_idx\_\_set: aliased by column_M_row_idx\_\_set
-- - data_row_a\_\_new
+- - header_M_row_idx\__new: aliased by column_M_row_idx\__new
+- - header_M_row_idx\__set: aliased by column_M_row_idx\__set
+- - data_row_a\__new
 - - header_M_row_idx_sym
-- - header*M_row_idx*: aliased by column*M_row_idx*
-- - header_M_row_idx\_\_: aliased by column_M_row_idx\_\_
-- data*row_a*: + polymorphic function: (data_row_tuple_a:data_row_tuple_T<ColDefs>[], header_M_row_idx:header_M_row_idx_T<ColDefs>):data_row_T<ColDefs>[]
+- - header_M_row_idx_: aliased by column_M_row_idx_
+- - header_M_row_idx\__: aliased by column_M_row_idx\__
+- data_row_a_: + polymorphic function: (data_row_tuple_a:data_row_tuple_T<ColDefs>[], header_M_row_idx:header_M_row_idx_T<ColDefs>):data_row_T<ColDefs>[]
 
 ### Patch Changes
 
-- table*row*: argument name: column_M_column_idx=>header_M_row_idx
+- table_row_: argument name: column_M_column_idx=>header_M_row_idx
 - data_row_tuple_T: fix: number member types
-- data*row*: argument names:
+- data_row_: argument names:
 
   datum_a=>data_row_tuple
   column_M_row_idx=>header_M_row_idx
 
-- data_row_a\_\_set: fix: update table\_\_
-- header_row\_\_set: fix: update table\_\_
+- data_row_a\__set: fix: update table\__
+- header_row\__set: fix: update table\__
 - Updated dependencies
   - @ctx-core/object@27.3.0
 
@@ -578,7 +578,7 @@
 ### Minor Changes
 
 - - length_sym
-- data*row*: data_row[length_sym]: returns target array length: fix: collision with length column values
+- data_row_: data_row[length_sym]: returns target array length: fix: collision with length column values
 
 ## 19.0.6
 
@@ -608,13 +608,13 @@
 
 ### Patch Changes
 
-- data*row*: fix: jsdocs
+- data_row_: fix: jsdocs
 
 ## 19.0.1
 
 ### Patch Changes
 
-- data*row*: performance:
+- data_row_: performance:
 
   get,set: extract to top-level functions to reduce dynamic closure scope
 
@@ -624,38 +624,38 @@
 
 ### Major Changes
 
-- - reverse*column_a\_\_,reverse_column_a*,reverse_column_a\_\_set
-- - rank*table\_\_,rank_table*,rank*table\_\_set,rank_table$*,b**rank**table,rank_table\_\_new
-- table**,table\_,table**set,table\_\_new,table_T
+- - reverse_column_a\__,reverse_column_a_,reverse_column_a\__set
+- - rank_table\__,rank_table_,rank_table\__set,rank_table$_,b\__rank\__table,rank_table\__new
+- table\__,table\_,table\__set,table\__new,table_T
 
   generics: ColDefs extends (([string, any][])|any[]|object)
 
-- - row**,row$_,row_,row**set
-- - row*id\_\_,row_id*,row_id\_\_set
-- - row*a\_\_,row_a*,row_a\_\_set
-- - table**row_a**,table\__row_a_
-- - row*M_row_idx\_\_,row_M_row_idx*,row_M_row_idx\_\_set
+- - row\__,row$_,row_,row\__set
+- - row_id\__,row_id_,row_id\__set
+- - row_a\__,row_a_,row_a\__set
+- - table\__row_a\__,table\__row_a_
+- - row_M_row_idx\__,row_M_row_idx_,row_M_row_idx\__set
 
 ### Minor Changes
 
 - - header_row_T
 - - data_row_o_T
-- - data*row_a\_\_,data_row_a*,data_row_a\_\_set
-- - column*M_row_idx*: aliased by column*M_column_idx*
-- - data*row_M_data_row_a_idx\_\_,data_row_M_data_row_a_idx*
-- - tuple\_\_union_T
-- - header*row\_\_,header_row*,header_row**set,header_row**new,header_row_T
-- - column_M_row_idx\_\_new
+- - data_row_a\__,data_row_a_,data_row_a\__set
+- - column_M_row_idx_: aliased by column_M_column_idx_
+- - data_row_M_data_row_a_idx\__,data_row_M_data_row_a_idx_
+- - tuple\__union_T
+- - header_row\__,header_row_,header_row\__set,header_row\__new,header_row_T
+- - column_M_row_idx\__new
 - - column_a_T
 - - column_T
-- - data_row_M_data_row_a_idx**set,data_row_M_data_row_a_idx**new
+- - data_row_M_data_row_a_idx\__set,data_row_M_data_row_a_idx\__new
 - data_row_T: aliased by Row
 
   generics: ColDefs extends (([string, any][])|any[]|object)
 
-- - column_M_row_idx**: aliased by column_M_column_idx**
-- - data*row*: aliased by \_row_proxy,\_proxy\_\_row
-- - tuple\_\_o_T
+- - column_M_row_idx\__: aliased by column_M_column_idx\__
+- - data_row_: aliased by \_row_proxy,\_proxy\__row
+- - tuple\__o_T
 
 ## 18.0.15
 
@@ -789,37 +789,37 @@
 
 ### Major Changes
 
-- - column*offsets*
-- - \_offsets\_\_column
-- - table\_\_T
-- - column_offset_a\_\_
+- - column_offsets_
+- - \_offsets\__column
+- - table\__T
+- - column_offset_a\__
 - Row: - row_id
-- - filter**data_row_a**,data*rows_filter\_\_,\_data_rows_filter$*,filter**data*row_a*,filter**data_row_a\_\_set
+- - filter\__data_row_a\__,data_rows_filter\__,\_data_rows_filter$_,filter\__data_row_a_,filter\__data_row_a\__set
 - - column_offsets_T
-- - filter**table**,data*rows_filter_table\_\_,data_rows_filter_table$*,filter**table\_,filter**table**set,filter**table_T,data_rows_filter_table_T
-- - data_rows\_\_T
-- - column_offset_a\_\_new
-- - column*offsets$*
-- - column*offsets*
-- - data_highlight_row_a\_\_T
+- - filter\__table\__,data_rows_filter_table\__,data_rows_filter_table$_,filter\__table\_,filter\__table\__set,filter\__table_T,data_rows_filter_table_T
+- - data_rows\__T
+- - column_offset_a\__new
+- - column_offsets$_
+- - column_offsets_
+- - data_highlight_row_a\__T
 - table_T: { column_a:string[], row_a:Row<Val>[] }
-- - data_highlight_row_a\_\_T
-- - data_row_a\_\_T
+- - data_highlight_row_a\__T
+- - data_row_a\__T
 - - \_column_offsets
-- - data*highlight_rows**,data_highlight_rows**,data_highlight_rows$*,data*highlight_rows*,data_highlight_row_a\_\_set
-- - column_offsets\_\_set
-- - data*row_a\_\_,data_row_a*,data_row_a**set,data_row_a**new
-- - table*data_highlight_row_a**,table_data_highlight_rows**,table_data_highlight_rows$*,table*data_highlight_row_a*,table_data_highlight_row_a\_\_set,table_data_highlight_row_a_T,table_data_highlight_rows_T
-- - data*row_a_filter_input_a**,data_rows_filter_inputs**,data_rows_filter_inputs$*,data*row_a_filter_input_a*,data_row_a_filter_input_a\_\_set,data_row_a_filter_input_a_T,data_row_filter_inputs_T
+- - data_highlight_rows\__,data_highlight_rows\__,data_highlight_rows$_,data_highlight_rows_,data_highlight_row_a\__set
+- - column_offsets\__set
+- - data_row_a\__,data_row_a_,data_row_a\__set,data_row_a\__new
+- - table_data_highlight_row_a\__,table_data_highlight_rows\__,table_data_highlight_rows$_,table_data_highlight_row_a_,table_data_highlight_row_a\__set,table_data_highlight_row_a_T,table_data_highlight_rows_T
+- - data_row_a_filter_input_a\__,data_rows_filter_inputs\__,data_rows_filter_inputs$_,data_row_a_filter_input_a_,data_row_a_filter_input_a\__set,data_row_a_filter_input_a_T,data_row_filter_inputs_T
 
 ### Minor Changes
 
-- - column*M_column_idx*
-- - table**row_a**,table\__row_a_
-- - row_M_row_idx\_\_set
-- - row*M_row_idx*
-- - column_M_column_idx\_\_set
-- - column_M_column_idx\_\_
+- - column_M_column_idx_
+- - table\__row_a\__,table\__row_a_
+- - row_M_row_idx\__set
+- - row_M_row_idx_
+- - column_M_column_idx\__set
+- - column_M_column_idx\__
 
 ### Patch Changes
 
@@ -847,60 +847,60 @@
 
 ### Major Changes
 
-- - ticks**domain**
-- - table**domain**
-- - row\_\_T
-- - row\_\_set
-- - data_rows_filter_inputs\_\_T
-- - table_data_highlight_rows\_\_T
-- - rank_table\_\_T
-- rows\_=>row_a\_\_new
-- - rows\_\_T
+- - ticks\__domain\__
+- - table\__domain\__
+- - row\__T
+- - row\__set
+- - data_rows_filter_inputs\__T
+- - table_data_highlight_rows\__T
+- - rank_table\__T
+- rows\_=>row_a\__new
+- - rows\__T
 - - \_rows
 
 ### Minor Changes
 
-- - row*id*
-- - reverse*column_a*
+- - row_id_
+- - reverse_column_a_
 - - filter\__table_
-- - filter\_\_data_row_a\_\_: aliased by data_rows_filter\_\_
-- - data*row_a*: aliased by data*rows*
+- - filter\__data_row_a\__: aliased by data_rows_filter\__
+- - data_row_a_: aliased by data_rows_
 - - filter\__data_row_a_
-- - data_row_a**: aliased by data_rows**
-- - filter**table**set
+- - data_row_a\__: aliased by data_rows\__
+- - filter\__table\__set
 - - table\_
 - - column_offset_a\_
-- - data_row_a_filter**: aliased by data_rows_filter**
-- - row_a**: aliased by rows**
-- - data_row_a_filter_input_a**: aliased by data_rows_filter_inputs**
-- - data_highlight_row_a\_\_set
-- - reverse_column_a\_\_set
-- - rank_table\_\_set
+- - data_row_a_filter\__: aliased by data_rows_filter\__
+- - row_a\__: aliased by rows\__
+- - data_row_a_filter_input_a\__: aliased by data_rows_filter_inputs\__
+- - data_highlight_row_a\__set
+- - reverse_column_a\__set
+- - rank_table\__set
 - - data_row_a_filter_input_a_T: aliased by data_row_filter_inputs_T
-- - filter**table**: aliased by data_rows_filter_table\_\_
-- - row_id\_\_set
-- - filter**data_row_a**set
-- - table_data_highlight_row_a\_\_set
-- - data_highlight_row_a**T: aliased by data_highlight_rows**T
-- column_offset_a\_\_new: aliased by column_offsets\_
-- - data*highlight_row_a*
+- - filter\__table\__: aliased by data_rows_filter_table\__
+- - row_id\__set
+- - filter\__data_row_a\__set
+- - table_data_highlight_row_a\__set
+- - data_highlight_row_a\__T: aliased by data_highlight_rows\__T
+- column_offset_a\__new: aliased by column_offsets\_
+- - data_highlight_row_a_
 - - row\_
-- - row_a\_\_set
-- - table*data_highlight_row_a*
-- - reverse_column_a\_\_set
-- - row\_\_set
-- - filter\_\_table_T: aliased by data_rows_filter_table_T
-- - row*a*
-- - data_highlight_row_a**: aliased by data_highlight_rows**
-- - data_rows_filter_table\_\_T
-- table\_\_set
-- - reverse*column_a*
+- - row_a\__set
+- - table_data_highlight_row_a_
+- - reverse_column_a\__set
+- - row\__set
+- - filter\__table_T: aliased by data_rows_filter_table_T
+- - row_a_
+- - data_highlight_row_a\__: aliased by data_highlight_rows\__
+- - data_rows_filter_table\__T
+- table\__set
+- - reverse_column_a_
 - - table_data_highlight_row_a_T: aliased by table_data_highlight_rows_T
-- - data_row_a**T: aliased by data_rows**T
-- - rank*table*
-- - reverse_column_a**: aliased by reverse_columns**
-- - column_a**: aliased by columns**
-- - column_offset_a\_\_set
+- - data_row_a\__T: aliased by data_rows\__T
+- - rank_table_
+- - reverse_column_a\__: aliased by reverse_columns\__
+- - column_a\__: aliased by columns\__
+- - column_offset_a\__set
 
 ### Patch Changes
 
@@ -1763,7 +1763,7 @@
 
 ### Patch Changes
 
-- fix: @ctx-core/\* dependencies
+- fix: @ctx-core/\_ dependencies
 - Updated dependencies
   - @ctx-core/array@26.1.4
   - @ctx-core/dom@11.1.11
@@ -2051,7 +2051,7 @@
 
 ### Patch Changes
 
-- fix: error TS6059: \* is not under 'rootDir': package.json: types: ./dist/index.d.ts
+- fix: error TS6059: \_ is not under 'rootDir': package.json: types: ./dist/index.d.ts
 - Updated dependencies
   - @ctx-core/array@23.0.41
   - @ctx-core/combinators@8.0.34
@@ -2103,7 +2103,7 @@
 
 ### Patch Changes
 
-- \*.d.ts export
+- \_.d.ts export
 - Updated dependencies
   - @ctx-core/array@23.0.37
   - @ctx-core/combinators@8.0.30
@@ -2163,7 +2163,7 @@
 
 ### Major Changes
 
-- \*\_b: ctx is a map: @ctx-core/object: 22.0.0
+- \__b: ctx is a map: @ctx-core/object: 22.0.0
 
 ### Patch Changes
 
@@ -2960,7 +2960,7 @@
 
 ### Patch Changes
 
-- fix: deploying \*.js files
+- fix: deploying \_.js files
 - Updated dependencies [undefined]
   - @ctx-core/array@22.0.8
   - @ctx-core/combinators@7.0.6
@@ -3369,7 +3369,7 @@
 
 ### Patch Changes
 
-- .gitignore: - \*.js
+- .gitignore: - \_.js
 - Updated dependencies [undefined]
   - @ctx-core/array@20.4.1
   - @ctx-core/combinators@6.2.1
