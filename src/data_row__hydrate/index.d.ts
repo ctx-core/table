@@ -1,11 +1,11 @@
 import type {
 	data_row_T,
 	dehydrated_json_data_row_tuple_T,
+	dehydrated_json_val_T,
 	header_row_T,
 	hydrated_json_val_T,
 	hydrated_val__T
 } from '../_types'
-import { dehydrated_json_val_T } from '../_types'
 export declare function data_row__hydrate<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object,
 	D = dehydrated_json_val_T,

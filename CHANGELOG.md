@@ -1,5 +1,12 @@
 # @ctx-core/table
 
+## 23.3.0
+
+### Minor Changes
+
+- - table\_\_dehydrate
+- dehydrated_json_val_T: union: + |Object
+
 ## 23.2.0
 
 ### Minor Changes
