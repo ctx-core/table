@@ -1,5 +1,12 @@
 # @ctx-core/table
 
+## 23.0.1
+
+### Patch Changes
+
+- data_row\_\_hydrate: fix: type
+- data_row\_\_hydrate: generics: + D = hydrated_json_val_T
+
 ## 23.0.0
 
 ### Major Changes
