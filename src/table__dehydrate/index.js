@@ -1,9 +1,9 @@
 import { data_row__dehydrate } from '../data_row__dehydrate/index.js'
-/** @typedef {import('../_types').dehydrated_val__T}dehydrated_val__T */
+/** @typedef {import('../_types').val__dehydrate_T}val__dehydrate_T */
 /** @typedef {import('../_types').table_T}table_T */
 /**
  * @param {table_T}table
- * @param {dehydrated_val__T}[val__dehydrate]
+ * @param {val__dehydrate_T}[val__dehydrate]
  * @returns {table_T<unknown>}
  */
 export function table__dehydrate(

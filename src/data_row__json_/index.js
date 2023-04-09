@@ -3,12 +3,12 @@ import { data_row__dehydrate } from '../data_row__dehydrate/index.js'
 import { json_val__dehydrate } from '../json_val__dehydrate/index.js'
 /** @typedef {import('@ctx-core/types').json_T}json_T */
 /** @typedef {import('../_types').data_row_T}data_row_T */
-/** @typedef {import('../_types').dehydrated_val__T}dehydrated_val__T */
+/** @typedef {import('../_types').val__dehydrate_T}val__dehydrate_T */
 /** @typedef {import('../_types').header_row_T}header_row_T */
 /** @typedef {import('../_types').hydrated_json_val_T}hydrated_json_val_T */
 /**
  * @param {data_row_T}data_row
- * @param {dehydrated_val__T}dehydrated_val_
+ * @param {val__dehydrate_T}dehydrated_val_
  * @returns {json_T}
  * @private
  */

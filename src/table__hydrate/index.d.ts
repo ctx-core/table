@@ -2,7 +2,7 @@ import type {
 	dehydrated_json_val_T,
 	dehydrated_table_T,
 	hydrated_json_val_T,
-	hydrated_val__T,
+	val__hydrate_T,
 	table_T
 } from '../_types'
 export declare function table__hydrate<
@@ -11,5 +11,5 @@ export declare function table__hydrate<
 	H = hydrated_json_val_T
 >(
 	dehydrated_table:dehydrated_table_T<ColDefs>,
-	val__hydrate?:hydrated_val__T<ColDefs, D, H>
+	val__hydrate?:val__hydrate_T<ColDefs, D, H>
 ):table_T<ColDefs>

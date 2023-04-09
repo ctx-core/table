@@ -1,5 +1,16 @@
 # @ctx-core/table
 
+## 23.4.0
+
+### Minor Changes
+
+- - val**hydrate_T: aliased by hydrated_val**T
+- - val**dehydrate_T: aliased by dehydrated_val**T
+
+### Patch Changes
+
+- val\_\_hydrate_T: argument names: dehydrated_json_val=>dehydrated_val
+
 ## 23.3.0
 
 ### Minor Changes
