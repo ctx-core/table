@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 23.5.0
+
+### Minor Changes
+
+- - row_pair_T<ColDefs> = [data_row_T<ColDefs>, header_row_T<ColDefs>]
+
 ## 23.4.21
 
 ### Patch Changes
