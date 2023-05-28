@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "23.5.15",
+	"version": "23.5.16",
 	"description": "ctx-core table",
 	"keywords": [
 		"ctx-core",
@@ -36,12 +36,12 @@
 		"@ctx-core/array": "^26.12.35",
 		"@ctx-core/dom": "^14.1.38",
 		"@ctx-core/function": "^21.18.0",
-		"@ctx-core/nanostores": "^4.0.4",
+		"@ctx-core/nanostores": "^4.0.5",
 		"@ctx-core/object": "^27.4.26",
 		"@ctx-core/types": "^1.2.19"
 	},
 	"devDependencies": {
-		"c8": "^7.13.0",
+		"c8": "^7.14.0",
 		"check-dts": "^0.7.2",
 		"tsx": "^3.12.7",
 		"typescript": "next",
