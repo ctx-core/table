@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 23.5.48
+
+### Patch Changes
+
+- @ctx-core/nanostores: ^5.2.3 -> ^5.2.4
+
 ## 23.5.47
 
 ### Patch Changes
