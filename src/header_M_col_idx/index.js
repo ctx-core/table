@@ -1,4 +1,4 @@
-import { nullish__check_ } from '@ctx-core/function'
+import { nullish__none_ } from '@ctx-core/function'
 import { computed_ } from '@ctx-core/nanostores'
 import { assign, be_, is_ctx_ } from '@ctx-core/object'
 import { header_row__, header_row__set } from '../header_row/index.js'
@@ -9,7 +9,7 @@ import { header_row__, header_row__set } from '../header_row/index.js'
 /** @type {typeof import('./index.d.ts').header_M_col_idx__} */
 export const header_M_col_idx__ = be_('header_M_col_idx__', ctx=>
 	computed_(header_row__(ctx), header_a=>
-		nullish__check_([header_a], ()=>
+		nullish__none_([header_a], ()=>
 			header_M_col_idx__new(header_a))))
 /**
  * @param {Ctx|header_row_T}ctx_or_header_row

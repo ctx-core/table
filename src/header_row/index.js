@@ -1,5 +1,5 @@
 import { idx_a_ } from '@ctx-core/array'
-import { isArray, nullish__check_ } from '@ctx-core/function'
+import { isArray, nullish__none_ } from '@ctx-core/function'
 import { computed_ } from '@ctx-core/nanostores'
 import { be_, clone, is_ctx_ } from '@ctx-core/object'
 import { table_, table__, table__new, table__set } from '../table/index.js'
@@ -9,7 +9,7 @@ import { table_, table__, table__new, table__set } from '../table/index.js'
 /** @type {typeof import('./index.d.ts').header_row__} */
 export const header_row__ = be_('header_row__', ctx=>
 	computed_(table__(ctx), table=>
-		nullish__check_([table], ()=>
+		nullish__none_([table], ()=>
 			table.header_row)))
 /**
  * @param {Ctx|column_a_T|number}ctx_or_column_a_or_length

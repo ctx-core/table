@@ -1,4 +1,4 @@
-import { nullish__check_ } from '@ctx-core/function'
+import { nullish__none_ } from '@ctx-core/function'
 import { computed_ } from '@ctx-core/nanostores'
 import { be_, is_ctx_ } from '@ctx-core/object'
 import { data_row_a__, data_row_a__set } from '../data_row_a/index.js'
@@ -9,7 +9,7 @@ import { data_row_a__, data_row_a__set } from '../data_row_a/index.js'
 export const data_row_M_data_row_a_idx__ = be_('data_row_M_data_row_a_idx__', ctx=>
 	computed_(data_row_a__(ctx),
 		data_row_a=>
-			nullish__check_([data_row_a], ()=>
+			nullish__none_([data_row_a], ()=>
 				data_row_M_data_row_a_idx__new(data_row_a))))
 /**
  * @param {Ctx|data_row_T[]}ctx_or_data_row_a
