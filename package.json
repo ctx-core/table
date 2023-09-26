@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "23.5.65",
+	"version": "23.5.66",
 	"description": "ctx-core table",
 	"keywords": [
 		"ctx-core",
@@ -36,7 +36,7 @@
 		"@ctx-core/array": "^26.15.2",
 		"@ctx-core/dom": "^14.1.65",
 		"@ctx-core/function": "^21.20.1",
-		"@ctx-core/nanostores": "^6.0.9",
+		"@ctx-core/nanostores": "^6.0.10",
 		"@ctx-core/object": "^28.0.7",
 		"@ctx-core/types": "^1.2.20"
 	},
