@@ -1,4 +1,4 @@
-import { data_row_ } from '../data_row_/index.js'
+import { data_row_ } from '../data_row/index.js'
 import { header_M_col_idx_ } from '../header_M_col_idx/index.js'
 /** @typedef {import('../_types').header_M_col_idx_T}header_M_col_idx_T */
 /** @typedef {import('../_types').data_row_T}data_row_T */

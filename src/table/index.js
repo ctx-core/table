@@ -4,9 +4,10 @@ import { be_, is_ctx_ } from '@ctx-core/object'
 /** @typedef {import('../_types').data_row_T}data_row_T */
 /** @typedef {import('../_types').header_row_T}header_row_T */
 /** @typedef {import('../_types').table_T}table_T */
-/** @type {typeof import('./index.d.ts').table__} */
-export const table__ = be_('table__', ctx=>
+/** @type {typeof import('./index.d.ts').table$_} */
+export const table$_ = be_('table$_', ctx=>
 	atom_(undefined))
+export { table$_ as table__ }
 /**
  * @param {Ctx|data_row_T[]}ctx_or_data_row_a
  * @param {header_row_T}[header_row]
@@ -17,7 +18,7 @@ export function table_(
 	ctx_or_data_row_a,
 	header_row
 ) {
-	if (is_ctx_(ctx_or_data_row_a)) return table__(/** @type {Ctx} */ctx_or_data_row_a).$
+	if (is_ctx_(ctx_or_data_row_a)) return table$_(/** @type {Ctx} */ctx_or_data_row_a).$
 	return table__new(ctx_or_data_row_a, header_row)
 }
 /**
@@ -29,7 +30,7 @@ export function table__set(
 	ctx,
 	table
 ) {
-	table__(ctx).$ = table
+	table$_(ctx).$ = table
 }
 /**
  * @param {data_row_T[]}data_row_a

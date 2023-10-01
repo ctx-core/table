@@ -17,7 +17,7 @@ const datum_a_MM_header_M_col_idx = globalThis__prop__ensure(
  * @returns {data_row_T<unknown>}
  * @private
  */
-export function data_row_(
+export function data_row__new(
 	data_row_tuple,
 	header_row_OR_header_M_col_idx
 ) {
@@ -34,6 +34,7 @@ export function data_row_(
 		/** @type {ProxyHandler} */
 		{ get, set })
 }
+export { data_row__new as data_row_ }
 /**
  * @param {data_row_T}target
  * @param {string|symbol}prop_name
@@ -75,7 +76,7 @@ function set(
  * @returns {data_row_o_T}
  * @private
  */
-export function data_row_o_(data_row) {
+export function data_row_o__new(data_row) {
 	const header_M_col_idx = data_row[header_M_col_idx_sym]
 	const data_row_o = {}
 	for (const header of header_M_col_idx.keys()) {
@@ -83,3 +84,4 @@ export function data_row_o_(data_row) {
 	}
 	return data_row_o
 }
+export { data_row_o__new as data_row_o_ }

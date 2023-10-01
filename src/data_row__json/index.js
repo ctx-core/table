@@ -1,4 +1,4 @@
-import { header_M_col_idx_sym } from '../data_row_/index.js'
+import { header_M_col_idx_sym } from '../data_row/index.js'
 import { data_row__dehydrate } from '../data_row__dehydrate/index.js'
 import { json_val__dehydrate } from '../json_val__dehydrate/index.js'
 /** @typedef {import('@ctx-core/types').json_T}json_T */
@@ -12,7 +12,7 @@ import { json_val__dehydrate } from '../json_val__dehydrate/index.js'
  * @returns {json_T}
  * @private
  */
-export function data_row__json_(
+export function data_row__json__new(
 	data_row,
 	dehydrated_val_ = json_val__dehydrate
 ) {
@@ -23,3 +23,4 @@ export function data_row__json_(
 			data_row,
 			dehydrated_val_))
 }
+export { data_row__json__new as data_row__json_ }

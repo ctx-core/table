@@ -4,7 +4,7 @@ import { equal } from 'uvu/assert'
 import {
 	data_row_a__new,
 	header_row_,
-	header_row__,
+	header_row$_,
 	header_row__new,
 	header_row__set,
 	table_,
@@ -20,7 +20,7 @@ test('header_row__', ()=>{
 			['zzz', 'yyy', 'xxx', 3.14],
 		], header_row)
 	})
-	equal(header_row__(ctx).$, ['col0', 'col1', 'col2', 'col3'])
+	equal(header_row$_(ctx).$, ['col0', 'col1', 'col2', 'col3'])
 })
 test('header_row_|Ctx argument', ()=>{
 	const ctx = ctx_()

@@ -1,14 +1,14 @@
 import { nullish__none_ } from '@ctx-core/function'
 import { computed_ } from '@ctx-core/nanostores'
 import { assign, be_, is_ctx_ } from '@ctx-core/object'
-import { header_row__, header_row__set } from '../header_row/index.js'
+import { header_row$_, header_row__set } from '../header_row/index.js'
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
 /** @typedef {typeof import('../_types').header_row_sym}header_row_sym */
 /** @typedef {typeof import('../_types').header_row_T}header_row_T */
 /** @typedef {typeof import('../_types').header_M_col_idx_T}header_M_col_idx_T */
 /** @type {typeof import('./index.d.ts').header_M_col_idx__} */
 export const header_M_col_idx__ = be_('header_M_col_idx__', ctx=>
-	computed_(header_row__(ctx), header_a=>
+	computed_(header_row$_(ctx), header_a=>
 		nullish__none_([header_a], ()=>
 			header_M_col_idx__new(header_a))))
 /**

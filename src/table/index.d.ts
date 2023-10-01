@@ -1,9 +1,10 @@
 import type { WritableAtom_ } from '@ctx-core/nanostores'
 import type { Ctx } from '@ctx-core/object'
 import type { data_row_T, header_row_T, table_T } from '../_types'
-export declare function table__<
+export declare function table$_<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
 >(ctx:Ctx):WritableAtom_<table_T<ColDefs>>
+export { table$_ as table__ }
 export declare function table_<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
 >(ctx:Ctx):table_T<ColDefs>

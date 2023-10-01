@@ -1,8 +1,8 @@
 import { nullish__none_ } from '@ctx-core/function'
 import { computed_ } from '@ctx-core/nanostores'
 import { be_, clone, is_ctx_ } from '@ctx-core/object'
-import { table_, table__, table__new, table__set } from '../table/index.js'
-import { data_row_, header_M_col_idx_sym } from '../data_row_/index.js'
+import { table_, table$_, table__new, table__set } from '../table/index.js'
+import { data_row_, header_M_col_idx_sym } from '../data_row/index.js'
 import { header_row__new } from '../header_row/index.js'
 import { header_M_col_idx_ } from '../header_M_col_idx/index.js'
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
@@ -12,7 +12,7 @@ import { header_M_col_idx_ } from '../header_M_col_idx/index.js'
 /** @typedef {import('../_types').header_row_T}header_row_T */
 /** @type {typeof import('./index.d.ts').data_row_a__} */
 export const data_row_a__ = be_('data_row_a__', ctx=>
-	computed_(table__(ctx), table=>
+	computed_(table$_(ctx), table=>
 		nullish__none_([table], ()=>
 			table.data_row_a)))
 /**

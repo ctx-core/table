@@ -1,5 +1,14 @@
 # @ctx-core/table
 
+## 23.6.0
+
+### Minor Changes
+
+- - table$\_: aliased by table\_\_
+- data*row\_\_new: aliased by data_row*
+- - data*row**json**new: aliased by data_row\_\_json*
+- - header*row$*: aliased by header_row\_\_
+
 ## 23.5.66
 
 ### Patch Changes

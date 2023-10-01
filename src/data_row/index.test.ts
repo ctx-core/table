@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import { equal } from 'uvu/assert'
-import { data_row_, data_row_o_, header_M_col_idx__new, header_row__new } from '../index.js'
-test('data_row_', ()=>{
+import { data_row__new, data_row_o__new, header_M_col_idx__new, header_row__new } from '../index.js'
+test('data_row__new', ()=>{
 	const header_row =
 		header_row__new<[
 			['col0', string],
@@ -16,7 +16,7 @@ test('data_row_', ()=>{
 			['col2', string],
 			['col3', number],
 		]>(header_row)
-	const data_row = data_row_<[
+	const data_row = data_row__new<[
 		['col0', string],
 		['col1', string],
 		['col2', string],
@@ -30,7 +30,7 @@ test('data_row_', ()=>{
 	equal(data_row.col2, 'baz')
 	equal(data_row.col3, 1.23)
 })
-test('data_row_|set', ()=>{
+test('data_row__new|set', ()=>{
 	const header_row =
 		header_row__new<[
 			['col0', string],
@@ -41,7 +41,7 @@ test('data_row_|set', ()=>{
 	const data_a =
 		['foo', 'bar', 'baz', 1.23] as [string, string, string, number]
 	const data_row =
-		data_row_<[
+		data_row__new<[
 			['col0', string],
 			['col1', string],
 			['col2', string],
@@ -52,7 +52,7 @@ test('data_row_|set', ()=>{
 	equal(data_row.col1, 'bar-custom')
 	equal(data_row.custom, 'custom_value')
 })
-test('data_row_o_', ()=>{
+test('data_row_o__new', ()=>{
 	const header_row =
 		header_row__new<[
 			['col0', string],
@@ -67,7 +67,7 @@ test('data_row_o_', ()=>{
 			['col2', string],
 			['col3', number],
 		]>(header_row)
-	const data_row = data_row_<[
+	const data_row = data_row__new<[
 		['col0', string],
 		['col1', string],
 		['col2', string],
@@ -76,7 +76,7 @@ test('data_row_o_', ()=>{
 		['foo', 'bar', 'baz', 1.23],
 		header_M_col_idx)
 	data_row.custom = 'custom_value'
-	equal(data_row_o_(data_row), {
+	equal(data_row_o__new(data_row), {
 		col0: 'foo',
 		col1: 'bar',
 		col2: 'baz',

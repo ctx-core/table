@@ -1,4 +1,4 @@
-import { header_M_col_idx_sym } from '../data_row_/index.js'
+import { header_M_col_idx_sym } from '../data_row/index.js'
 import { json_val__dehydrate } from '../json_val__dehydrate/index.js'
 /** @typedef {import('@ctx-core/types').json_T}json_T */
 /** @typedef {import('../_types').data_row_T}data_row_T */
