@@ -1,4 +1,4 @@
-import { ctx_ } from '@ctx-core/object'
+import { ctx__new } from '@ctx-core/object'
 import { test } from 'uvu'
 import { equal } from 'uvu/assert'
 import {
@@ -15,7 +15,7 @@ import {
 	table__set
 } from '../index.js'
 test('data_row_M_data_row_a_idx__', ()=>{
-	const ctx = ctx_()
+	const ctx = ctx__new()
 	equal(table_(ctx), undefined)
 	equal(data_row_M_data_row_a_idx__(ctx).$, undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
@@ -36,7 +36,7 @@ test('data_row_M_data_row_a_idx__', ()=>{
 	]))
 })
 test('data_row_M_data_row_a_idx_|Ctx argument', ()=>{
-	const ctx = ctx_()
+	const ctx = ctx__new()
 	equal(table_(ctx), undefined)
 	equal(data_row_M_data_row_a_idx_(ctx), undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
@@ -81,7 +81,7 @@ test('data_row_M_data_row_a_idx_|data_row_T[] argument', ()=>{
 	]))
 })
 test('data_row_M_data_row_a_idx__set', ()=>{
-	const ctx = ctx_()
+	const ctx = ctx__new()
 	equal(table_(ctx), undefined)
 	equal(data_row_M_data_row_a_idx_(ctx), undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])

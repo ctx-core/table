@@ -1,4 +1,4 @@
-import { ctx_ } from '@ctx-core/object'
+import { ctx__new } from '@ctx-core/object'
 import { test } from 'uvu'
 import { equal } from 'uvu/assert'
 import {
@@ -11,7 +11,7 @@ import {
 	table__set
 } from '../index.js'
 test('header_M_col_idx__', ()=>{
-	const ctx = ctx_()
+	const ctx = ctx__new()
 	const header_M_col_idx_ = header_M_col_idx__(ctx)
 	equal(header_M_col_idx_.$, undefined)
 	header_row__set(ctx, ['col0', 'col1', 'col2', 'col3'])
@@ -23,7 +23,7 @@ test('header_M_col_idx__', ()=>{
 	]))
 })
 test('header_M_col_idx_|Ctx argument', ()=>{
-	const ctx = ctx_()
+	const ctx = ctx__new()
 	equal(header_M_col_idx_(ctx), undefined)
 	header_row__set(ctx, ['col0', 'col1', 'col2', 'col3'])
 	equal(header_M_col_idx_(ctx), new Map<string, number>([
@@ -49,7 +49,7 @@ test('header_M_col_idx__new', ()=>{
 	equal(header_M_col_idx.header_row, header_row)
 })
 test('header_M_col_idx_|column_a_T argument', ()=>{
-	const ctx = ctx_()
+	const ctx = ctx__new()
 	equal(header_M_col_idx_(ctx), undefined)
 	table__set(ctx, {
 		header_row: ['col0', 'col1', 'col2', 'col3'],
@@ -63,7 +63,7 @@ test('header_M_col_idx_|column_a_T argument', ()=>{
 	]))
 })
 test('header_M_col_idx__set', ()=>{
-	const ctx = ctx_()
+	const ctx = ctx__new()
 	equal(table_(ctx), undefined)
 	header_M_col_idx__set(ctx,
 		header_M_col_idx__new(['col0', 'col1', 'col2', 'col3']))

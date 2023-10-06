@@ -1,4 +1,4 @@
-import { ctx_ } from '@ctx-core/object'
+import { ctx__new } from '@ctx-core/object'
 import { test } from 'uvu'
 import { equal } from 'uvu/assert'
 import {
@@ -11,7 +11,7 @@ import {
 	table__set
 } from '../index.js'
 test('header_row__', ()=>{
-	const ctx = ctx_()
+	const ctx = ctx__new()
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
 	table__set(ctx, {
 		header_row,
@@ -23,7 +23,7 @@ test('header_row__', ()=>{
 	equal(header_row$_(ctx).$, ['col0', 'col1', 'col2', 'col3'])
 })
 test('header_row_|Ctx argument', ()=>{
-	const ctx = ctx_()
+	const ctx = ctx__new()
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
 	table__set(ctx, {
 		header_row,
@@ -35,7 +35,7 @@ test('header_row_|Ctx argument', ()=>{
 	equal(header_row_(ctx), ['col0', 'col1', 'col2', 'col3'])
 })
 test('header_row__set', ()=>{
-	const ctx = ctx_()
+	const ctx = ctx__new()
 	equal(table_(ctx), undefined)
 	equal(header_row_(ctx), undefined)
 	header_row__set(ctx, ['col0', 'col1', 'col2', 'col3'])

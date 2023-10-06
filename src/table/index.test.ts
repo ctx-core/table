@@ -1,9 +1,9 @@
-import { ctx_ } from '@ctx-core/object'
+import { ctx__new } from '@ctx-core/object'
 import { test } from 'uvu'
 import { equal } from 'uvu/assert'
 import { header_row__new, table_, table$_, table__new, table__set } from '../index.js'
 test('table__', ()=>{
-	const ctx = ctx_()
+	const ctx = ctx__new()
 	equal(table$_(ctx).$, undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
 	table$_(ctx).$ = {
@@ -16,7 +16,7 @@ test('table__', ()=>{
 	})
 })
 test('table_|Ctx argument', ()=>{
-	const ctx = ctx_()
+	const ctx = ctx__new()
 	equal(table_(ctx), undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
 	table$_(ctx).$ = {
@@ -45,7 +45,7 @@ test('table_|data_row_T[], header_row_T arguments', ()=>{
 	})
 })
 test('table__set', ()=>{
-	const ctx = ctx_()
+	const ctx = ctx__new()
 	equal(table_(ctx), undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
 	table__set(ctx, {
