@@ -1,5 +1,14 @@
 # @ctx-core/table
 
+## 23.7.16
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/nanostores@8.0.0
+
 ## 23.7.15
 
 ### Patch Changes
