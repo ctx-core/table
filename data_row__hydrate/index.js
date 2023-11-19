@@ -1,10 +1,10 @@
 import { data_row_ } from '../data_row/index.js'
 import { header_M_col_idx_ } from '../header_M_col_idx/index.js'
-/** @typedef {import('../_types/index.d.ts').header_M_col_idx_T}header_M_col_idx_T */
-/** @typedef {import('../_types/index.d.ts').data_row_T}data_row_T */
-/** @typedef {import('../_types/index.d.ts').dehydrated_json_data_row_tuple_T}dehydrated_json_data_row_tuple_T */
-/** @typedef {import('../_types/index.d.ts').header_row_T}header_row_T */
-/** @typedef {import('../_types/index.d.ts').val__hydrate_T}val__hydrate_T */
+/** @typedef {import('../_types/index.d.ts').header_M_col_idx_T} */
+/** @typedef {import('../_types/index.d.ts').data_row_T} */
+/** @typedef {import('../_types/index.d.ts').dehydrated_json_data_row_tuple_T} */
+/** @typedef {import('../_types/index.d.ts').header_row_T} */
+/** @typedef {import('../_types/index.d.ts').val__hydrate_T} */
 /**
  * @param {dehydrated_json_data_row_tuple_T}dehydrated_data_row_tuple
  * @param {header_row_T|header_M_col_idx_T}header_row_or_header_M_col_idx

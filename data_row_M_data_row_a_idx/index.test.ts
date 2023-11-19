@@ -6,7 +6,7 @@ import {
 	data_row_a__new,
 	data_row_a__set,
 	data_row_M_data_row_a_idx_,
-	data_row_M_data_row_a_idx__,
+	data_row_M_data_row_a_idx$_,
 	data_row_M_data_row_a_idx__new,
 	data_row_M_data_row_a_idx__set,
 	type data_row_T,
@@ -15,10 +15,10 @@ import {
 	table_,
 	table__set
 } from '../index.js'
-test('data_row_M_data_row_a_idx__', ()=>{
+test('data_row_M_data_row_a_idx$_', ()=>{
 	const ctx = ctx__new()
 	equal(table_(ctx), undefined)
-	equal(data_row_M_data_row_a_idx__(ctx).$, undefined)
+	equal(data_row_M_data_row_a_idx$_(ctx).$, undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
 	const data_row_a = data_row_a__new([
 		['foo', 'bar', 'baz', 1.23],
@@ -31,7 +31,7 @@ test('data_row_M_data_row_a_idx__', ()=>{
 	}
 	table__set(ctx, table)
 	equal(table_(ctx), table)
-	equal(data_row_M_data_row_a_idx__(ctx).$, new Map<data_row_T, number>([
+	equal(data_row_M_data_row_a_idx$_(ctx).$, new Map<data_row_T, number>([
 		[data_row_a[0], 0],
 		[data_row_a[1], 1],
 	]))

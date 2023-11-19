@@ -1,5 +1,12 @@
 # @ctx-core/table
 
+## 23.8.0
+
+### Minor Changes
+
+- - data*row_a$*: aliased by data_row_a\_\_
+- - header*M_col_idx$*: aliased by header_M_col_idx\_\_
+
 ## 23.7.18
 
 ### Patch Changes

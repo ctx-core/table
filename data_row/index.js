@@ -1,16 +1,16 @@
 import { globalThis__prop__ensure } from '@ctx-core/object'
 import { header_M_col_idx_ } from '../header_M_col_idx/index.js'
-/** @typedef {import('../_types/index.d.ts').data_row_T}data_row_T */
-/** @typedef {import('../_types/index.d.ts').data_row_o_T}data_row_o_T */
-/** @typedef {import('../_types/index.d.ts').data_row_tuple_T}data_row_tuple_T */
-/** @typedef {import('../_types/index.d.ts').header_M_col_idx_T}header_M_col_idx_T */
-/** @typedef {import('../_types/index.d.ts').header_row_T}header_row_T */
+/** @typedef {import('../_types/index.d.ts').data_row_T} */
+/** @typedef {import('../_types/index.d.ts').data_row_o_T} */
+/** @typedef {import('../_types/index.d.ts').data_row_tuple_T} */
+/** @typedef {import('../_types/index.d.ts').header_M_col_idx_T} */
+/** @typedef {import('../_types/index.d.ts').header_row_T} */
 export const length_sym = Symbol.for('length')
 export const header_M_col_idx_sym = Symbol.for('header_M_col_idx')
 const datum_a_MM_header_M_col_idx = globalThis__prop__ensure(
 	Symbol.for('datum_a_MM_header_M_col_idx'),
 	()=>new WeakMap())
-/** @typedef {import('../_types/index.d.ts').data_row_tuple_T}data_row_tuple_T */
+/** @typedef {import('../_types/index.d.ts').data_row_tuple_T} */
 /**
  * @param {data_row_tuple_T}data_row_tuple
  * @param {header_row_T|header_M_col_idx_T}header_row_OR_header_M_col_idx

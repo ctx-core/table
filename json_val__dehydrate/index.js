@@ -1,6 +1,6 @@
-/** @typedef {import('../_types/index.d.ts').data_row_tuple_T}data_row_tuple_T */
-/** @typedef {import('../_types/index.d.ts').dehydrated_json_val_T}dehydrated_json_val_T */
-/** @typedef {import('../_types/index.d.ts').hydrated_json_val_T}hydrated_json_val_T */
+/** @typedef {import('../_types/index.d.ts').data_row_tuple_T} */
+/** @typedef {import('../_types/index.d.ts').dehydrated_json_val_T} */
+/** @typedef {import('../_types/index.d.ts').hydrated_json_val_T} */
 /**
  * @param {hydrated_json_val_T}hydrated_json_val
  * @param {string}[_header]

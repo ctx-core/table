@@ -3,14 +3,15 @@ import { isArray, nullish__none_ } from '@ctx-core/function'
 import { computed_ } from '@ctx-core/nanostores'
 import { be_, clone, is_ctx_ } from '@ctx-core/object'
 import { table$_, table_, table__new, table__set } from '../table/index.js'
-/** @typedef {import('@ctx-core/object').Ctx}Ctx */
-/** @typedef {import('../_types/index.d.ts').column_a_T}column_a_T */
-/** @typedef {import('../_types/index.d.ts').header_row_T}header_row_T */
+/** @typedef {import('@ctx-core/object').Ctx} */
+/** @typedef {import('../_types/index.d.ts').column_a_T} */
+/** @typedef {import('../_types/index.d.ts').header_row_T} */
 /** @type {typeof import('./index.d.ts').header_row$_} */
-export const header_row$_ = be_('header_row$_', ctx=>
+export const header_row$_ = be_(ctx=>
 	computed_(table$_(ctx), table=>
 		nullish__none_([table], ()=>
-			table.header_row)))
+			table.header_row))
+).config({ id: 'header_row$_' })
 export { header_row$_ as header_row__ }
 /**
  * @param {Ctx|column_a_T|number}ctx_or_column_a_or_length

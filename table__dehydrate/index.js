@@ -1,6 +1,6 @@
 import { data_row__dehydrate } from '../data_row__dehydrate/index.js'
-/** @typedef {import('../_types/index.d.ts').val__dehydrate_T}val__dehydrate_T */
-/** @typedef {import('../_types/index.d.ts').table_T}table_T */
+/** @typedef {import('../_types/index.d.ts').val__dehydrate_T} */
+/** @typedef {import('../_types/index.d.ts').table_T} */
 /**
  * @param {table_T}table
  * @param {val__dehydrate_T}[val__dehydrate]

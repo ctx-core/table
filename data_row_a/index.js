@@ -5,16 +5,18 @@ import { data_row_, header_M_col_idx_sym } from '../data_row/index.js'
 import { header_M_col_idx_ } from '../header_M_col_idx/index.js'
 import { header_row__new } from '../header_row/index.js'
 import { table$_, table_, table__new, table__set } from '../table/index.js'
-/** @typedef {import('@ctx-core/object').Ctx}Ctx */
-/** @typedef {import('../_types/index.d.ts').data_row_T}data_row_T */
-/** @typedef {import('../_types/index.d.ts').data_row_tuple_T}data_row_tuple_T */
-/** @typedef {import('../_types/index.d.ts').header_M_col_idx_T}header_M_col_idx_T */
-/** @typedef {import('../_types/index.d.ts').header_row_T}header_row_T */
-/** @type {typeof import('./index.d.ts').data_row_a__} */
-export const data_row_a__ = be_('data_row_a__', ctx=>
+/** @typedef {import('@ctx-core/object').Ctx} */
+/** @typedef {import('../_types/index.d.ts').data_row_T} */
+/** @typedef {import('../_types/index.d.ts').data_row_tuple_T} */
+/** @typedef {import('../_types/index.d.ts').header_M_col_idx_T} */
+/** @typedef {import('../_types/index.d.ts').header_row_T} */
+/** @type {typeof import('./index.d.ts').data_row_a$_} */
+export const data_row_a$_ = be_(ctx=>
 	computed_(table$_(ctx), table=>
 		nullish__none_([table], ()=>
-			table.data_row_a)))
+			table.data_row_a))
+).config({ id: 'data_row_a$_' })
+export { data_row_a$_ as data_row_a__ }
 /**
  * @param {Ctx|data_row_tuple_T[]}ctx_or_data_tuple_a
  * @param {header_row_T|header_M_col_idx_T}[header_row_or_header_M_col_idx]
@@ -26,7 +28,7 @@ export function data_row_a_(
 	header_row_or_header_M_col_idx
 ) {
 	if (is_ctx_(ctx_or_data_tuple_a)) {
-		return data_row_a__(/** @type {Ctx} */ctx_or_data_tuple_a).$
+		return data_row_a$_(/** @type {Ctx} */ctx_or_data_tuple_a).$
 	}
 	return data_row_a__new(ctx_or_data_tuple_a, header_row_or_header_M_col_idx)
 }

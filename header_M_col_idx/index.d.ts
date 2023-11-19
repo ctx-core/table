@@ -1,9 +1,9 @@
 import type { ReadableAtom_ } from '@ctx-core/nanostores'
-import type { be__params_T, Ctx } from '@ctx-core/object'
+import type { be_params_T, Ctx } from '@ctx-core/object'
 import type { header_M_col_idx_T, header_row_T } from '../_types/index.js'
-export declare function header_M_col_idx__<
+export declare function header_M_col_idx$_<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
->(ctx:Ctx, opts?:be__params_T):ReadableAtom_<header_M_col_idx_T<ColDefs>>
+>(ctx:Ctx, params?:be_params_T):ReadableAtom_<header_M_col_idx_T<ColDefs>>
 export declare function header_M_col_idx_<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
 >(ctx:Ctx):header_M_col_idx_T<ColDefs>

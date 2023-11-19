@@ -1,10 +1,10 @@
 import type { ReadableAtom_ } from '@ctx-core/nanostores'
-import type { be__params_T, Ctx } from '@ctx-core/object'
+import type { be_params_T, Ctx } from '@ctx-core/object'
 import type { data_row_T } from '../_types/index.js'
-export declare function data_row_M_data_row_a_idx__<
+export declare function data_row_M_data_row_a_idx$_<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
->(ctx:Ctx, opts?:be__params_T):ReadableAtom_<data_row_M_data_row_a_idx_T<ColDefs>>
-export declare function data_row_M_data_row_a_idx_<
+>(ctx:Ctx, params?:be_params_T):ReadableAtom_<data_row_M_data_row_a_idx_T<ColDefs>>
+export declare function data_ro_M_data_row_a_idx_<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
 >(ctx:Ctx):data_row_M_data_row_a_idx_T<ColDefs>
 export declare function data_row_M_data_row_a_idx_<

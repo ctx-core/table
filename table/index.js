@@ -1,12 +1,13 @@
 import { atom_ } from '@ctx-core/nanostores'
 import { be_, is_ctx_ } from '@ctx-core/object'
-/** @typedef {import('@ctx-core/object').Ctx}Ctx */
-/** @typedef {import('../_types/index.d.ts').data_row_T}data_row_T */
-/** @typedef {import('../_types/index.d.ts').header_row_T}header_row_T */
-/** @typedef {import('../_types/index.d.ts').table_T}table_T */
+/** @typedef {import('@ctx-core/object').Ctx} */
+/** @typedef {import('../_types/index.d.ts').data_row_T} */
+/** @typedef {import('../_types/index.d.ts').header_row_T} */
+/** @typedef {import('../_types/index.d.ts').table_T} */
 /** @type {typeof import('./index.d.ts').table$_} */
-export const table$_ = be_('table$_', ctx=>
+export const table$_ = be_(()=>
 	atom_(undefined))
+	.config({ id: 'table$_' })
 export { table$_ as table__ }
 /**
  * @param {Ctx|data_row_T[]}ctx_or_data_row_a

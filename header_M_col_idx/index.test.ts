@@ -3,7 +3,7 @@ import { test } from 'uvu'
 import { equal } from 'uvu/assert'
 import {
 	header_M_col_idx_,
-	header_M_col_idx__,
+	header_M_col_idx$_,
 	header_M_col_idx__new,
 	header_M_col_idx__set,
 	header_row__new,
@@ -11,9 +11,9 @@ import {
 	table_,
 	table__set
 } from '../index.js'
-test('header_M_col_idx__', ()=>{
+test('header_M_col_idx$_', ()=>{
 	const ctx = ctx__new()
-	const header_M_col_idx_ = header_M_col_idx__(ctx)
+	const header_M_col_idx_ = header_M_col_idx$_(ctx)
 	equal(header_M_col_idx_.$, undefined)
 	header_row__set(ctx, ['col0', 'col1', 'col2', 'col3'])
 	equal(header_M_col_idx_.$, new Map<string, number>([

@@ -1,7 +1,7 @@
 import type { ReadableAtom_ } from '@ctx-core/nanostores'
 import type { Ctx } from '@ctx-core/object'
 import type { data_row_T, data_row_tuple_T, header_M_col_idx_T, header_row_T } from '../_types/index.js'
-export declare function data_row_a__<
+export declare function data_row_a$_<
 	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
 >(ctx:Ctx):ReadableAtom_<data_row_T<ColDefs>[]>
 export declare function data_row_a_<

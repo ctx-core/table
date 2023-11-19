@@ -1,11 +1,11 @@
 import { header_M_col_idx_sym } from '../data_row/index.js'
 import { json_val__dehydrate } from '../json_val__dehydrate/index.js'
-/** @typedef {import('@ctx-core/types/index').json_T}json_T */
-/** @typedef {import('../_types/index.d.ts').data_row_T}data_row_T */
-/** @typedef {import('../_types/index.d.ts').dehydrated_json_data_row_tuple_T}dehydrated_json_data_row_tuple_T */
-/** @typedef {import('../_types/index.d.ts').header_row_T}header_row_T */
-/** @typedef {import('../_types/index.d.ts').hydrated_json_val_T}hydrated_json_val_T */
-/** @typedef {import('../_types/index.d.ts').val__dehydrate_T}val__dehydrate_T */
+/** @typedef {import('@ctx-core/types/index').json_T} */
+/** @typedef {import('../_types/index.d.ts').data_row_T} */
+/** @typedef {import('../_types/index.d.ts').dehydrated_json_data_row_tuple_T} */
+/** @typedef {import('../_types/index.d.ts').header_row_T} */
+/** @typedef {import('../_types/index.d.ts').hydrated_json_val_T} */
+/** @typedef {import('../_types/index.d.ts').val__dehydrate_T} */
 /**
  * @param {data_row_T}data_row
  * @param {val__dehydrate_T}val__dehydrate
