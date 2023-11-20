@@ -1,29 +1,29 @@
 import type { ReadableAtom_ } from '@ctx-core/nanostores'
-import type { be_params_T, Ctx } from '@ctx-core/object'
+import type { Ctx } from 'ctx-core/all'
 import type { data_row_T } from '../_types/index.js'
 export declare function data_row_M_data_row_a_idx$_<
-	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
->(ctx:Ctx, params?:be_params_T):ReadableAtom_<data_row_M_data_row_a_idx_T<ColDefs>>
+	ColDefs extends (([string, unknown][])|unknown[]|object) = ([string, unknown][])|unknown[]|object
+>(ctx:Ctx):ReadableAtom_<data_row_M_data_row_a_idx_T<ColDefs>>
 export declare function data_ro_M_data_row_a_idx_<
-	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
+	ColDefs extends (([string, unknown][])|unknown[]|object) = ([string, unknown][])|unknown[]|object
 >(ctx:Ctx):data_row_M_data_row_a_idx_T<ColDefs>
 export declare function data_row_M_data_row_a_idx_<
-	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
+	ColDefs extends (([string, unknown][])|unknown[]|object) = ([string, unknown][])|unknown[]|object
 >(data_row_a:data_row_T<ColDefs>[]):data_row_M_data_row_a_idx_T<ColDefs>
 export declare function data_row_M_data_row_a_idx_<
-	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
+	ColDefs extends (([string, unknown][])|unknown[]|object) = ([string, unknown][])|unknown[]|object
 >(
 	ctx_or_data_row_a:Ctx|data_row_T<ColDefs>[]
 ):data_row_M_data_row_a_idx_T<ColDefs>
 export declare function data_row_M_data_row_a_idx__set<
-	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
+	ColDefs extends (([string, unknown][])|unknown[]|object) = ([string, unknown][])|unknown[]|object
 >(ctx:Ctx, row_M_row_idx:data_row_M_data_row_a_idx_T<ColDefs>):void
 export declare function data_row_M_data_row_a_idx__new<
-	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
+	ColDefs extends (([string, unknown][])|unknown[]|object) = ([string, unknown][])|unknown[]|object
 >(data_row_a:data_row_T<ColDefs>[]):data_row_M_data_row_a_idx_T<ColDefs>
 export type data_row_M_data_row_a_idx_T<
-	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
+	ColDefs extends (([string, unknown][])|unknown[]|object) = ([string, unknown][])|unknown[]|object
 > = Map<data_row_T<ColDefs>, number>
 export declare type row_M_row_idx_T<
-	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
+	ColDefs extends (([string, unknown][])|unknown[]|object) = ([string, unknown][])|unknown[]|object
 > = data_row_M_data_row_a_idx_T<ColDefs>
