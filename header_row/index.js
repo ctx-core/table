@@ -10,8 +10,8 @@ import { table$_, table_, table__new, table__set } from '../table/index.js'
 export const header_row$_ = be_(ctx=>
 	computed_(table$_(ctx), table=>
 		nullish__none_([table], ()=>
-			table.header_row))
-).config({ id: 'header_row$_' })
+			table.header_row)),
+{ id: 'header_row$_' })
 export { header_row$_ as header_row__ }
 /**
  * @param {Ctx|column_a_T|number}ctx_or_column_a_or_length

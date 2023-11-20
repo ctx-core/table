@@ -14,8 +14,8 @@ import { table$_, table_, table__new, table__set } from '../table/index.js'
 export const data_row_a$_ = be_(ctx=>
 	computed_(table$_(ctx), table=>
 		nullish__none_([table], ()=>
-			table.data_row_a))
-).config({ id: 'data_row_a$_' })
+			table.data_row_a)),
+{ id: 'data_row_a$_' })
 export { data_row_a$_ as data_row_a__ }
 /**
  * @param {Ctx|data_row_tuple_T[]}ctx_or_data_tuple_a

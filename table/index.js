@@ -6,8 +6,8 @@ import { be_, is_ctx_ } from '@ctx-core/object'
 /** @typedef {import('../_types/index.d.ts').table_T} */
 /** @type {typeof import('./index.d.ts').table$_} */
 export const table$_ = be_(()=>
-	atom_(undefined))
-	.config({ id: 'table$_' })
+	atom_(undefined),
+{ id: 'table$_' })
 export { table$_ as table__ }
 /**
  * @param {Ctx|data_row_T[]}ctx_or_data_row_a

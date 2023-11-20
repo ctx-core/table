@@ -1,6 +1,7 @@
 import { nullish__none_ } from '@ctx-core/function'
 import { computed_ } from '@ctx-core/nanostores'
 import { is_ctx_ } from '@ctx-core/object'
+import { be_ } from 'ctx-core/object'
 import { data_row_a$_, data_row_a__set } from '../data_row_a/index.js'
 /** @typedef {import('@ctx-core/object').Ctx} */
 /** @typedef {import('../_types/index.d.ts').data_row_T} */
@@ -10,8 +11,8 @@ export const data_row_M_data_row_a_idx$_ = be_(ctx=>
 	computed_(data_row_a$_(ctx),
 		data_row_a=>
 			nullish__none_([data_row_a], ()=>
-				data_row_M_data_row_a_idx__new(data_row_a)))
-).config({ id: 'data_row_M_data_row_a_idx' })
+				data_row_M_data_row_a_idx__new(data_row_a))),
+{ id: 'data_row_M_data_row_a_idx' })
 export { data_row_M_data_row_a_idx$_ as data_row_M_data_row_a_idx__ }
 /**
  * @param {Ctx|data_row_T[]}ctx_or_data_row_a

@@ -10,8 +10,8 @@ import { header_row$_, header_row__set } from '../header_row/index.js'
 export const header_M_col_idx$_ = be_(ctx=>
 	computed_(header_row$_(ctx), header_a=>
 		nullish__none_([header_a], ()=>
-			header_M_col_idx__new(header_a)))
-).config({ id: 'header_M_col_idx$_' })
+			header_M_col_idx__new(header_a))),
+{ id: 'header_M_col_idx$_' })
 export { header_M_col_idx$_ as header_M_col_idx__ }
 /**
  * @param {Ctx|header_row_T}ctx_or_header_row
