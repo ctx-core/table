@@ -1,5 +1,21 @@
 # @ctx-core/table
 
+## 23.8.20
+
+### Patch Changes
+
+- @ctx-core/function: ^21.22.29 -> ^21.22.30
+- @ctx-core/array: ^27.0.34 -> ^27.0.35
+- @ctx-core/object: ^31.1.15 -> ^31.1.16
+- @ctx-core/types: ^1.3.34 -> ^1.3.35
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/dom@15.1.35
+  - @ctx-core/nanostores@9.0.21
+
 ## 23.8.19
 
 ### Patch Changes
