@@ -1,8 +1,9 @@
 /// <reference types="ctx-core" />
 /// <reference types="../_types/index.d.ts" />
 import { computed_ } from '@ctx-core/nanostores'
-import { assign, be_, is_ctx_ } from 'ctx-core/be'
+import { be_, is_ctx_ } from 'ctx-core/be'
 import { nullish__none_ } from 'ctx-core/function'
+import { assign } from 'ctx-core/object'
 import { header_row$_, header_row__set } from '../header_row/index.js'
 export const header_M_col_idx$_ = be_(ctx=>
 	computed_(header_row$_(ctx), header_a=>
