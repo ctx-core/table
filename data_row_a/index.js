@@ -1,16 +1,14 @@
-import { nullish__none_ } from '@ctx-core/function'
+/// <reference types="ctx-core" />
+/// <reference types="./index.d.ts" />
+/// <reference types="../_types/index.d.ts" />
 import { computed_ } from '@ctx-core/nanostores'
-import { be_, clone, is_ctx_ } from '@ctx-core/object'
+import { be_, is_ctx_ } from 'ctx-core/be'
+import { nullish__none_ } from 'ctx-core/function'
 import { data_row_, header_M_col_idx_sym } from '../data_row/index.js'
 import { header_M_col_idx_ } from '../header_M_col_idx/index.js'
 import { header_row__new } from '../header_row/index.js'
 import { table$_, table_, table__new, table__set } from '../table/index.js'
-/** @typedef {import('@ctx-core/object').Ctx} */
-/** @typedef {import('../_types/index.d.ts').data_row_T} */
-/** @typedef {import('../_types/index.d.ts').data_row_tuple_T} */
-/** @typedef {import('../_types/index.d.ts').header_M_col_idx_T} */
-/** @typedef {import('../_types/index.d.ts').header_row_T} */
-/** @type {typeof import('./index.d.ts').data_row_a$_} */
+/** @type {typeof data_row_a$_} */
 export const data_row_a$_ = be_(ctx=>
 	computed_(table$_(ctx), table=>
 		nullish__none_([table], ()=>
@@ -42,7 +40,7 @@ export function data_row_a__set(
 ) {
 	let table = table_(ctx)
 	if (table) {
-		table = clone(table, { data_row_a })
+		table = { ...table, data_row_a }
 	} else {
 		const data_row_0 = data_row_a[0]
 		table = table__new(

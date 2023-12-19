@@ -1,5 +1,5 @@
 import type { ReadableAtom_ } from '@ctx-core/nanostores'
-import type { Ctx } from '@ctx-core/object'
+import type { Ctx } from 'ctx-core/be'
 import type { column_a_T, header_row_T } from '../_types/index.js'
 export declare function header_row$_<
 	ColDefs extends (([string, unknown][])|unknown[]|object) = ([string, unknown][])|unknown[]|object

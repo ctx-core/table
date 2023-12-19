@@ -1,12 +1,10 @@
-import { idx_a_ } from '@ctx-core/array'
-import { isArray, nullish__none_ } from '@ctx-core/function'
+/// <reference types="ctx-core" />
+/// <reference types="../_types/index.d.ts" />
 import { computed_ } from '@ctx-core/nanostores'
-import { be_, clone, is_ctx_ } from '@ctx-core/object'
+import { idx_a_ } from 'ctx-core/array'
+import { be_, is_ctx_ } from 'ctx-core/be'
+import { isArray, nullish__none_ } from 'ctx-core/function'
 import { table$_, table_, table__new, table__set } from '../table/index.js'
-/** @typedef {import('@ctx-core/object').Ctx} */
-/** @typedef {import('../_types/index.d.ts').column_a_T} */
-/** @typedef {import('../_types/index.d.ts').header_row_T} */
-/** @type {typeof import('./index.d.ts').header_row$_} */
 export const header_row$_ = be_(ctx=>
 	computed_(table$_(ctx), table=>
 		nullish__none_([table], ()=>
@@ -37,7 +35,7 @@ export function header_row__set(
 ) {
 	let table = table_(ctx)
 	if (table) {
-		table = clone(table, { header_row: header_row })
+		table = { ...table, header_row: header_row }
 	} else {
 		table = table__new([], header_row)
 	}

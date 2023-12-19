@@ -1,5 +1,13 @@
 # @ctx-core/table
 
+## 23.8.46
+
+### Patch Changes
+
+- consolidate dependencies
+- Updated dependencies
+  - ctx-core@5.1.0
+
 ## 23.8.45
 
 ### Patch Changes

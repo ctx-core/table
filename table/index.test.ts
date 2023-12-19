@@ -1,4 +1,4 @@
-import { ctx__new } from '@ctx-core/object'
+import { ctx__new } from 'ctx-core/be'
 import { test } from 'uvu'
 import { equal } from 'uvu/assert'
 import { header_row__new, table$_, table_, table__new, table__set } from '../index.js'

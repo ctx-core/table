@@ -1,9 +1,7 @@
+/// <reference types="ctx-core" />
+/// <reference types="../_types/index.d.ts" />
 import { atom_ } from '@ctx-core/nanostores'
-import { be_, is_ctx_ } from '@ctx-core/object'
-/** @typedef {import('@ctx-core/object').Ctx} */
-/** @typedef {import('../_types/index.d.ts').data_row_T} */
-/** @typedef {import('../_types/index.d.ts').header_row_T} */
-/** @typedef {import('../_types/index.d.ts').table_T} */
+import { be_, is_ctx_ } from 'ctx-core/be'
 /** @type {typeof import('./index.d.ts').table$_} */
 export const table$_ = be_(()=>
 	atom_(undefined),

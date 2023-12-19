@@ -1,12 +1,9 @@
-import { nullish__none_ } from '@ctx-core/function'
+/// <reference types="ctx-core" />
+/// <reference types="../_types/index.d.ts" />
 import { computed_ } from '@ctx-core/nanostores'
-import { assign, be_, is_ctx_ } from '@ctx-core/object'
+import { assign, be_, is_ctx_ } from 'ctx-core/be'
+import { nullish__none_ } from 'ctx-core/function'
 import { header_row$_, header_row__set } from '../header_row/index.js'
-/** @typedef {import('@ctx-core/object').Ctx} */
-/** @typedef {typeof import('../_types/index.d.ts').header_row_sym} */
-/** @typedef {typeof import('../_types/index.d.ts').header_row_T} */
-/** @typedef {typeof import('../_types/index.d.ts').header_M_col_idx_T} */
-/** @type {typeof import('./index.d.ts').header_M_col_idx$_} */
 export const header_M_col_idx$_ = be_(ctx=>
 	computed_(header_row$_(ctx), header_a=>
 		nullish__none_([header_a], ()=>
