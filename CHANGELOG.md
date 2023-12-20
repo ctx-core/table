@@ -1,5 +1,14 @@
 # @ctx-core/table
 
+## 23.8.52
+
+### Patch Changes
+
+- ctx-core: ^5.2.3 -> ^5.3.0
+- Updated dependencies
+  - @ctx-core/dom@15.1.65
+  - @ctx-core/nanostores@10.0.9
+
 ## 23.8.51
 
 ### Patch Changes
