@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "23.8.49",
+	"version": "23.8.50",
 	"description": "ctx-core table",
 	"keywords": [
 		"ctx-core",
@@ -50,9 +50,9 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/dom": "^15.1.62",
-		"@ctx-core/nanostores": "^10.0.6",
-		"ctx-core": "^5.2.1"
+		"@ctx-core/dom": "^15.1.63",
+		"@ctx-core/nanostores": "^10.0.7",
+		"ctx-core": "^5.2.2"
 	},
 	"devDependencies": {
 		"c8": "^8.0.1",
