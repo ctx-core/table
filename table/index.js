@@ -1,10 +1,11 @@
 /// <reference types="ctx-core" />
 /// <reference types="../_types/index.d.ts" />
-import { atom_ } from '@ctx-core/nanostores'
+/// <reference types="./index.d.ts" />
 import { be_, is_ctx_ } from 'ctx-core/be'
-/** @type {typeof import('./index.d.ts').table$_} */
+import { sig_ } from 'ctx-core/rmemo'
+/** @type {typeof table$_} */
 export const table$_ = be_(()=>
-	atom_(undefined),
+	sig_(undefined),
 { id: 'table$_' })
 export { table$_ as table__ }
 /**
@@ -17,7 +18,7 @@ export function table_(
 	ctx_or_data_row_a,
 	header_row
 ) {
-	if (is_ctx_(ctx_or_data_row_a)) return table$_(/** @type {Ctx} */ctx_or_data_row_a).$
+	if (is_ctx_(ctx_or_data_row_a)) return table$_(/** @type {Ctx} */ctx_or_data_row_a)()
 	return table__new(ctx_or_data_row_a, header_row)
 }
 /**
@@ -29,7 +30,7 @@ export function table__set(
 	ctx,
 	table
 ) {
-	table$_(ctx).$ = table
+	table$_(ctx)._ = table
 }
 /**
  * @param {data_row_T[]}data_row_a

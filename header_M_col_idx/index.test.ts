@@ -14,9 +14,9 @@ import {
 test('header_M_col_idx$_', ()=>{
 	const ctx = ctx__new()
 	const header_M_col_idx_ = header_M_col_idx$_(ctx)
-	equal(header_M_col_idx_.$, undefined)
+	equal(header_M_col_idx_(), undefined)
 	header_row__set(ctx, ['col0', 'col1', 'col2', 'col3'])
-	equal(header_M_col_idx_.$, new Map<string, number>([
+	equal(header_M_col_idx_(), new Map<string, number>([
 		['col0', 0],
 		['col1', 1],
 		['col2', 2],

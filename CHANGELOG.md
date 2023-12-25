@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 24.0.0
+
+### Major Changes
+
+- rmemo instead of @ctx-core/nanostores
+
 ## 23.8.57
 
 ### Patch Changes

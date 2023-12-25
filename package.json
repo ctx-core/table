@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "23.8.57",
+	"version": "24.0.0",
 	"description": "ctx-core table",
 	"keywords": [
 		"ctx-core",
@@ -21,19 +21,19 @@
 		"*.d.ts",
 		"*.js",
 		"*.json",
-		"./_types",
-		"./data_row",
-		"./data_row__dehydrate",
-		"./data_row__hydrate",
-		"./data_row__json",
-		"./data_row_a",
-		"./data_row_M_data_row_a_idx",
-		"./header_M_col_idx",
-		"./header_row",
-		"./json_val__dehydrate",
-		"./table",
-		"./table__dehydrate",
-		"./table__hydrate"
+		"_types",
+		"data_row",
+		"data_row__dehydrate",
+		"data_row__hydrate",
+		"data_row__json",
+		"data_row_a",
+		"data_row_M_data_row_a_idx",
+		"header_M_col_idx",
+		"header_row",
+		"json_val__dehydrate",
+		"table",
+		"table__dehydrate",
+		"table__hydrate"
 	],
 	"types": "./index.d.ts",
 	"exports": {
@@ -51,7 +51,6 @@
 	},
 	"dependencies": {
 		"@ctx-core/dom": "^15.1.69",
-		"@ctx-core/nanostores": "^10.0.14",
 		"ctx-core": "^5.5.0"
 	},
 	"devDependencies": {

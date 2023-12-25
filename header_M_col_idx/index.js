@@ -1,14 +1,15 @@
 /// <reference types="ctx-core" />
 /// <reference types="../_types/index.d.ts" />
-import { computed_ } from '@ctx-core/nanostores'
 import { be_, is_ctx_ } from 'ctx-core/be'
 import { nullish__none_ } from 'ctx-core/function'
 import { assign } from 'ctx-core/object'
-import { header_row$_, header_row__set } from '../header_row/index.js'
+import { memo_ } from 'ctx-core/rmemo'
+import { header_row_, header_row__set } from '../header_row/index.js'
 export const header_M_col_idx$_ = be_(ctx=>
-	computed_(header_row$_(ctx), header_a=>
-		nullish__none_([header_a], ()=>
-			header_M_col_idx__new(header_a))),
+	memo_(()=>
+		nullish__none_([header_row_(ctx)],
+			header_row=>
+				header_M_col_idx__new(header_row))),
 { id: 'header_M_col_idx$_' })
 export { header_M_col_idx$_ as header_M_col_idx__ }
 /**
@@ -20,7 +21,7 @@ export function header_M_col_idx_(
 	ctx_or_header_row
 ) {
 	if (is_ctx_(ctx_or_header_row)) {
-		return /** @type {header_M_col_idx_T} */header_M_col_idx$_(ctx_or_header_row).$
+		return /** @type {header_M_col_idx_T} */header_M_col_idx$_(ctx_or_header_row)()
 	}
 	return header_M_col_idx__new(/** @type {header_row_T} */ctx_or_header_row)
 }

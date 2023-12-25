@@ -14,7 +14,7 @@ import {
 } from '../index.js'
 test('data_row_a$_', ()=>{
 	const ctx = ctx__new()
-	equal(data_row_a$_(ctx).$, undefined)
+	equal(data_row_a$_(ctx)(), undefined)
 	equal(table_(ctx), undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
 	const header_M_col_idx = header_M_col_idx_(header_row)
@@ -25,14 +25,14 @@ test('data_row_a$_', ()=>{
 			data_row_(['zzz', 'yyy', 'xxx', 3.14], header_M_col_idx),
 		]
 	})
-	equal(data_row_a$_(ctx).$, [
+	equal(data_row_a$_(ctx)(), [
 		['foo', 'bar', 'baz', 1.23],
 		['zzz', 'yyy', 'xxx', 3.14]
 	])
 })
 test('data_row_a_|Ctx argument', ()=>{
 	const ctx = ctx__new()
-	equal(data_row_a$_(ctx).$, undefined)
+	equal(data_row_a$_(ctx)(), undefined)
 	equal(table_(ctx), undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
 	const header_M_col_idx = header_M_col_idx_(header_row)

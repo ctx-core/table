@@ -1,9 +1,9 @@
-import type { ReadableAtom_ } from '@ctx-core/nanostores'
-import type { Ctx } from 'ctx-core/all'
+import type { Ctx } from 'ctx-core/be'
+import type { memo_T } from 'ctx-core/rmemo'
 import type { data_row_T } from '../_types/index.js'
 export declare function data_row_M_data_row_a_idx$_<
 	ColDefs extends (([string, unknown][])|unknown[]|object) = ([string, unknown][])|unknown[]|object
->(ctx:Ctx):ReadableAtom_<data_row_M_data_row_a_idx_T<ColDefs>>
+>(ctx:Ctx):memo_T<data_row_M_data_row_a_idx_T<ColDefs>>
 export declare function data_ro_M_data_row_a_idx_<
 	ColDefs extends (([string, unknown][])|unknown[]|object) = ([string, unknown][])|unknown[]|object
 >(ctx:Ctx):data_row_M_data_row_a_idx_T<ColDefs>

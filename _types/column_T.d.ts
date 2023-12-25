@@ -1,11 +1,11 @@
 export type column_T<
-	ColDefs extends (([string, any][])|any[]|object) = ([string, any][])|any[]|object
+	ColDefs extends (([string, unknown][])|unknown[]|object) = ([string, unknown][])|unknown[]|object
 > =
-	ColDefs extends (([string, any][])|any[]|object)
+	ColDefs extends (([string, unknown][])|unknown[]|object)
 		? string|number
-		: ColDefs extends [string, any][]
+		: ColDefs extends [string, unknown][]
 			? string
-			: ColDefs extends any[]
+			: ColDefs extends unknown[]
 				? number
 				: ColDefs extends object
 					? string

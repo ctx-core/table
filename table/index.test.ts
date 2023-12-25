@@ -4,13 +4,13 @@ import { equal } from 'uvu/assert'
 import { header_row__new, table$_, table_, table__new, table__set } from '../index.js'
 test('table__', ()=>{
 	const ctx = ctx__new()
-	equal(table$_(ctx).$, undefined)
+	equal(table$_(ctx)(), undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
-	table$_(ctx).$ = {
+	table__set(ctx, {
 		header_row,
 		data_row_a: []
-	}
-	equal(table$_(ctx).$, {
+	})
+	equal(table$_(ctx)(), {
 		header_row,
 		data_row_a: []
 	})
@@ -19,10 +19,10 @@ test('table_|Ctx argument', ()=>{
 	const ctx = ctx__new()
 	equal(table_(ctx), undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
-	table$_(ctx).$ = {
+	table__set(ctx, {
 		header_row,
 		data_row_a: []
-	}
+	})
 	equal(table_(ctx), {
 		header_row,
 		data_row_a: []

@@ -1,17 +1,17 @@
 /// <reference types="ctx-core" />
 /// <reference types="./index.d.ts" />
 /// <reference types="../_types/index.d.ts" />
-import { computed_ } from '@ctx-core/nanostores'
 import { be_, is_ctx_ } from 'ctx-core/be'
 import { nullish__none_ } from 'ctx-core/function'
+import { memo_ } from 'ctx-core/rmemo'
 import { data_row_, header_M_col_idx_sym } from '../data_row/index.js'
 import { header_M_col_idx_ } from '../header_M_col_idx/index.js'
 import { header_row__new } from '../header_row/index.js'
-import { table$_, table_, table__new, table__set } from '../table/index.js'
+import { table_, table__new, table__set } from '../table/index.js'
 /** @type {typeof data_row_a$_} */
 export const data_row_a$_ = be_(ctx=>
-	computed_(table$_(ctx), table=>
-		nullish__none_([table], ()=>
+	memo_(()=>
+		nullish__none_([table_(ctx)], table=>
 			table.data_row_a)),
 { id: 'data_row_a$_' })
 export { data_row_a$_ as data_row_a__ }
@@ -26,7 +26,7 @@ export function data_row_a_(
 	header_row_or_header_M_col_idx
 ) {
 	if (is_ctx_(ctx_or_data_tuple_a)) {
-		return data_row_a$_(/** @type {Ctx} */ctx_or_data_tuple_a).$
+		return data_row_a$_(/** @type {Ctx} */ctx_or_data_tuple_a)()
 	}
 	return data_row_a__new(ctx_or_data_tuple_a, header_row_or_header_M_col_idx)
 }

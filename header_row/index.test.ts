@@ -20,7 +20,7 @@ test('header_row__', ()=>{
 			['zzz', 'yyy', 'xxx', 3.14],
 		], header_row)
 	})
-	equal(header_row$_(ctx).$, ['col0', 'col1', 'col2', 'col3'])
+	equal(header_row$_(ctx)(), ['col0', 'col1', 'col2', 'col3'])
 })
 test('header_row_|Ctx argument', ()=>{
 	const ctx = ctx__new()
