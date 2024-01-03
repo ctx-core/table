@@ -1,9 +1,8 @@
 /// <reference types="ctx-core" />
 /// <reference types="../_types/index.d.ts" />
 import { be_, is_ctx_ } from 'ctx-core/be'
-import { nullish__none_ } from 'ctx-core/function'
 import { assign } from 'ctx-core/object'
-import { memo_ } from 'ctx-core/rmemo'
+import { memo_, nullish__none_ } from 'ctx-core/rmemo'
 import { header_row_, header_row__set } from '../header_row/index.js'
 export const header_M_col_idx$_ = be_(ctx=>
 	memo_(()=>

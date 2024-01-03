@@ -2,8 +2,7 @@
 /// <reference types="../_types/index.d.ts" />
 /// <reference types="./index.d.ts" />
 import { be_, is_ctx_ } from 'ctx-core/be'
-import { nullish__none_ } from 'ctx-core/function'
-import { memo_ } from 'ctx-core/rmemo'
+import { memo_, nullish__none_ } from 'ctx-core/rmemo'
 import { data_row_a_, data_row_a__set } from '../data_row_a/index.js'
 export const data_row_M_data_row_a_idx$_ = be_(ctx=>
 	memo_(()=>

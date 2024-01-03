@@ -2,8 +2,7 @@
 /// <reference types="./index.d.ts" />
 /// <reference types="../_types/index.d.ts" />
 import { be_, is_ctx_ } from 'ctx-core/be'
-import { nullish__none_ } from 'ctx-core/function'
-import { memo_ } from 'ctx-core/rmemo'
+import { memo_, nullish__none_ } from 'ctx-core/rmemo'
 import { data_row_, header_M_col_idx_sym } from '../data_row/index.js'
 import { header_M_col_idx_ } from '../header_M_col_idx/index.js'
 import { header_row__new } from '../header_row/index.js'

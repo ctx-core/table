@@ -2,8 +2,8 @@
 /// <reference types="../_types/index.d.ts" />
 import { idx_a_ } from 'ctx-core/array'
 import { be_, is_ctx_ } from 'ctx-core/be'
-import { isArray, nullish__none_ } from 'ctx-core/function'
-import { memo_ } from 'ctx-core/rmemo'
+import { isArray } from 'ctx-core/function'
+import { memo_, nullish__none_ } from 'ctx-core/rmemo'
 import { table_, table__new, table__set } from '../table/index.js'
 export const header_row$_ = be_(ctx=>
 	memo_(()=>
