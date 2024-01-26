@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/table",
-	"version": "24.0.47",
+	"version": "24.0.48",
 	"description": "ctx-core table",
 	"keywords": [
 		"ctx-core",
@@ -51,8 +51,8 @@
 		"test:unit:coverage": "c8 pnpm test:unit"
 	},
 	"dependencies": {
-		"@ctx-core/dom": "^15.3.6",
-		"ctx-core": "^5.30.0"
+		"@ctx-core/dom": "^15.3.7",
+		"ctx-core": "^5.31.0"
 	},
 	"devDependencies": {
 		"c8": "^9.1.0",
