@@ -1,5 +1,13 @@
 # @ctx-core/table
 
+## 24.0.60
+
+### Patch Changes
+
+- ctx-core: ^5.36.0 -> ^5.36.1
+- Updated dependencies
+  - @ctx-core/dom@15.3.19
+
 ## 24.0.59
 
 ### Patch Changes
