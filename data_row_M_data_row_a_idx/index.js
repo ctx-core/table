@@ -12,7 +12,7 @@ export const data_row_M_data_row_a_idx$_ = be_(ctx=>
 { id: 'data_row_M_data_row_a_idx' })
 export { data_row_M_data_row_a_idx$_ as data_row_M_data_row_a_idx__ }
 /**
- * @param {Ctx|data_row_T[]}ctx_or_data_row_a
+ * @param {ctx_T|data_row_T[]}ctx_or_data_row_a
  * @returns{data_row_M_data_row_a_idx_T}
  * @private
  */
@@ -20,12 +20,12 @@ export function data_row_M_data_row_a_idx_(
 	ctx_or_data_row_a
 ) {
 	if (is_ctx_(ctx_or_data_row_a)) {
-		return data_row_M_data_row_a_idx$_(/** @type {Ctx} */ctx_or_data_row_a)()
+		return data_row_M_data_row_a_idx$_(/** @type {ctx_T} */ctx_or_data_row_a)()
 	}
 	return data_row_M_data_row_a_idx__new(ctx_or_data_row_a)
 }
 /**
- * @param {Ctx}ctx
+ * @param {ctx_T}ctx
  * @param {data_row_M_data_row_a_idx_T}data_row_M_data_row_a_idx
  * @private
  */

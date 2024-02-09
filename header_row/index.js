@@ -12,7 +12,7 @@ export const header_row$_ = be_(ctx=>
 { id: 'header_row$_' })
 export { header_row$_ as header_row__ }
 /**
- * @param {Ctx|column_a_T|number}ctx_or_column_a_or_length
+ * @param {ctx_T|column_a_T|number}ctx_or_column_a_or_length
  * @returns {column_a_T}
  * @private
  */
@@ -20,12 +20,12 @@ export function header_row_(
 	ctx_or_column_a_or_length
 ) {
 	if (is_ctx_(ctx_or_column_a_or_length)) {
-		return header_row$_(/** @type {Ctx} */ctx_or_column_a_or_length)()
+		return header_row$_(/** @type {ctx_T} */ctx_or_column_a_or_length)()
 	}
 	return header_row__new(ctx_or_column_a_or_length)
 }
 /**
- * @param {Ctx}ctx
+ * @param {ctx_T}ctx
  * @param {column_a_T}header_row
  * @private
  */

@@ -23,7 +23,7 @@ test('header_M_col_idx$_', ()=>{
 		['col3', 3]
 	]))
 })
-test('header_M_col_idx_|Ctx argument', ()=>{
+test('header_M_col_idx_|ctx_T argument', ()=>{
 	const ctx = ctx__new()
 	equal(header_M_col_idx_(ctx), undefined)
 	header_row__set(ctx, ['col0', 'col1', 'col2', 'col3'])

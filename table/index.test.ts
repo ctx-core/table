@@ -15,7 +15,7 @@ test('table__', ()=>{
 		data_row_a: []
 	})
 })
-test('table_|Ctx argument', ()=>{
+test('table_|ctx_T argument', ()=>{
 	const ctx = ctx__new()
 	equal(table_(ctx), undefined)
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])

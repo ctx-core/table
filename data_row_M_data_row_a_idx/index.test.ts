@@ -36,7 +36,7 @@ test('data_row_M_data_row_a_idx$_', ()=>{
 		[data_row_a[1], 1],
 	]))
 })
-test('data_row_M_data_row_a_idx_|Ctx argument', ()=>{
+test('data_row_M_data_row_a_idx_|ctx_T argument', ()=>{
 	const ctx = ctx__new()
 	equal(table_(ctx), undefined)
 	equal(data_row_M_data_row_a_idx_(ctx), undefined)

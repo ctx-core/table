@@ -22,7 +22,7 @@ test('header_row__', ()=>{
 	})
 	equal(header_row$_(ctx)(), ['col0', 'col1', 'col2', 'col3'])
 })
-test('header_row_|Ctx argument', ()=>{
+test('header_row_|ctx_T argument', ()=>{
 	const ctx = ctx__new()
 	const header_row = header_row__new(['col0', 'col1', 'col2', 'col3'])
 	table__set(ctx, {

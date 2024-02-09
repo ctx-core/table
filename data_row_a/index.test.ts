@@ -30,7 +30,7 @@ test('data_row_a$_', ()=>{
 		['zzz', 'yyy', 'xxx', 3.14]
 	])
 })
-test('data_row_a_|Ctx argument', ()=>{
+test('data_row_a_|ctx_T argument', ()=>{
 	const ctx = ctx__new()
 	equal(data_row_a$_(ctx)(), undefined)
 	equal(table_(ctx), undefined)

@@ -12,7 +12,7 @@ export const header_M_col_idx$_ = be_(ctx=>
 { id: 'header_M_col_idx$_' })
 export { header_M_col_idx$_ as header_M_col_idx__ }
 /**
- * @param {Ctx|header_row_T}ctx_or_header_row
+ * @param {ctx_T|header_row_T}ctx_or_header_row
  * @returns {header_M_col_idx_T}
  * @private
  */
@@ -25,7 +25,7 @@ export function header_M_col_idx_(
 	return header_M_col_idx__new(/** @type {header_row_T} */ctx_or_header_row)
 }
 /**
- * @param {Ctx}ctx
+ * @param {ctx_T}ctx
  * @param {header_M_col_idx_T}header_M_col_idx
  * @private
  */

@@ -15,7 +15,7 @@ export const data_row_a$_ = be_(ctx=>
 { id: 'data_row_a$_' })
 export { data_row_a$_ as data_row_a__ }
 /**
- * @param {Ctx|data_row_tuple_T[]}ctx_or_data_tuple_a
+ * @param {ctx_T|data_row_tuple_T[]}ctx_or_data_tuple_a
  * @param {header_row_T|header_M_col_idx_T}[header_row_or_header_M_col_idx]
  * @returns {data_row_T[]}
  * @private
@@ -25,12 +25,12 @@ export function data_row_a_(
 	header_row_or_header_M_col_idx
 ) {
 	if (is_ctx_(ctx_or_data_tuple_a)) {
-		return data_row_a$_(/** @type {Ctx} */ctx_or_data_tuple_a)()
+		return data_row_a$_(/** @type {ctx_T} */ctx_or_data_tuple_a)()
 	}
 	return data_row_a__new(ctx_or_data_tuple_a, header_row_or_header_M_col_idx)
 }
 /**
- * @param {Ctx}ctx
+ * @param {ctx_T}ctx
  * @param {data_row_T[]}data_row_a
  */
 export function data_row_a__set(
