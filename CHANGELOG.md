@@ -1,5 +1,13 @@
 # @ctx-core/table
 
+## 24.0.95
+
+### Patch Changes
+
+- package.json: author: url,email
+- Updated dependencies
+  - ctx-core@6.6.1
+
 ## 24.0.94
 
 ### Patch Changes
