@@ -30,7 +30,7 @@ export function table__set(
 	ctx,
 	table
 ) {
-	table$_(ctx)._ = table
+	table$_(ctx).set(table)
 }
 /**
  * @param {data_row_T[]}data_row_a
