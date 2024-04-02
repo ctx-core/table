@@ -1,15 +1,16 @@
 /// <reference types="ctx-core" />
 /// <reference types="../_types/index.d.ts" />
 /// <reference types="./index.d.ts" />
-import { be_, is_ctx_ } from 'ctx-core/be'
+import { id_be_, is_ctx_ } from 'ctx-core/be'
 import { memo_, nullish__none_ } from 'ctx-core/rmemo'
 import { data_row_a_, data_row_a__set } from '../data_row_a/index.js'
-export const data_row_M_data_row_a_idx$_ = be_(ctx=>
-	memo_(()=>
-		nullish__none_([data_row_a_(ctx)],
-			data_row_a=>
-				data_row_M_data_row_a_idx__new(data_row_a))),
-{ id: 'data_row_M_data_row_a_idx' })
+export const data_row_M_data_row_a_idx$_ = id_be_(
+	'data_row_M_data_row_a_idx',
+	ctx=>
+		memo_(()=>
+			nullish__none_([data_row_a_(ctx)],
+				data_row_a=>
+					data_row_M_data_row_a_idx__new(data_row_a))))
 export { data_row_M_data_row_a_idx$_ as data_row_M_data_row_a_idx__ }
 /**
  * @param {ctx_T|data_row_T[]}ctx_or_data_row_a

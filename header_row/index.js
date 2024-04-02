@@ -1,15 +1,16 @@
 /// <reference types="ctx-core" />
 /// <reference types="../_types/index.d.ts" />
 import { idx_a_ } from 'ctx-core/array'
-import { be_, is_ctx_ } from 'ctx-core/be'
+import { id_be_, is_ctx_ } from 'ctx-core/be'
 import { isArray } from 'ctx-core/function'
 import { memo_, nullish__none_ } from 'ctx-core/rmemo'
 import { table_, table__new, table__set } from '../table/index.js'
-export const header_row$_ = be_(ctx=>
-	memo_(()=>
-		nullish__none_([table_(ctx)], table=>
-			table.header_row)),
-{ id: 'header_row$_' })
+export const header_row$_ = id_be_(
+	'header_row$_',
+	ctx=>
+		memo_(()=>
+			nullish__none_([table_(ctx)], table=>
+				table.header_row)))
 export { header_row$_ as header_row__ }
 /**
  * @param {ctx_T|column_a_T|number}ctx_or_column_a_or_length

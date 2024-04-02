@@ -1,18 +1,19 @@
 /// <reference types="ctx-core" />
 /// <reference types="./index.d.ts" />
 /// <reference types="../_types/index.d.ts" />
-import { be_, is_ctx_ } from 'ctx-core/be'
+import { id_be_, is_ctx_ } from 'ctx-core/be'
 import { memo_, nullish__none_ } from 'ctx-core/rmemo'
 import { data_row_, header_M_col_idx_sym } from '../data_row/index.js'
 import { header_M_col_idx_ } from '../header_M_col_idx/index.js'
 import { header_row__new } from '../header_row/index.js'
 import { table_, table__new, table__set } from '../table/index.js'
 /** @type {typeof data_row_a$_} */
-export const data_row_a$_ = be_(ctx=>
-	memo_(()=>
-		nullish__none_([table_(ctx)], table=>
-			table.data_row_a)),
-{ id: 'data_row_a$_' })
+export const data_row_a$_ = id_be_(
+	'data_row_a$_',
+	ctx=>
+		memo_(()=>
+			nullish__none_([table_(ctx)], table=>
+				table.data_row_a)))
 export { data_row_a$_ as data_row_a__ }
 /**
  * @param {ctx_T|data_row_tuple_T[]}ctx_or_data_tuple_a

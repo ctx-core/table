@@ -1,12 +1,12 @@
 /// <reference types="ctx-core" />
 /// <reference types="../_types/index.d.ts" />
 /// <reference types="./index.d.ts" />
-import { be_, is_ctx_ } from 'ctx-core/be'
+import { id_be_, is_ctx_ } from 'ctx-core/be'
 import { sig_ } from 'ctx-core/rmemo'
 /** @type {typeof table$_} */
-export const table$_ = be_(()=>
-	sig_(undefined),
-{ id: 'table$_' })
+export const table$_ = id_be_(
+	'table$_',
+	()=>sig_(undefined))
 export { table$_ as table__ }
 /**
  * @param {ctx_T|data_row_T[]}ctx_or_data_row_a

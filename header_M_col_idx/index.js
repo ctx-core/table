@@ -1,15 +1,16 @@
 /// <reference types="ctx-core" />
 /// <reference types="../_types/index.d.ts" />
-import { be_, is_ctx_ } from 'ctx-core/be'
+import { id_be_, is_ctx_ } from 'ctx-core/be'
 import { assign } from 'ctx-core/object'
 import { memo_, nullish__none_ } from 'ctx-core/rmemo'
 import { header_row_, header_row__set } from '../header_row/index.js'
-export const header_M_col_idx$_ = be_(ctx=>
-	memo_(()=>
-		nullish__none_([header_row_(ctx)],
-			header_row=>
-				header_M_col_idx__new(header_row))),
-{ id: 'header_M_col_idx$_' })
+export const header_M_col_idx$_ = id_be_(
+	'header_M_col_idx$_',
+	ctx=>
+		memo_(()=>
+			nullish__none_([header_row_(ctx)],
+				header_row=>
+					header_M_col_idx__new(header_row))))
 export { header_M_col_idx$_ as header_M_col_idx__ }
 /**
  * @param {ctx_T|header_row_T}ctx_or_header_row
