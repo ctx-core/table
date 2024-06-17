@@ -1,5 +1,11 @@
 # @ctx-core/table
 
+## 24.0.131
+
+### Patch Changes
+
+- ctx-core: ^7.2.18 -> ^7.2.19
+
 ## 24.0.130
 
 ### Patch Changes
