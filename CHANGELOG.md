@@ -1,5 +1,26 @@
 # @ctx-core/table
 
+## 24.0.145
+
+### Patch Changes
+
+- c8: ^10.1.3 -> ^11.0.0
+- check-dts: ^0.8.2 -> ^0.9.0
+- tsx: ^4.20.6 -> ^4.21.0
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - ctx-core@7.2.33
+
 ## 24.0.144
 
 ### Patch Changes
@@ -3024,7 +3045,6 @@
 - - dehydrated_val\_\_T: aliased by dehydrated_json_val\_\_T
 - dehydrated_data_row_tuple_T: aliases data_row_tuple_T
 - - dehydrated_json_data_row_tuple_T: renamed from dehydrated_data_row_tuple_T:
-
     - row_T<ColDefs>
 
 ## 21.3.0
@@ -3269,7 +3289,6 @@
 ### Major Changes
 
 - - aliases:
-
     - \_row_proxy
     - \_proxy\_\_row
       header_M_row_idx\_\_new=>header_M_col_idx\_\_new
@@ -3354,7 +3373,6 @@
 ### Minor Changes
 
 - - data_row\_\_sym_props_o_T:
-
     - [length_sym]: number
     - [header_m_row_idx_sym]: header_M_row_idx_T<ColDefs>
 
@@ -3578,7 +3596,6 @@
 - data*row*: performance:
 
   get,set: extract to top-level functions to reduce dynamic closure scope
-
   - datum_a_M_column_M_row_idx: WeakMap to store datum_a->column_M_row_idx: supports get,set extraction to top-level
 
 ## 19.0.0
